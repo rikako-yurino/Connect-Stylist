@@ -1,0 +1,119 @@
+<%#= render "shared/header" %>
+<div class='main'>
+
+  <%# 画面上部のタイトル帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      SUIT YOU
+    </h2>
+    <p class='service-explain'>
+      パーソナルスタイリストによるネットショッピングサポートサービス
+    </p>
+  </div>
+  <%# /画面上部のタイトル帯部分  %>
+
+  <%# SUIT YOU の特徴部分 %>
+  <div class='select-reason-contents'>
+    <h2 class='title'>
+      SUIT YOU の特徴
+    </h2>
+    <ul class='reason-lists'>
+      <li class='list'>
+        <%= image_tag "parsonalstylist-intro01.png", class:"list-pict" %>
+        <span class='reason-list-number'>1</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>3分</span>
+          で骨格診断
+        </h3>
+        <p class='reason-list-description'>
+          無料ですぐに骨格診断ができる！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "parsonalstylist-intro01.png", class:"list-pict" %>
+        <span class='reason-list-number'>2</span>
+        <h3 class='reason-list-text'>
+          <span class='reason-list-blue-text'>リーズナブル</span>
+        </h3>
+        <p class='reason-list-description'>
+          手軽にプロのスタイリストの提案がもらえる！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "parsonalstylist-intro01.png", class:"list-pict" %>
+        <span class='reason-list-number'>3</span>
+        <h3 class='reason-list-text'>
+          オンライン
+          <span class='reason-list-blue-text'>完結！</span>
+        </h3>
+        <p class='reason-list-description'>
+          安心＆スムーズなネットショッピングをサポート
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /SUIT YOU の特徴部分 %>
+
+
+  <%# 無料診断リンク %>
+  <div class='item-contents'>
+    <%= link_to '無料で骨格診断', "#", class: "subtitle" %>
+  </div>
+  <%# /無料診断リンク %>
+
+
+
+  <%# SUIT YOUのサービス内容 %>
+  <div class='feature-contents'>
+    <h2 class='title'>
+      サービス一覧
+    </h2>
+    <h3 class='title'>
+      チャットやビデオ通話でプロのアドバイスを受けられる
+    </h3>
+    <ul class='feature-lists'>
+      <li class='list'>
+        <%= image_tag "furima-intro04.png", class:"list-pict" %>
+        <h3 class='feature-list-text'>
+          ネットショッピング動向
+        </h3>
+        <p class='feature-list-description'>
+          もう毎朝着る服に迷わない！<br>
+          クローゼットのお掃除サポートサービス。<br>
+          あなたの診断結果をもとに本当に似合う服<br>
+          だけを残して断舎離するお手伝いをします。
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "furima-intro05.png", class:"list-pict" %>
+        <h3 class='feature-list-text'>
+          断捨離サポート
+        </h3>
+        <p class='feature-list-description'> 
+          もう毎朝着る服に迷わない！<br>
+          クローゼットのお掃除サポートサービス。<br>
+          あなたの診断結果をもとに本当に似合う服<br>
+          だけを残して断舎離するお手伝いをします。
+        </p>
+    </ul>
+  </div>
+  <%# /SUIT YOUのサービス内容 %>
+
+    <%# 予約リンク %>
+  <div class='item-contents'>
+    <%= link_to 'スタイリストを予約', "#", class: "subtitle" %>
+  </div>
+  <%# /予約リンク %>
+
+  <%# 商品一覧 %>
+  <div class='item-contents'>
+    <h2 class='title'>スタイリスト紹介</h2>
+  </div>
+  <%# /商品一覧 %>
+</div>
+<div class ='purchase-btns'>
+  <%= link_to "#", class: 'purchase-btn' do %>
+    <span class='purchase-btn-text'>スタイリスト予約</span>
+  <% end %>
+</div>
+<%#= render "shared/footer" %>
