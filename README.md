@@ -15,12 +15,13 @@
 | prefecture_id        | integer |                         |
 | work_id              | integer | null: false             |
 | frame_type_id        | integer | null: false             |
-| color_type_id        | integer | null: false             |
 
 ### Association
 
-- has_many :items
 - has_many :orders
+- has_many :room
+- has_many :messages
+- has_one :reservation
 
 ## reservations テーブル
 
