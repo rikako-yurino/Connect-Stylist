@@ -17,6 +17,7 @@
     <% if user_signed_in? %>
       <%= "#{current_user.nickname}さん" %>
       <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "subtitle" %>
+      <%= link_to 'ユーザー情報編集', edit_user_registration_path, class: "subtitle" %>
     <% else %>
       <%= link_to '新規会員登録', new_user_registration_path, class: "subtitle" %>
       <%= link_to 'ログイン', new_user_session_path, class: "subtitle" %>
@@ -118,11 +119,9 @@
   </div>
   <%# /商品一覧 %>
 </div>
-<% if user_signed_in? %>
-  <div class ='purchase-btns'>
-    <%= link_to new_room_path, class: 'purchase-btn' do %>
-      <span class='purchase-btn-text'>スタイリストとチャットする</span>
-    <% end %>
-  </div>
-<% end %>
+<div class ='purchase-btns'>
+  <%= link_to "#", class: 'purchase-btn' do %>
+    <span class='purchase-btn-text'>スタイリスト予約</span>
+  <% end %>
+</div>
 <%#= render "shared/footer" %>
