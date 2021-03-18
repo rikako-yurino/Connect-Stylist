@@ -118,9 +118,11 @@
   </div>
   <%# /商品一覧 %>
 </div>
-<div class ='purchase-btns'>
-  <%= link_to "#", class: 'purchase-btn' do %>
-    <span class='purchase-btn-text'>スタイリスト予約</span>
-  <% end %>
-</div>
+<% if user_signed_in? %>
+  <div class ='purchase-btns'>
+    <%= link_to new_room_path, class: 'purchase-btn' do %>
+      <span class='purchase-btn-text'>スタイリストとチャットする</span>
+    <% end %>
+  </div>
+<% end %>
 <%#= render "shared/footer" %>

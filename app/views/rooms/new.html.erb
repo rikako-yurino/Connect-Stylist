@@ -1,0 +1,33 @@
+<div class='chat-room-form'>
+  <h1>新規チャットルーム</h1>
+  <%=form_with model: @room, local: true do |f|%>
+
+    <div class='chat-room-form__field--right'>
+    <div class='chat-room-form__field'>
+      <p class="form-text">お探しのスタイリングの用途</p>
+    </div>
+      <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class:"select-box", id:"purpose"}) %>
+    </div>
+
+    <div class='chat-room-form__field--right'>
+    <div class='chat-room-form__field'>
+      <p class="form-text">好きなファッションのスタイル</p>
+    </div>
+      <%= f.collection_select(:style_id, Style.all, :id, :name, {}, {class:"select-box", id:"style"}) %>
+    </div>
+
+    <div class='chat-room-form__field--right'>
+    <div class='chat-room-form__field'>
+      <label class="form-text">その他をお選びの方ご要望がある方はご記入ください</label>
+    </div>
+      <%= f.text_field :remarks, class: 'chat__room_name chat-room-form__input', placeholder: '備考欄'%>
+    </div>
+
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit class: 'chat-room-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
