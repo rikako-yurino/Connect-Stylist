@@ -16,6 +16,7 @@
 | work_id              | integer | null: false             |
 | frame_type_id        | integer | null: false             |
 
+
 ### Association
 
 - has_many :orders
