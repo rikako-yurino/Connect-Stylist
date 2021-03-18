@@ -14,6 +14,13 @@
 
   <%# SUIT YOU の特徴部分 %>
   <div class='select-reason-contents'>
+    <% if user_signed_in? %>
+      <%= "#{current_user.nickname}さん" %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "subtitle" %>
+    <% else %>
+      <%= link_to '新規会員登録', new_user_registration_path, class: "subtitle" %>
+      <%= link_to 'ログイン', new_user_session_path, class: "subtitle" %>
+    <% end %>
     <h2 class='title'>
       SUIT YOU の特徴
     </h2>
