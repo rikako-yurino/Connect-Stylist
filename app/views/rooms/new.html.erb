@@ -1,0 +1,37 @@
+<div class='chat-room-form'>
+  <h1>新規チャットルーム</h1>
+  <%=form_with model: @room, local: true do |f|%>
+    <div class='chat-room-form__field'>
+      <div class='form-text-wrap'>
+      <label class="form-text">あなたの骨格タイプ</label>
+      <span class="indispensable">必須</span>
+      <span class="form-text">診断がまだお済みでない方はこちら</span>
+    </div>
+    <div class='chat-room-form__field--left'>
+      <%= f.label :purpose_id, class: 'chat-room-form__label'%>
+    </div>
+    <div class='chat-room-form__field--right'>
+      <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class:"select-box", id:"purpose"}) %>
+    </div>
+    <div class='chat-room-form__field--left'>
+      <%= f.label :remarks, class: 'chat-room-form__label'%>
+    </div>
+    <div class='chat-room-form__field--right'>
+      <%= f.text_field :remarks, class: 'chat__room_name chat-room-form__input', placeholder: '備考欄'%>
+    </div>
+    </div>
+    <div class='chat-room-form__field'>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
+      </div>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit class: 'chat-room-form__action-btn'%>
+      </div>
+    </div>
+  <% end %>
+</div>
