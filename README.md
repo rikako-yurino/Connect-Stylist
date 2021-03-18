@@ -43,13 +43,14 @@
 | Column              | Type          | Options                        |
 | ------------------- |  ------------ | ------------------------------ |
 | purpose_id          | integer       | null: false                    |
+| style_id            | integer       | null: false                    |
 | remarks             | text          |                                |
 | user                | references    | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
-- has_one :order
+
 
 ## messages テーブル
 
