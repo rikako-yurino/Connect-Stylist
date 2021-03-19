@@ -15,8 +15,14 @@ class RoomsController < ApplicationController
   def show
   end
 
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+    redirect_to root_path
+  end
+
   private
   def room_params
-    params.require(:room).permit(:purpose_id, :style_id, :remarks)
+    params.require(:room).permit(:purpose_id, :style_id, :remarks).merge(user_id: current_user.id)
   end
 end

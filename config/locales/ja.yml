@@ -14,3 +14,10 @@ ja:
         prefecture_id: お住いの地域
         work_id: ご職業
         frame_type_id: あなたの骨格タイプ
+    activerecord:
+      attributes:
+        room:
+          purpose_id: ""
+          style_id: ""
+        
+
