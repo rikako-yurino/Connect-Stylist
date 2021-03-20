@@ -3,4 +3,30 @@
  チャットルーム
   </div>
   <%= link_to "チャットを終了する", room_path, method: :delete %>
+
+  <div id="chat-frame">
+  <p class="chat-talk">
+      <span class="talk-icon">
+          <img src="[ファイルのurl]" alt="tartgeticon" width="XX" height="XX"/>
+      </span>
+      <span class="talk-content">[トーク内容を記載]</span>
+  </p>
+  <p class="chat-talk mytalk">
+      <span class="talk-icon">
+          <img src="[ファイルのurl]" alt="myicon" width="XX" height="XX"/>
+      </span>
+      <span class="talk-content">[トーク内容を記載]</span>
+  </p>
+  </div>
+
+    <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
+  <div class="form-input">
+    <%= f.text_field :content, class: 'form-message', placeholder: 'type a message' %>
+    <label class="form-image">
+      <span class="image-file">画像</span>
+      <%= f.file_field :image, class: 'hidden' %>
+    </label>
+  </div>
+  <%= f.submit '送信', class: 'form-submit' %>
+  <% end %>
 </div>

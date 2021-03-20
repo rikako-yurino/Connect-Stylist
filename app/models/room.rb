@@ -1,6 +1,6 @@
 class Room < ApplicationRecord
-  # has_many :messages, dependent: :destroy
-  # belongs_to :users
+  belongs_to :user
+  has_many :messages, dependent: :destroy
 
   with_options presence: true do
     validates :purpose_id

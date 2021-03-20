@@ -13,6 +13,8 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @message = Message.new
+    @room = Room.find(params[:id])
   end
 
   def destroy
