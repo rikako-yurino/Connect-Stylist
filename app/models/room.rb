@@ -1,5 +1,6 @@
 class Room < ApplicationRecord
   belongs_to :user
+  belongs_to :stylist
   has_many :messages, dependent: :destroy
 
   with_options presence: true do

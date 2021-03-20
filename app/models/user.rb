@@ -2,7 +2,6 @@ class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_one :room
   has_many :messages
-
   belongs_to :prefecture
   belongs_to :work
   belongs_to :frame_type
