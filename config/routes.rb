@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     passwords: 'stylists/passwords',
     registrations: 'stylists/registrations'
   }
-  root to: 'diagnoses#index'
+  resources :stylists, only: [:index, :destroy] 
   resources :rooms, only: [:new, :create, :show, :destroy] do
     resources :messages, only: [:index, :create]
   end
-  resources :stylists, only: [:index, :destroy] 
+  root to: 'diagnoses#index'
 end

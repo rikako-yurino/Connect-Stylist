@@ -1,4 +1,7 @@
 class Message < ApplicationRecord
+  belongs_to :user, optional: true
+  belongs_to :stylist, optional: true
   belongs_to :room
-  belongs_to :user
+
+  validates :message, presence: true
 end

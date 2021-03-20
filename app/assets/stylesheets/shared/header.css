@@ -4,7 +4,7 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 2vh 8vh;
   display: flex;
   flex-direction: column;
 }
@@ -16,7 +16,7 @@
 }
 
 .furima-icon {
-  width: 10vw;
+  width: 18vw;
   margin-right: 10vw;
 }
 
@@ -85,6 +85,11 @@
   font-weight: bold;
 }
 
+.dignosis {
+  text-decoration: none;
+  color: #333333;
+  padding-left: 30px;
+}
 
 .logout {
   text-decoration: none;
@@ -93,12 +98,12 @@
 
 .login {
   text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
+
   color: #333333;
 }
 
 .sign-up {
   text-decoration: none;
   color: #333333;
+  margin-left: 3vw;
 }
