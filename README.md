@@ -22,19 +22,6 @@
 - has_one :room
 - has_many :messages
 
-## reservations テーブル
-
-| Column              | Type          | Options                        |
-| ------------------- |  ------------ | ------------------------------ |
-| date_time_id        | integer       | null: false                    |
-| plan_id             | integer       | null: false                    |
-| remarks             | text          |                                |
-| user                | references    | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- has_one :order
 
 ## rooms テーブル
 
@@ -81,16 +68,3 @@
 
 - belongs_to :room
 - belongs_to :user
-
-## orders テーブル
-
-| Column   | Type        | Options                        |
-| -------- | ----------- | ------------------------------ |
-| user     | references  | null: false, foreign_key: true |
-| plan_id  | references  | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :item
-- has_one :delivery
