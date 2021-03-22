@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   
   def show
     @message = @room.messages.new(message_params)
-    @messages = @room.messages.includes(:user, :stylist)
+    @messages = @room.messages.includes(:user)
   end
 
   def create

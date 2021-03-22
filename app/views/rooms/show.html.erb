@@ -4,9 +4,6 @@
   </div>
   <%= link_to "チャットを終了する", room_path, method: :delete %>
 
-<div class="messages">
-  <%= render partial: 'messages/message', collection: @messages %>
-</div>
 
   <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
@@ -18,4 +15,9 @@
   </div>
   <%= f.submit '送信', class: 'form-submit' %>
   <% end %>
+
+<div class="messages">
+  <%= render partial: 'messages/message', collection: @messages %>
+</div>
+
 </div>

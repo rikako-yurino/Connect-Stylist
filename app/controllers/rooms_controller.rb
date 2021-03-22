@@ -16,8 +16,8 @@ class RoomsController < ApplicationController
 
   def show
     @message = Message.new
-    # @messages = Message.where(room_id: @room.id)
     @room = Room.find(params[:id])
+    @messages = @room.messages.includes(:user)
   end
 
   def destroy
