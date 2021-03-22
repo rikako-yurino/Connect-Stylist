@@ -1,26 +1,10 @@
-<%#= render "shared/header" %>
+<%= render "shared/header_stylist" %>
 <div class='main'>
 
   <%# 画面上部のタイトル帯部分 %>
   <div class='title-contents'>
-    <h2 class='service-title'>
-      SUIT YOU
-    </h2>
-    <p class='service-explain'>
-      パーソナルスタイリストによるネットショッピングサポートサービス
-    </p>
   </div>
   <%# /画面上部のタイトル帯部分  %>
 
-  <%# SUIT YOU の特徴部分 %>
-  <div class='select-reason-contents'>
-    <% if stylist_signed_in? %>
-      <%= "#{current_stylist.last_name} #{current_stylist.first_name}さん" %>
-      <%= link_to 'ログアウト', destroy_stylist_session_path, method: :delete, class: "subtitle" %>
-      <%= link_to 'スタイリスト情報編集', edit_stylist_registration_path, class: "subtitle" %>
-    <% else %>
-      <%= link_to '新規登録', new_stylist_registration_path, class: "subtitle" %>
-      <%= link_to 'ログイン', new_stylist_session_path, class: "subtitle" %>
-    <% end %>
  
-<%#= render "shared/footer" %>
+<%= render "shared/second-footer" %>

@@ -3,5 +3,5 @@ class Message < ApplicationRecord
   belongs_to :stylist, optional: true
   belongs_to :room
 
-  validates :message, presence: true
+  validates :content, presence: true
 end

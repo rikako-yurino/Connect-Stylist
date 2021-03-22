@@ -16,6 +16,7 @@ class RoomsController < ApplicationController
 
   def show
     @message = Message.new
+    # @messages = Message.where(room_id: @room.id)
     @room = Room.find(params[:id])
   end
 
@@ -27,6 +28,6 @@ class RoomsController < ApplicationController
 
   private
   def room_params
-    params.require(:room).permit(:purpose_id, :style_id, :remarks).merge(user_id: current_user.id)
+    params.require(:room).permit(:purpose_id, :style_id, :remark, :room_id).merge(user_id: current_user.id)
   end
 end
