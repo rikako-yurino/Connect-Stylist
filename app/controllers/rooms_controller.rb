@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user!
+  
   def new
     @room = Room.new
   end
@@ -13,10 +15,19 @@ class RoomsController < ApplicationController
   end
 
   def show
+    @message = Message.new
+    @room = Room.find(params[:id])
+    @messages = @room.messages.includes(:user)
+  end
+
+  def destroy
+    room = Room.find(params[:id])
+    room.destroy
+    redirect_to root_path
   end
 
   private
   def room_params
-    params.require(:room).permit(:purpose_id, :style_id, :remarks)
+    params.require(:room).permit(:purpose_id, :style_id, :remark, :room_id).merge(user_id: current_user.id)
   end
 end

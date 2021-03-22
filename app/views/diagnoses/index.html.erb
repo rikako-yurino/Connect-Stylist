@@ -1,29 +1,22 @@
-<%#= render "shared/header" %>
+<%= render "shared/header" %>
 <div class='main'>
 
   <%# 画面上部のタイトル帯部分 %>
   <div class='title-contents'>
     <h2 class='service-title'>
-      SUIT YOU
+
     </h2>
-    <p class='service-explain'>
-      パーソナルスタイリストによるネットショッピングサポートサービス
-    </p>
   </div>
   <%# /画面上部のタイトル帯部分  %>
 
+    <p class='service-explain'>
+      パーソナルスタイリストによるネットショッピングサポートサービス
+    </p>
   <%# SUIT YOU の特徴部分 %>
   <div class='select-reason-contents'>
-    <% if user_signed_in? %>
-      <%= "#{current_user.nickname}さん" %>
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "subtitle" %>
-      <%= link_to 'ユーザー情報編集', edit_user_registration_path, class: "subtitle" %>
-    <% else %>
-      <%= link_to '新規会員登録', new_user_registration_path, class: "subtitle" %>
-      <%= link_to 'ログイン', new_user_session_path, class: "subtitle" %>
-    <% end %>
+  
     <h2 class='title'>
-      SUIT YOU の特徴
+      CONNECT Stylist の特徴
     </h2>
     <ul class='reason-lists'>
       <li class='list'>
@@ -120,8 +113,8 @@
   <%# /商品一覧 %>
 </div>
 <div class ='purchase-btns'>
-  <%= link_to "#", class: 'purchase-btn' do %>
-    <span class='purchase-btn-text'>スタイリスト予約</span>
+  <%= link_to new_room_path, class: 'purchase-btn' do %>
+    <span class='purchase-btn-text'>スタイリストに聞く</span>
   <% end %>
 </div>
 <%#= render "shared/footer" %>

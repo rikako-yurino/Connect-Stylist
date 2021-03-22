@@ -19,24 +19,9 @@
 
 ### Association
 
-- has_many :orders
-- has_many :room
+- has_one :room
 - has_many :messages
-- has_one :reservation
 
-## reservations テーブル
-
-| Column              | Type          | Options                        |
-| ------------------- |  ------------ | ------------------------------ |
-| date_time_id        | integer       | null: false                    |
-| plan_id             | integer       | null: false                    |
-| remarks             | text          |                                |
-| user                | references    | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- has_one :order
 
 ## rooms テーブル
 
@@ -46,11 +31,30 @@
 | style_id            | integer       | null: false                    |
 | remarks             | text          |                                |
 | user                | references    | null: false, foreign_key: true |
+| stylist             | references    | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
+- belongs_to :stylist
+- has_many :messages
 
+## stylist テーブル
+
+| Column               | Type          | Options                        |
+| -------------------  |  ------------ | ------------------------------ |
+| email                | string        | null: false, unique:true       |
+| password             | string        | null: false                    |
+| encrypted_password   | string        | null: false                    |
+| last_name            | string        | null: false                    |
+| first_name           | string        | null: false                    |
+| license              | text          | null: false                    |
+| profile              | text          | null: false                    |
+
+### Association
+
+- has_many :messages
+- has_one :room
 
 ## messages テーブル
 
@@ -64,16 +68,3 @@
 
 - belongs_to :room
 - belongs_to :user
-
-## orders テーブル
-
-| Column   | Type        | Options                        |
-| -------- | ----------- | ------------------------------ |
-| user     | references  | null: false, foreign_key: true |
-| plan_id  | references  | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :user
-- belongs_to :item
-- has_one :delivery
