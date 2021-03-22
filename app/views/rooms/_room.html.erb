@@ -1,0 +1,13 @@
+<div class="room">
+  <div class="upper-room">
+    <div class="room-user">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%= link_to room.user.nickname, room_path(room)  %>
+    </div>
+    <div class="room-date">
+      <!-- 投稿した時刻を出力する -->
+      <%= l room.created_at %>
+    </div>
+  </div>
+  <div class="lower-room">
+</div>

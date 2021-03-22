@@ -1,10 +1,18 @@
 <%= render "shared/header_stylist" %>
 <div class='main'>
-
-  <%# 画面上部のタイトル帯部分 %>
   <div class='title-contents'>
+  
   </div>
-  <%# /画面上部のタイトル帯部分  %>
+    <h2 class='title'>
+      トークルーム一覧
+    </h2>
+  <%# トークルーム一覧 %>
+  <div class='room-contents'>
+  <div class="rooms">
+  <%= render partial: 'rooms/room', collection: @rooms %>
+  </div>
+  </div>
+  <%# /トークルーム一覧  %>
 
  
 <%= render "shared/second-footer" %>
