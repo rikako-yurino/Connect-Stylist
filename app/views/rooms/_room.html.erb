@@ -2,7 +2,7 @@
   <div class="upper-room">
     <div class="room-user">
       <!-- 投稿したユーザー名情報を出力する -->
-      <%= link_to room.user.nickname, room_path(room)  %>
+      <%= link_to "#{room.user.last_name} #{room.user.first_name} さんのトークルーム", room_path(room)  %>
     </div>
     <div class="room-date">
       <!-- 投稿した時刻を出力する -->

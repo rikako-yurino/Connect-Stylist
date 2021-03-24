@@ -14,6 +14,7 @@ class MessagesController < ApplicationController
       @messages = @room.messages.includes(:user, :stylist)
       render :index
     end
+    ActionCable.server.broadcast 'room_channel', message: @message.template
   end
 
   private

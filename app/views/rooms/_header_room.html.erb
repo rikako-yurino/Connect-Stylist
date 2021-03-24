@@ -1,0 +1,12 @@
+<div class='search-bar-contents'>
+  <%= link_to image_tag("furima-logo-color.png", class:"furima-icon"), "#" %>
+  <% if user_signed_in? %>
+      <ul class='lists-right'>
+          <li><%= link_to "チャットを終了する", root_path, class: "logout"  %></li>
+      </ul>
+  <% elsif stylist_signed_in? %>
+      <ul class='lists-right'>
+          <li><%= link_to "チャットを終了する(スタイリスト)", stylists_path, method: :delete, class: "logout"  %></li>
+      </ul>
+  <% end %>
+</div>
