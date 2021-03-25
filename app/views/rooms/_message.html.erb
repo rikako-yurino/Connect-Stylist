@@ -2,13 +2,16 @@
   <!-- 投稿したユーザー名情報を出力する -->
   
   <% if stylist_signed_in? %>
-    <%= "スタイリスト #{message.stylist.last_name} "%>
-  <% else %>
-    <%= "#{message.user.nickname} さん"%>
+    <%= "スタイリスト:  #{message.stylist.last_name} #{message.stylist.first_name} "%>
+    <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %></p>
+    <%= simple_format(h message.content) %>
   <% end %>
-  <!-- 投稿した時刻を出力する -->
-   <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %></p>
-  <%= simple_format(h message.content) %>
-  <!-- 投稿したメッセージ内容を記述する -->
+
+  <% if user_signed_in? %>
+    <%= "#{message.user.nickname} さん"%>
+    <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %></p>
+    <%= simple_format(h message.content) %>
+  <% end %>
+  
   <%#= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
 </div>

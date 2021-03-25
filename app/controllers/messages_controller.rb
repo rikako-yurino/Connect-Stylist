@@ -20,7 +20,7 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:content,:room_id).merge(user_id: current_user.id)
+    params.require(:message).permit(:content, :room_id).merge(user_id: current_user.id, stylist_id: current_stylist.id)
   end
 
   def set_params
