@@ -1,6 +1,4 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!
-  
   def new
     @room = Room.new
   end
@@ -20,9 +18,7 @@ class RoomsController < ApplicationController
     @room = Room.find(params[:id])
     @messages = @room.messages.includes(:user)
   end
-  
 
-  
 
   def destroy
     room = Room.find(params[:id])

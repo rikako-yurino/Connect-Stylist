@@ -1,0 +1,21 @@
+.form-image {
+  font-size: 12px;
+  background-color: lightblue;
+  color: white;
+  padding: 12px;
+  width: 60px;
+  margin: 5px 10px;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 100%;
+}
+
+
