@@ -1,6 +1,6 @@
 .purchase-btn {
   width: 120px;
-  background: #7ae7c2;
+  background: #AB99FF;
   text-align: center;
   border-radius: 4%;
   bottom: 32px;
@@ -9,14 +9,39 @@
   padding: 15px;
 }
 
+.purchase-btns{
+  display: flex;
+}
+
 .purchase-btn-text {
   color: #fff;
   display: block;
   font-size: 18px;
-  text-decoration: none;
+  text-decoration: none !important;
   margin-bottom: 5px;
 }
+
 
 .purchase-btn-icon {
   width: 60%;
 }
+
+.button-4 {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  user-select: none;
+  background: #AB99FF;
+  border: 1px #AB99FF solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.purchase-btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+}
+

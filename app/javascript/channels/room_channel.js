@@ -32,8 +32,7 @@ document.addEventListener('turbolinks:load', () => {
         window.scroll(0, documentElement.scrollHeight)
     }
 
-    // 最初にページ一番下へ移動させる
-    scrollToBottom()
+
 
     const messageButton = document.getElementById('message-button')
 

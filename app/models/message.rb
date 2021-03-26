@@ -4,7 +4,7 @@ class Message < ApplicationRecord
   has_one_attached :image
   belongs_to :room
 
-  validates :content, presence: true, unless: :was_attached?
+  validates :content, presence: true, length: { maximum: 500 }, unless: :was_attached?
 
   def template
     ApplicationController.renderer.render partial: 'messages/message', locals: { message: self }

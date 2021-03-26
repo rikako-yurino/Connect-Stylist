@@ -27,24 +27,6 @@ a {
   font-size: 8vh;
 }
 
-.service-explain {
-  font-size: 2.5vh;
-  line-height: 40px;
-}
-
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
-}
 
 /* //画面上部の「人生を変えるフリマアプリ」帯部分 */
 
@@ -91,18 +73,6 @@ a {
   width: 100%;
 }
 
-.reason-list-number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 60px;
-  font-size: 30px;
-  text-align: center;
-  line-height: 60px;
-  background-color: #3ccace;
-  color: #fff;
-}
 
 .reason-list-text {
   font-weight: bold;
@@ -116,7 +86,7 @@ a {
 
 .reason-list-description {
   font-size: 18px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 /* //FURIMAが選ばれる3つの理由部分 */
@@ -146,20 +116,6 @@ a {
 .ad-explain {
   font-size: 2.5vh;
   line-height: 30px;
-}
-
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
 }
 
 /* //画面中央の「会員数日本一位」帯部分 */
@@ -224,6 +180,24 @@ a {
   padding: 10vh 0;
 }
 
+.button-2 {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 30px;
+  color: #AB99FF;
+  text-decoration: none;
+  user-select: none;
+  background: #AB99FF;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.button-2:hover {
+  color: #fff;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+
+
 .item-contents>.title {
   font-size: 5vh;
   line-height: 1.4;
@@ -234,7 +208,7 @@ a {
   font-size: 3vh;
   margin: 1vh 0;
   text-decoration: none;
-  color: #3ccace;
+  color: #fff;
   font-weight: bold;
 }
 

@@ -7,13 +7,7 @@ class MessagesController < ApplicationController
   end
 
   def create
-    @message = @room.messages.new(message_params)
-    if @message.save
-      redirect_to room_path(@room)
-    else
-      @messages = Message.where(room_id: @room.id)
-      render :index
-    end
+    @message = @room.messages.create!(message_params)
     ActionCable.server.broadcast 'room_channel', message: @message.template
   end
 

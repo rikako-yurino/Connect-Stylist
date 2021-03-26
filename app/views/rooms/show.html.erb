@@ -1,10 +1,5 @@
 <%= render "header_room" %>
-<div class='wrapper'>
-  <div class='side-bar'>
- チャットルーム
-  </div>
-  <%= link_to "チャットを終了する", room_path, method: :delete %>
-
+<div class='message-wrapper'>
   <div id="message-container">
     <%= render partial: 'message', collection: @messages %>
   </div>
