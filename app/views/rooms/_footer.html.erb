@@ -2,7 +2,7 @@
   <%= form_with model: [@room, @message],  local: false do |f| %>
   <div class="form-group">
     <div class="form-input"  id="footer">
-      <%= f.text_area :content, class:  'form-control', rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
+      <%= f.text_area :content, class:  'form-control message_content', rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
       <label class="form-image">
         <span class="image-file">画像</span>
         <%= f.file_field :image, class: 'hidden' %>
@@ -15,3 +15,6 @@
   </div>
   <% end %>
 </footer>
+
+
+

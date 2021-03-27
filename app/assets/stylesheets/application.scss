@@ -14,6 +14,8 @@
  *= require_self
  */
 
+ @import "bootstrap/scss/bootstrap";
+
  /* リセットCSS */
 body {
   font-size: 14px;
@@ -29,8 +31,7 @@ ul,li {
   padding: 0;
   margin: 0;
 }
-
- @import "bootstrap/scss/bootstrap";
+ 
 
  // メッセージ一覧
 #message-container {
@@ -44,7 +45,6 @@ footer {
   max-width: 768px;
   padding: 1rem;
   margin: 0 auto;
-  background-color: white;
 }
 
 .btn-primary.disabled {
@@ -57,9 +57,6 @@ footer {
   resize: none;
 }
 
-#message_content {
-  resize: none;
-}
 
 
 

@@ -1,21 +1,67 @@
 <div class="message" id="message-<%= message.id %>">
+<div class="card-body msg_card_body">
+          <%# ユーザー側ビュー %>
+            <% if user_signed_in? %>
+              <%# スタイリストのメッセージ %>
+              <% if message.stylist_id.present?%>
+                <div class="d-flex justify-content-start mb-4">
+                  <div class="img_cont_msg">
+                    <img class="rounded-circle user_img_msg">
+                  </div>
+                  <div class="msg_cotainer">
+                  <%= simple_format(h message.content) %>
+                    <span class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
+                  </div>
+                </div>
+              <% end %>
+              <%# //スタイリストのメッセージ %>
 
+              <%# ユーザーのメッセージ %>
+              <% if message.user_id.present?%>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+								<%= simple_format(h message.content) %>
+									<span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
+								</div>
+								<div class="img_cont_msg">
+							    <img class="rounded-circle user_img_msg">
+								</div>
+							</div>
+              <% end %>
+              <%#// ユーザーのメッセージ %>
+            <% end %>
+          <%#// ユーザー側ビュー %>
+            
 
-  <%# スタイリストのメッセージ %>
-  <% if message.stylist_id.present?%>
-    <%= "スタイリスト:  #{message.stylist.last_name} #{message.stylist.first_name} "%>
-    <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %>
-    <%= simple_format(h message.content) %>
-    <%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
-  <% end %>
-  <%# //スタイリストのメッセージ %>
-
-  <%# ユーザーのメッセージ %>
-  <% if message.user_id.present?%>
-    <%= "#{message.user.nickname} さん"%>
-    <%= l message.created_at, format: '%Y年%-m月%-d日(%a) %H:%M' %>
-    <%= simple_format(h message.content) %>
-    <%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
-  <% end %>
-  <%#// ユーザーのメッセージ %>
+          <%# スタイリスト側ビュー %>
+          <% if stylist_signed_in? %>
+            <%# ユーザーのメッセージ %>
+            <% if message.user_id.present?%>
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img  class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+								<%= simple_format(h message.content) %>
+									<span class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
+								</div>
+							</div>
+            <% end %>
+            <%#// ユーザーのメッセージ %>
+            <%# スタイリストのメッセージ %>
+            <% if message.stylist_id.present?%>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+								<%= simple_format(h message.content) %>
+									<span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
+								</div>
+								<div class="img_cont_msg">
+							<img  class="rounded-circle user_img_msg">
+								</div>
+							</div>
+            <% end %>
+            <%#// スタイリストのメッセージ %>
+          <% end %>
+          <%# スタイリスト側ビュー %>
 </div>
+

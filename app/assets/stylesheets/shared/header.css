@@ -71,11 +71,10 @@
 .sign-up {
   text-decoration: none;
   color: #333333;
-  margin-left: 3vw;
   margin-right: 3vw;
 }
 
-.user-nickname,.logout,.login,.sign {
+.user-nickname,.logout,.login,.sign,.sign-up {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8rem;
@@ -100,7 +99,7 @@
 }
 
 
-.user-nickname:hover,.logout:hover,.login:hover,.sign:hover {
+.user-nickname:hover,.logout:hover,.login:hover,.sign:hover,.sign-up:hover {
   color: #fff;
   background: #65E0C8;
 }

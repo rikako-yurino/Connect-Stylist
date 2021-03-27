@@ -2,8 +2,8 @@ class MessagesController < ApplicationController
   before_action :set_params, only:[:show, :create]
   
   def show
-    @message = @room.messages.new(message_params)
-    @messages = Message.where(room_id: @room.id)
+    @messages = Message.includes(:user).order(:id)
+    @message = current_user.messages.build
   end
 
   def create

@@ -103,7 +103,7 @@ li {
   cursor: pointer;
 }
 .chat-room-user__btn--add {
-  color: #38aef0;
+  color: #00b5ad;
 }
 .chat-room-user__btn--remove {
   color: #AB99FF;
@@ -111,7 +111,7 @@ li {
 
 .chat-room-user__name a {
   text-decoration: none;
-  color: #38aef0;
+  color: #00b5ad;
 }
 
 select {
@@ -127,4 +127,11 @@ select {
 
 .field_with_errors {
   display: contents;
+}
+
+
+
+.button-2:hover {
+  color: #fff;
+  background: #AB99FF;
 }

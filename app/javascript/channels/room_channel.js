@@ -116,4 +116,12 @@ document.addEventListener('turbolinks:load', () => {
             })
         }
     }, {passive: true});
+
+
+	$(document).ready(function(){
+        $('#action_menu_btn').click(function(){
+            $('.action_menu').toggle();
+        });
+            });
+    
 })
