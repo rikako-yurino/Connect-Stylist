@@ -1,3 +1,6 @@
+// Place all the styles related to the diagnoses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   margin: 0;
   padding: 0;
@@ -9,39 +12,38 @@ body {
   height: 50vw;
   width: 100%;
 }
- .choose_box p {
-    font-size: 24px;
-    display: block;
-    font-weight: 600;
-    text-align: center;
+.choose_box p {
+  font-size: 24px;
+  display: block;
+  font-weight: 600;
+  text-align: center;
   }
- 
-.choose_box ul {
-    width: 80%;
-    text-align: center;
-    margin: auto;
-   display:flex;
-  flex-wrap: wrap;
+
+ .flexbox ul {
+  width: 80%;
+  text-align: center;
+  align-items: center;
 }
+
 .choose_box ul li {
   width: calc(100% / 2 - 20px);
-  margin-right: 20px;
+
   margin-bottom: 20px;
   list-style: none;
 }
  
 .choose_box ul li:nth-child(2n) {
-   margin-right: 0;
+  margin-right: 0;
 }
 .choose_box ul li a {
   color: #fff;
   display: block;
   padding: 20px 60px;
   text-align: center;
-  background-color: #fb85be;
+  background-color: #75DBC7;
   font-weight: 600;
   font-size: 18px;
-  border: 2px solid #fb85be;
+  border: 2px solid #75DBC7;
   text-decoration: none;
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
@@ -49,25 +51,25 @@ body {
 }
  
 .choose_box ul li a:hover {
-   background-color: #fff;
-  color: #fb85be;
-    -webkit-transition: 0.7s;
-    -moz-transition: 0.7s;
-    -o-transition: 0.7s;
-    transition: 0.7s;
+  background-color: #fff;
+  color: #75DBC7;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
 }
  
 h4 {
-    width: 50%;
-    clear: both;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 600;
-    color: #fff;
-    text-align: center;
-    background-color: #7ae7c2;
+  position: relative;
+  padding: 0.5em 1.6em;
+  font-size: 30px;
+  color: #00b5ad;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  border-top: 3px #00b5ad solid;
+  border-bottom: 3px #00b5ad solid;
+  transition: 0.3s;
   }
  
 .fit {
@@ -76,12 +78,36 @@ h4 {
   top: 20px;
   width: 100%;
 }
-#q_06 span,#q_07 span {
+
+#answer_01 span,#answer_02 span,#answer_03 span {
   display: block;
   width:100%;
 }
-#q_06 a,#q_07 a {
+
+#answer_01 a,#answer_02 a,#answer_03 a {
   display: block;
   width:100%;
   text-align: center;
+}
+
+.frame-img {
+  text-align: center;
+}
+
+.frame-type {
+  width: 50%;
+  margin: 30px 0;
+}
+
+.back-btns{
+  margin: auto;
+}
+
+.back-btn {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #00b5ad;
+  text-decoration: none !important;
+  user-select: none;
 }

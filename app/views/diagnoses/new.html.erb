@@ -1,76 +1,137 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
  
 <div class="choose_box">
    
 <div id="q_01" class="fit">
- <p>質問1</p>
+ <p>質問1:</p>
 <ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_02">選択肢1</a></li>
-<li class="odd"><a class="btn" href="#q_03">選択肢2</a></li>
-<li class="odd"><a class="btn" href="#q_04">選択肢3</a></li>
-<li class="odd"><a class="btn" href="#q_05">選択肢4</a></li>
+<li><a class="btn" href="#q_02" data-value="a">選択肢1</a></li>
+<li><a class="btn" href="#q_02" data-value="b">選択肢2</a></li>
+<li><a class="btn" href="#q_02" data-value="c">選択肢3</a></li>
 </ul>
  </div>
  <!-- 最初の選択肢 -->
    
 <div id="q_02" style="display: none;">
-<p>質問2</p>
+<p>質問2:</p>
 <ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_06">選択肢1-1</a></li>
-<li class="odd"><a class="btn" href="#q_07">選択肢1-2</a></li>
+<li><a class="btn" href="#q_03" data-value="a">選択肢1</a></li>
+<li><a class="btn" href="#q_03" data-value="b">選択肢2</a></li>
+<li><a class="btn" href="#q_03" data-value="c">選択肢3</a></li>
 </ul>
 </div>
 <!-- 次の選択肢 -->
   
 <div id="q_03" style="display: none;">
-<p>質問2</p>
+<p>質問3:</p>
 <ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_06">選択肢2-1</a></li>
-<li class="odd"><a class="btn" href="#q_07">選択肢2-2</a></li>
+<li><a class="btn" href="#q_04" data-value="a">選択肢1</a></li>
+<li><a class="btn" href="#q_04" data-value="b">選択肢2</a></li>
+<li><a class="btn" href="#q_04" data-value="c">選択肢3</a></li>
 </ul>
 </div>
 <!-- 次の選択肢 -->
    
 <div id="q_04" style="display: none;">
-<p>質問2</p>
+<p>質問4:</p>
 <ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_06">選択肢3-1</a></li>
-<li class="odd"><a class="btn" href="#q_07">選択肢3-2</a></li>
+<li><a class="btn" href="#q_05" data-value="a">選択肢1</a></li>
+<li><a class="btn" href="#q_05" data-value="b">選択肢2</a></li>
+<li><a class="btn" href="#q_05" data-value="c">選択肢3</a></li>
 </ul>
 </div>
 <!-- 次の選択肢 -->
    
- <div id="q_05" style="display: none;">
-<p>質問2</p>
+<div id="q_05" style="display: none;">
+<p>質問5:</p>
 <ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_06">選択肢4-1</a></li>
-<li class="odd"><a class="btn" href="#q_07">選択肢4-2</a></li>
+<li><a class="btn" href="#q_06" data-value="a">選択肢1</a></li>
+<li><a class="btn" href="#q_06" data-value="b">選択肢2</a></li>
+<li><a class="btn" href="#q_06" data-value="c">選択肢3</a></li>
 </ul>
 </div>
 <!-- 次の選択肢 -->
    
-   
- <div id="q_06" style="display: none;">
-        <p>あなた診断結果は…</p>
-        <h4>『ストレート』タイプです</h4>
-   <span><%= link_to 'TOPページに戻る', root_path, class: "btn" %></span>
+<div id="q_06" style="display: none;">
+<p>質問6:</p>
+<ul class="flexbox fw">
+<li><a class="btn" href="#q_07" data-value="a">選択肢1</a></li>
+<li><a class="btn" href="#q_07" data-value="b">選択肢2</a></li>
+<li><a class="btn" href="#q_07" data-value="c">選択肢3</a></li>
+</ul>
 </div>
-  
+<!-- 次の選択肢 -->
+   
+<div id="q_07" style="display: none;">
+<p>質問7:</p>
+<ul class="flexbox fw">
+<li><a class="btn" href="#q_08" data-value="a">選択肢1</a></li>
+<li><a class="btn" href="#q_08" data-value="b">選択肢2</a></li>
+<li><a class="btn" href="#q_08" data-value="c">選択肢3</a></li>
+</ul>
+</div>
+<!-- 次の選択肢 -->
+   
+<div id="q_08" style="display: none;">
+<p>質問8:</p>
+<ul class="flexbox fw">
+<li><a class="btn" href="#q_09" data-value="a">選択肢1</a></li>
+<li><a class="btn" href="#q_09" data-value="b">選択肢2</a></li>
+<li><a class="btn" href="#q_09" data-value="c">選択肢3</a></li>
+</ul>
+</div>
+<!-- 次の選択肢 -->
+   
+<div id="q_09" style="display: none;">
+<p>質問9:</p>
+<ul class="flexbox fw">
+<li><a class="btn end" data-value="a">選択肢1</a></li>
+<li><a class="btn end" data-value="b">選択肢2</a></li>
+<li><a class="btn end" data-value="c">選択肢3</a></li>
+</ul>
+</div>
+<!-- 次の選択肢 -->
+   
+
+
 <!-- 選択肢の答え① -->
-   
-  <div id="q_07" style="display: none;">
-        <p>あなた診断結果は…</p>
-        <h4>『ウェーブ』タイプです</h4>
-     <span><%= link_to 'TOPページに戻る', root_path, class: "btn" %></span>
-</div>
-  
-<!-- 選択肢の答え③ -->
-  <div id="q_08" style="display: none;">
-        <p>あなた診断結果は…</p>
-        <h4>『ナチュラル』タイプです</h4>
-     <span><%= link_to 'TOPページに戻る', root_path, class: "btn" %></span>
-     
+
+<div id="answer_01" style="display: none;">
+  <p>あなた診断結果は</p>
+  <h4>『ストレート』タイプです</h4>
+  <div class="frame-img">
+  <div class="frame-img">
+    <%= image_tag "frame_straight.png", class:"frame-type" %>
+  </div>
+  <div class="frame-btns">
+    <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+  </div>
 </div>
   
 <!-- 選択肢の答え② -->
+   
+<div id="answer_02" style="display: none;">
+  <p>あなた診断結果は</p>
+  <h4>『ウェーブ』タイプです</h4>
+  <div class="frame-img">
+    <%= image_tag "frame_straight.png", class:"frame-type" %>
+  </div>
+  <div class="frame-btns">
+    <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+  </div></div>
+  
+<!-- 選択肢の答え③ -->
+<div id="answer_03" style="display: none;">
+  <p>あなた診断結果は</p>
+  <h4>『ナチュラル』タイプです</h4>
+  <div class="frame-img">
+  <div class="frame-img">
+    <%= image_tag "frame_straight.png", class:"frame-type" %>
+  </div>     
+  <div class="frame-btns">
+    <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+  </div></div>
+  
+
 </div>
