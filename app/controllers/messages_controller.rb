@@ -2,24 +2,22 @@ class MessagesController < ApplicationController
   before_action :set_params, only:[:show, :create]
   
   def show
-    @message = @room.messages.new(message_params)
-    @messages = @room.messages.includes(:user)
+    @messages = Message.includes(:user).order(:id)
+    @message = current_user.messages.build
   end
 
   def create
-    @message = @room.messages.new(message_params)
-    if @message.save
-      redirect_to room_path(@room)
-    else
-      @messages = @room.messages.includes(:user, :stylist)
-      render :index
-    end
+    @message = @room.messages.create!(message_params)
+    ActionCable.server.broadcast 'room_channel', message: @message.template
   end
 
   private
-
   def message_params
-    params.require(:message).permit(:content,:room_id).merge(user_id: current_user.id)
+    if user_signed_in?
+      params.require(:message).permit(:content, :room_id, :image).merge(user_id: current_user.id,)
+    elsif stylist_signed_in?
+      params.require(:message).permit(:content, :room_id, :image).merge(stylist_id: current_stylist.id)
+    end
   end
 
   def set_params

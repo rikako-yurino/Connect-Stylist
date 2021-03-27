@@ -1,5 +1,5 @@
 class Stylist < ApplicationRecord
-  has_one :room
+  has_many :rooms
   has_many :messages, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

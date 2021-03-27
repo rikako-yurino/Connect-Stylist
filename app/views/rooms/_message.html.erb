@@ -1,19 +1,67 @@
-<div class="message">
-  <div class="upper-message">
-    <div class="message-user">
-      <!-- 投稿したユーザー名情報を出力する -->
-      <%= message.user.name %>
-    </div>
-    <div class="message-date">
-      <!-- 投稿した時刻を出力する -->
-      <%= l message.created_at %>
-    </div>
-  </div>
-  <div class="lower-message">
-    <div class="message-content">
-      <!-- 投稿したメッセージ内容を記述する -->
-      <%= message.content %>
-    </div>
-     <%= image_tag message.image.variant(resize: '500x500'), class: 'message-image' if message.image.attached? %>
-  </div>
+<div class="message" id="message-<%= message.id %>">
+<div class="card-body msg_card_body">
+          <%# ユーザー側ビュー %>
+            <% if user_signed_in? %>
+              <%# スタイリストのメッセージ %>
+              <% if message.stylist_id.present?%>
+                <div class="d-flex justify-content-start mb-4">
+                  <div class="img_cont_msg">
+                    <img class="rounded-circle user_img_msg">
+                  </div>
+                  <div class="msg_cotainer">
+                  <%= simple_format(h message.content) %>
+                    <span class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
+                  </div>
+                </div>
+              <% end %>
+              <%# //スタイリストのメッセージ %>
+
+              <%# ユーザーのメッセージ %>
+              <% if message.user_id.present?%>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+								<%= simple_format(h message.content) %>
+									<span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
+								</div>
+								<div class="img_cont_msg">
+							    <img class="rounded-circle user_img_msg">
+								</div>
+							</div>
+              <% end %>
+              <%#// ユーザーのメッセージ %>
+            <% end %>
+          <%#// ユーザー側ビュー %>
+            
+
+          <%# スタイリスト側ビュー %>
+          <% if stylist_signed_in? %>
+            <%# ユーザーのメッセージ %>
+            <% if message.user_id.present?%>
+							<div class="d-flex justify-content-start mb-4">
+								<div class="img_cont_msg">
+									<img  class="rounded-circle user_img_msg">
+								</div>
+								<div class="msg_cotainer">
+								<%= simple_format(h message.content) %>
+									<span class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
+								</div>
+							</div>
+            <% end %>
+            <%#// ユーザーのメッセージ %>
+            <%# スタイリストのメッセージ %>
+            <% if message.stylist_id.present?%>
+							<div class="d-flex justify-content-end mb-4">
+								<div class="msg_cotainer_send">
+								<%= simple_format(h message.content) %>
+									<span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
+								</div>
+								<div class="img_cont_msg">
+							<img  class="rounded-circle user_img_msg">
+								</div>
+							</div>
+            <% end %>
+            <%#// スタイリストのメッセージ %>
+          <% end %>
+          <%# スタイリスト側ビュー %>
 </div>
+
