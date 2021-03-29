@@ -50,10 +50,8 @@ ActiveRecord::Schema.define(version: 2021_03_25_022815) do
     t.integer "style_id", null: false
     t.text "remarks"
     t.bigint "user_id"
-    t.bigint "stylist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["stylist_id"], name: "index_rooms_on_stylist_id"
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
@@ -98,6 +96,5 @@ ActiveRecord::Schema.define(version: 2021_03_25_022815) do
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "stylists"
   add_foreign_key "messages", "users"
-  add_foreign_key "rooms", "stylists"
   add_foreign_key "rooms", "users"
 end

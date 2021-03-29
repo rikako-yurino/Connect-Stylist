@@ -5,7 +5,6 @@ class CreateRooms < ActiveRecord::Migration[6.0]
       t.integer       :style_id,       null: false
       t.text          :remarks
       t.references    :user,           foreign_key: true
-      t.references    :stylist,        foreign_key: true
       t.timestamps
     end
   end

@@ -4,16 +4,6 @@
    <%= render 'shared/error_messages', model: f.object%>
 
     <div class='chat-room-form__field'>
-      <p class="form-text">スタイリスト</p>
-    </div>
-    <select name= "room[stylist_id]", class="select-box">
-      <option value="">---</option>
-        <% Stylist.all.each do |stylist| %>
-      <option value=<%= stylist.id %>><%= stylist.last_name %><%= stylist.first_name %></option>
-      <% end %>
-    </select>
-
-    <div class='chat-room-form__field'>
       <p class="form-text">お探しのスタイリングの用途</p>
     </div>
       <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class:"select-box", id:"purpose"}) %>

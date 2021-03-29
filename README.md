@@ -31,7 +31,6 @@
 | style_id            | integer       | null: false                    |
 | remarks             | text          |                                |
 | user                | references    | null: false, foreign_key: true |
-| stylist             | references    | null: false, foreign_key: true |
 
 ### Association
 
