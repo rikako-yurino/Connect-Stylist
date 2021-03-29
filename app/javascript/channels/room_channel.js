@@ -22,6 +22,7 @@ document.addEventListener('turbolinks:load', () => {
             // サーバー側から受け取ったHTMLを一番最後に加える
             messageContainer.insertAdjacentHTML('beforeend', data['message'])
         }
+        
     })
 
     const documentElement = document.documentElement
@@ -31,7 +32,7 @@ document.addEventListener('turbolinks:load', () => {
     window.scrollToBottom = () => {
         window.scroll(0, documentElement.scrollHeight)
     }
-
+    scrollToBottom()
 
 
     const messageButton = document.getElementById('message-button')
@@ -101,7 +102,6 @@ document.addEventListener('turbolinks:load', () => {
     let oldestMessageId
     // メッセージの追加読み込みの可否を決定する変数
     window.showAdditionally = true
-
     window.addEventListener('scroll', () => {
         if (documentElement.scrollTop === 0 && showAdditionally) {
             showAdditionally = false
@@ -122,6 +122,9 @@ document.addEventListener('turbolinks:load', () => {
         $('#action_menu_btn').click(function(){
             $('.action_menu').toggle();
         });
-            });
+    });
+
     
+
+
 })
