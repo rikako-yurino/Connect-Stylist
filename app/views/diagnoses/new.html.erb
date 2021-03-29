@@ -1,76 +1,153 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
- 
-<div class="choose_box">
-   
-<div id="q_01" class="fit">
- <p>質問1</p>
-<ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_02">選択肢1</a></li>
-<li class="odd"><a class="btn" href="#q_03">選択肢2</a></li>
-<li class="odd"><a class="btn" href="#q_04">選択肢3</a></li>
-<li class="odd"><a class="btn" href="#q_05">選択肢4</a></li>
-</ul>
- </div>
- <!-- 最初の選択肢 -->
-   
-<div id="q_02" style="display: none;">
-<p>質問2</p>
-<ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_06">選択肢1-1</a></li>
-<li class="odd"><a class="btn" href="#q_07">選択肢1-2</a></li>
-</ul>
-</div>
-<!-- 次の選択肢 -->
-  
-<div id="q_03" style="display: none;">
-<p>質問2</p>
-<ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_06">選択肢2-1</a></li>
-<li class="odd"><a class="btn" href="#q_07">選択肢2-2</a></li>
-</ul>
-</div>
-<!-- 次の選択肢 -->
-   
-<div id="q_04" style="display: none;">
-<p>質問2</p>
-<ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_06">選択肢3-1</a></li>
-<li class="odd"><a class="btn" href="#q_07">選択肢3-2</a></li>
-</ul>
-</div>
-<!-- 次の選択肢 -->
-   
- <div id="q_05" style="display: none;">
-<p>質問2</p>
-<ul class="flexbox fw">
-<li class="even"><a class="btn" href="#q_06">選択肢4-1</a></li>
-<li class="odd"><a class="btn" href="#q_07">選択肢4-2</a></li>
-</ul>
-</div>
-<!-- 次の選択肢 -->
-   
-   
- <div id="q_06" style="display: none;">
-        <p>あなた診断結果は…</p>
+
+<div class="choose_boxes">
+  <div class="choose_box">
+    <div id="q_00" class="fit">
+        <div class="frame-img btn" href="#q_01">
+          <%= image_tag "frame_opning.png", class:"frame-type" %>
+        </div>  
+    </div>
+    <!-- オープニング -->
+
+    <div id="q_01" style="display: none;">
+      <p>質問1:手足の大きさは？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn" href="#q_02" data-value="a">身長の割に小さく厚みがある</a></li>
+        <li><a class="btn" href="#q_02" data-value="b">身長とバランスが取れている大きさだが厚みがない</a></li>
+        <li><a class="btn" href="#q_02" data-value="c">身長の割に大きく厚みもある</a></li>
+      </ul>
+    </div>
+    <!-- 最初の選択肢 -->
+      
+    <div id="q_02" style="display: none;">
+      <p>質問2:手の特徴は？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn" href="#q_03" data-value="a">手の平は厚く指の太さは均一的 </a></li>
+        <li><a class="btn" href="#q_03" data-value="b">手の平は薄く指先に向かって徐々に細くなる </a></li>
+        <li><a class="btn" href="#q_03" data-value="c">手の甲がゴツゴツと感じる。指は細いが関節が大きく指輪が回転する</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+    <div id="q_03" style="display: none;">
+      <p>質問3:鎖骨の特徴は？</p>
+        <ul class="flexbox fw">
+        <li><a class="btn" href="#q_04" data-value="a">さほど目立たない </a></li>
+        <li><a class="btn" href="#q_04" data-value="b">うっすらと出ている</a></li>
+        <li><a class="btn" href="#q_04" data-value="c">はっきりと出ていて、かなり目立つ</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+    <div id="q_04" style="display: none;">
+      <p>質問4:腰幅と肩幅の差は？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn" href="#q_05" data-value="a">特に変わらない</a></li>
+        <li><a class="btn" href="#q_05" data-value="b">腰幅の方が広い</a></li>
+        <li><a class="btn" href="#q_05" data-value="c">肩幅の方が広い</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+    <div id="q_05" style="display: none;">
+      <p>質問5:太もも、ひざ下の特徴は？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn" href="#q_06" data-value="a">太ももは太く、ひざ下は細い</a></li>
+        <li><a class="btn" href="#q_06" data-value="b">太ももより、ひざ下の太さが気になる。O脚気味</a></li>
+        <li><a class="btn" href="#q_06" data-value="c">太ももは肉感的ではなく、すねの骨が目立つ</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+    <div id="q_06" style="display: none;">
+      <p>質問6:筋肉のつき方は？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn" href="#q_07" data-value="a">筋肉がつきやすく、二の腕や太ももの前が張りやすい</a></li>
+        <li><a class="btn" href="#q_07" data-value="b">筋肉がつきにくく、足が痩せずらい</a></li>
+        <li><a class="btn" href="#q_07" data-value="c">筋肉はあまり感じなく、骨太なイメージ</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+    <div id="q_07" style="display: none;">
+      <p>質問7:足の特徴は？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn" href="#q_08" data-value="a">身長の割に小さい。厚みがあり、幅は狭め</a></li>
+        <li><a class="btn" href="#q_08" data-value="b">身長に対し相応。厚みがなく、幅は標準的</a></li>
+        <li><a class="btn" href="#q_08" data-value="c">身長の割に大きい。厚みもあり、幅は広め</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+    <div id="q_08" style="display: none;">
+      <p>質問8:シンプルなハイネックニットを着ると？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn" href="#q_09" data-value="a">首回りがすっきりして、痩せて見える</a></li>
+        <li><a class="btn" href="#q_09" data-value="b">間延びしてしまい、物足りなさを感じる</a></li>
+        <li><a class="btn" href="#q_09" data-value="c">スリムでシンプルなものだと肩幅が強調される</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+    <div id="q_09" style="display: none;">
+      <p>質問9:パフスリーブのトップスを着ると？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn" href="#q_10" data-value="a">太って見える・老けて見える</a></li>
+        <li><a class="btn" href="#q_10" data-value="b">女性らしいボリュームが出る・バランスが取れる</a></li>
+        <li><a class="btn" href="#q_10" data-value="c">肩幅が目立つ・ガタイがよく見える</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+    <div id="q_10" style="display: none;">
+      <p>質問10:ハイウエストのボトムを着ると？</p>
+      <ul class="flexbox fw">
+        <li><a class="btn end" data-value="a">上半身が詰まって見える・太って見える</a></li>
+        <li><a class="btn end" data-value="b">バランスが良くなる・スタイルが良く見える</a></li>
+        <li><a class="btn end" data-value="c">スリムでシンプルなものだと物足りなさを感じる</a></li>
+      </ul>
+    </div>
+    <!-- 次の選択肢 -->
+      
+
+
+    <!-- 選択肢の答え① -->
+    <div class="result-diagnoses">
+      <div id="answer_01" style="display: none;">
+        <p>あなた診断結果は</p>
         <h4>『ストレート』タイプです</h4>
-   <span><%= link_to 'TOPページに戻る', root_path, class: "btn" %></span>
-</div>
-  
-<!-- 選択肢の答え① -->
-   
-  <div id="q_07" style="display: none;">
-        <p>あなた診断結果は…</p>
+        <div class="frame-img">
+          <%= image_tag "frame_straight.png", class:"frame-type" %>
+        </div>
+        <div class="frame-btns">
+          <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+        </div>
+      </div>
+        
+      <!-- 選択肢の答え② -->
+        
+      <div id="answer_02" style="display: none;">
+        <p>あなた診断結果は</p>
         <h4>『ウェーブ』タイプです</h4>
-     <span><%= link_to 'TOPページに戻る', root_path, class: "btn" %></span>
-</div>
-  
-<!-- 選択肢の答え③ -->
-  <div id="q_08" style="display: none;">
-        <p>あなた診断結果は…</p>
+        <div class="frame-img">
+          <%= image_tag "frame_wave.png", class:"frame-type" %>
+        </div>
+        <div class="frame-btns">
+          <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+        </div>
+      </div>
+        
+      <!-- 選択肢の答え③ -->
+      <div id="answer_03" style="display: none;">
+        <p>あなた診断結果は</p>
         <h4>『ナチュラル』タイプです</h4>
-     <span><%= link_to 'TOPページに戻る', root_path, class: "btn" %></span>
-     
-</div>
-  
-<!-- 選択肢の答え② -->
+        <div class="frame-img">
+          <%= image_tag "frame_natural.png", class:"frame-type" %>
+        </div>     
+        <div class="frame-btns">
+          <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
