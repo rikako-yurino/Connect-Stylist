@@ -9,7 +9,8 @@
             <%= image_tag message.stylist.stylist_photo, class:"rounded-circle user_img_msg" %>
           </div>
           <div class="msg_cotainer">
-          <%= simple_format(h message.content) %>
+            <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
+            <%= simple_format(h message.content) %>
             <span class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
           </div>
         </div>
@@ -20,11 +21,12 @@
       <% if message.user_id.present?%>
       <div class="d-flex justify-content-end mb-4">
         <div class="msg_cotainer_send">
-        <%= simple_format(h message.content) %>
+          <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
+          <%= simple_format(h message.content) %>
           <span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
         </div>
         <div class="img_cont_msg">
-            <%= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
+          <%= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
         </div>
       </div>
       <% end %>
@@ -42,10 +44,10 @@
           <%= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
         </div>
         <div class="msg_cotainer">
-        <%= simple_format(h message.content) %>
+          <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
+          <%= simple_format(h message.content) %>
           <span class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
         </div>
-
       </div>
     <% end %>
     <%#// ユーザーのメッセージ %>
@@ -53,7 +55,8 @@
     <% if message.stylist_id.present?%>
       <div class="d-flex justify-content-end mb-4">
         <div class="msg_cotainer_send">
-        <%= simple_format(h message.content) %>
+          <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
+          <%= simple_format(h message.content) %>
           <span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
         </div>
         <div class="img_cont_msg">
