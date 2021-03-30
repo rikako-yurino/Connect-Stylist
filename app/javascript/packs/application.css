@@ -304,6 +304,7 @@ li {
   width: 100%;
   line-height: 30px;
   padding: 10px 15px;
+  border: 1px solid #ccc;
   box-sizing: border-box;
   margin: 2vh 0;
 }

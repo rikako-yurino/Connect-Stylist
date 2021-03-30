@@ -228,3 +228,18 @@ a {
   text-decoration: none;
 }
 
+.room-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+.talk-rooms {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  padding-left: 50px
+}

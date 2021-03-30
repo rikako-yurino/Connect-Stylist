@@ -1,18 +1,20 @@
 <%= render "shared/header_stylist" %>
 <div class='main'>
   <div class='title-contents'>
-  
-  </div>
-    <h2 class='title'>
-      トークルーム一覧
-    </h2>
+</div>
+<div class="room-wrapper">
   <%# トークルーム一覧 %>
-  <div class='room-contents'>
-  <div class="rooms">
-    <%= render partial: 'rooms/room', collection: @rooms %>
-  </div>
-  </div>
-  <%# /トークルーム一覧  %>
-
- 
-<%= render "shared/second-footer" %>
+  <% if stylist_signed_in? %>
+    <div class="talk-rooms">
+      <h2 class='title'>
+        トークルーム一覧
+      </h2>
+        <div class='room-contents'>
+          <div class="rooms">
+            <%= render partial: 'rooms/room', collection: @rooms %>
+          </div>
+        </div>
+    </div>
+  <% end %>
+</div>
+<%# /トークルーム一覧  %>
