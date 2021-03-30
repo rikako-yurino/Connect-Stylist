@@ -6,7 +6,7 @@
       <% if message.stylist_id.present?%>
         <div class="d-flex justify-content-start mb-4">
           <div class="img_cont_msg">
-            <img class="rounded-circle user_img_msg">
+            <%= image_tag message.stylist.stylist_photo, class:"rounded-circle user_img_msg" %>
           </div>
           <div class="msg_cotainer">
           <%= simple_format(h message.content) %>
@@ -24,7 +24,7 @@
           <span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
         </div>
         <div class="img_cont_msg">
-          <img class="rounded-circle user_img_msg">
+            <%= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
         </div>
       </div>
       <% end %>
@@ -39,12 +39,13 @@
     <% if message.user_id.present?%>
       <div class="d-flex justify-content-start mb-4">
         <div class="img_cont_msg">
-          <img  class="rounded-circle user_img_msg">
+          <%= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
         </div>
         <div class="msg_cotainer">
         <%= simple_format(h message.content) %>
           <span class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
         </div>
+
       </div>
     <% end %>
     <%#// ユーザーのメッセージ %>
@@ -56,7 +57,7 @@
           <span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
         </div>
         <div class="img_cont_msg">
-          <img  class="rounded-circle user_img_msg">
+           <%= image_tag message.stylist.stylist_photo, class:"rounded-circle user_img_msg" %>
         </div>
       </div>
     <% end %>

@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
   end
   
-  resources :stylists, only: [:index, :destroy] 
+  resources :stylists, only: [:index, :destroy, :edit] 
   resources :diagnoses, only: [:index, :new, :show] 
   root to: 'diagnoses#index'
 end

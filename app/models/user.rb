@@ -7,6 +7,7 @@ class User < ApplicationRecord
   belongs_to :frame_type
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_one_attached :user_photo
        
   with_options presence: true do  
     validates :email
