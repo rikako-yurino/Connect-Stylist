@@ -9,6 +9,19 @@
   <%= render 'shared/error_messages', model: f.object%>
 
   <div class="form-group">
+    <div class="form-text-wrap">
+     <label class="form-text">プロフィール画像</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class="click-upload">
+      <p>
+        クリックしてファイルをアップロード
+      </p>
+      <%= f.file_field :user_photo, id:"item-image" %>
+    </div>
+  </div>
+
+  <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>
       <span class="indispensable">必須</span>
@@ -37,11 +50,7 @@
     </div>
     <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
   </div>
-  <div class="form-group">
-    <p class='form-info-text'>
-      お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
-    </p>
-  </div>
+
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">お名前(全角)</label>
@@ -94,23 +103,20 @@
     <div class='form-text-wrap'>
       <label class="form-text">あなたの骨格タイプ</label>
       <span class="indispensable">必須</span>
-      <span class="form-text">診断がまだお済みでない方はこちら</span>
     </div>
     <%= f.collection_select(:frame_type_id, FrameType.all, :id, :name, {}, {class:"select-box", id:"frame-type"}) %>
+        <div class="form-group">
+          <h2 class='form-bottom-text'>
+            診断がまだお済みでない方はこちらから
+            
+            <span><%= link_to '診断', new_diagnosis_path %></span>
+          </h2>
+        </div>
 
-  </div>
-  <div class="form-group">
-    <h2 class='form-bottom-text'>
-      「会員登録」のボタンを押すことにより、
-      <span>利用規約</span>
-      <br>に同意したものとみなします
-    </h2>
   </div>
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
   </div>
-  <p class='register-info'>本人情報の登録について</p>
 </div>
 <% end %>
 
-<%#= render "shared/second-footer"%>

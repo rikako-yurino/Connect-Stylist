@@ -3,6 +3,7 @@ class Stylist < ApplicationRecord
   has_many :messages, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_one_attached :stylist_photo
   with_options presence: true do  
   validates :email
   validates :license

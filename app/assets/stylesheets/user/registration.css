@@ -1,15 +1,16 @@
 .registration-main {
   width: 100%;
   min-width: 800px;
-  height: 100%;
-  background-color: #f5f5f5;
+  height: 230vh;
+  /* background-color: #f5f5f5; */
   display: flex;
   justify-content: center;
 }
 
-/* form-wrapは商品購入画面でも使用しています */
+
 .form-wrap {
   width: 50%;
+  height: 200vh;
   background-color: white;
   padding-bottom: 70px;
 }
@@ -24,11 +25,13 @@
 .form-header-text {
   line-height: 100px;
   border-bottom: 1px solid #f5f5f5;
+  color: #83D6FF;
   font-weight: bold;
+  font-size: 25px;
 }
 
 .form-group {
-  width: 50%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -81,7 +84,7 @@
   flex-wrap: wrap;
 }
 
-.input-name {
+.input-name, .select-box{
   width: 130px;
   margin: 5px 20px 0 20px;
   height: 48px;
@@ -116,6 +119,8 @@
   padding: 0 5px;
 }
 
+
+
 .field_with_errors {
   display: contents;
 }
@@ -129,7 +134,6 @@
 
 .form-bottom-text:last-child {
   margin: 0;
-  padding-bottom: 50px;
 }
 
 .form-bottom-text>span {
@@ -157,4 +161,36 @@
   color: #7ae7c2;
   text-align: right;
   cursor: pointer;
+}
+
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.indispensable {
+  background: #FF7885;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
 }
