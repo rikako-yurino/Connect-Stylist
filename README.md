@@ -45,6 +45,7 @@
 | style_id            | integer       | null: false                    |
 | remarks             | text          |                                |
 | user                | references    | null: false, foreign_key: true |
+| reservation_id      | references    | null: false, foreign_key: true |
 
 ### Association
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_25_022815) do
+ActiveRecord::Schema.define(version: 2021_03_30_234750) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -45,6 +45,15 @@ ActiveRecord::Schema.define(version: 2021_03_25_022815) do
     t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
+  create_table "reservations", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "date", null: false
+    t.integer "time_id", null: false
+    t.bigint "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
   create_table "rooms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "purpose_id", null: false
     t.integer "style_id", null: false
@@ -52,6 +61,8 @@ ActiveRecord::Schema.define(version: 2021_03_25_022815) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "reservation_id", null: false
+    t.index ["reservation_id"], name: "index_rooms_on_reservation_id"
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
@@ -96,5 +107,7 @@ ActiveRecord::Schema.define(version: 2021_03_25_022815) do
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "stylists"
   add_foreign_key "messages", "users"
+  add_foreign_key "reservations", "users"
+  add_foreign_key "rooms", "reservations"
   add_foreign_key "rooms", "users"
 end

@@ -7,9 +7,9 @@ Rails.application.routes.draw do
     passwords: 'stylists/passwords',
     registrations: 'stylists/registrations'
   }
-
-  resources :rooms, only: [:new, :create, :show, :destroy, :list_stylist, :change] do
-    resources :messages, only: [:create]
+  resources :reservations, only: [:new, :create, :show] do
+    resources :rooms, only: [:new, :create, :show, :destroy, :show_additionally] 
+      resources :messages, only: [:create]
   end
   
   resources :stylists, only: [:index, :destroy, :edit] 
