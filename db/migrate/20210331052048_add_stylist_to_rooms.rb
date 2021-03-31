@@ -1,5 +1,5 @@
 class AddStylistToRooms < ActiveRecord::Migration[6.0]
   def change
-    add_reference :rooms, :stylist, null: false, foreign_key: true
+    add_reference :rooms, :stylist, foreign_key: true
   end
 end

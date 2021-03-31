@@ -1,7 +1,17 @@
 <div class='chat-room-form'>
-  <h1>スタイリストとチャット</h1>
+  <h1>スタイリスト予約</h1>
   <%=form_with model: @reservation_room, url: reservations_path, local: true do |f|%>
    <%= render 'shared/error_messages', model: f.object%>
+
+    <div class='chat-room-form__field'>
+      <p class="form-text">日付</p>
+    </div>
+    <%= f.date_field :date, class: 'select-box'%>
+
+    <div class='chat-room-form__field'>
+      <p class="form-text">時間</p>
+    </div>
+      <%= f.collection_select(:time_id, TimeId.all, :id, :name, {}, {class:"select-box", id:"time"}) %>
 
     <div class='chat-room-form__field'>
       <p class="form-text">お探しのスタイリングの用途</p>

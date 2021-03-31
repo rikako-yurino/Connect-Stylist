@@ -18,6 +18,6 @@ class ReservationsController < ApplicationController
 
   private
   def resevation_params
-    params.require(:resevation_room).permit(:date, :time_id, :purpose_id, :style_id, :remarks, :stylist).merge(user_id: current_user.id)
+    params.require(:reservation_room).permit(:date, :time_id, :purpose_id, :style_id, :remarks, :stylist).merge(user_id: current_user.id)
   end
 end
