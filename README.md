@@ -19,23 +19,39 @@
 
 ### Association
 
+- has_one :reservation
 - has_one :room
 - has_many :messages
 
+
+## reservations テーブル
+
+| Column              | Type          | Options                        |
+| ------------------- |  ------------ | ------------------------------ |
+| date                | date          | null: false                    |
+| time_id             | integer       | null: false                    |
+| user                | references    | null: false, foreign_key: true |
+| purpose_id          | integer       | null: false                    |
+| style_id            | integer       | null: false                    |
+| remarks             | text          |                                |
+
+### Association
+
+- belongs_to :user
+- has_one    :room
 
 ## rooms テーブル
 
 | Column              | Type          | Options                        |
 | ------------------- |  ------------ | ------------------------------ |
-| purpose_id          | integer       | null: false                    |
-| style_id            | integer       | null: false                    |
-| remarks             | text          |                                |
 | user                | references    | null: false, foreign_key: true |
+| stylist             | references    | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :stylist
+- belongs_to :reservation
 - has_many :messages
 
 ## stylist テーブル
