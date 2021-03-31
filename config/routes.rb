@@ -8,11 +8,12 @@ Rails.application.routes.draw do
     registrations: 'stylists/registrations'
   }
 
-  resources :rooms, only: [:new, :create, :show, :destroy, :list_stylist, :change] do
-    resources :messages, only: [:create]
+  resources :reservations, only: [:new, :create, :show] do
+    resources :rooms, only: [:new, :create, :show, :destroy, :list_stylist, :change] 
+      resources :messages, only: [:create]
   end
-  
   resources :stylists, only: [:index, :destroy, :edit] 
   resources :diagnoses, only: [:index, :new, :show] 
+  
   root to: 'diagnoses#index'
 end
