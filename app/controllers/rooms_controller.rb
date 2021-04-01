@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  before_action :authenticate_user!
+
   def show
     @message = Message.new
     @room = Room.find(params[:id])
@@ -15,4 +17,5 @@ class RoomsController < ApplicationController
     room.destroy
     redirect_to root_path
   end
+
 end

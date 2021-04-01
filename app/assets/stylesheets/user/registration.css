@@ -47,6 +47,18 @@
   height: 20%;
 }
 
+.reservation_done_wrap {
+  width: 90%;
+  height: 290px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.reservation_done_text {
+  font-size: 18px;
+  margin: 30px 30px 50px 30px;
+}
+
 .form-text {
   font-size: 14px;
   font-weight: bold;

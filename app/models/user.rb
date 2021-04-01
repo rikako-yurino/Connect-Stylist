@@ -1,13 +1,14 @@
 class User < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_one :room
+  has_many :reservations
   has_many :messages, dependent: :destroy
   belongs_to :prefecture
   belongs_to :work
   belongs_to :frame_type
+  has_one_attached :user_photo
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_one_attached :user_photo
        
   with_options presence: true do  
     validates :email

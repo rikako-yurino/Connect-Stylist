@@ -1,4 +1,4 @@
-class TimeId < ActiveHash::Base
+class TimeZone < ActiveHash::Base
   self.data = [
     { id: 1, name: '---'},
     { id: 2, name: '10:00-11:00'},
@@ -16,4 +16,5 @@ class TimeId < ActiveHash::Base
   ]
   include ActiveHash::Associations
   has_many :reservations
+  has_many :rooms
 end

@@ -1,23 +1,30 @@
 class ReservationsController < ApplicationController
+  before_action :authenticate_user!
+
   def new
     @reservation_room = ReservationRoom.new
   end
 
+  def confirm
+    @reservation_room = ReservationRoom.new(reservation_params)
+  end
+
   def create
-    @reservation_room = ReservationRoom.new(resevation_params)
+    @reservation_room = ReservationRoom.new(reservation_params)
     if @reservation_room.valid?
       @reservation_room.save
-      redirect_to 
+      render :show 
     else
       render :new
     end
   end
 
   def show
+    
   end
 
   private
-  def resevation_params
-    params.require(:reservation_room).permit(:date, :time_id, :purpose_id, :style_id, :remarks, :stylist).merge(user_id: current_user.id)
+  def reservation_params
+    params.require(:reservation_room).permit(:date, :time_zone_id, :purpose_id, :style_id, :remarks).merge(user_id: current_user.id)
   end
 end
