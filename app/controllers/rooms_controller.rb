@@ -1,21 +1,9 @@
 class RoomsController < ApplicationController
-  def new
-    @room = Room.new
-  end
-
-  def create
-    @room = Room.new(room_params)
-    
-    if @room.save
-      redirect_to room_path(@room)
-    else
-      render :new
-    end
-  end
 
   def show
     @message = Message.new
-    @room = Room.find(params[:id])
+    @room = Room.find_by(params[:id])
+    @reservation = Reservation.find(@room.reservation_id)
     @messages = @room.messages.includes(:user)
   end
 
@@ -30,8 +18,4 @@ class RoomsController < ApplicationController
     redirect_to root_path
   end
 
-  private
-  def room_params
-    params.require(:room).permit(:stylist_id, :purpose_id, :style_id, :remark).merge(user_id: current_user.id)
-  end
 end

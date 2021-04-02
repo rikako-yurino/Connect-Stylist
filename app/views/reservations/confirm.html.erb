@@ -1,0 +1,41 @@
+<div class='chat-room-form'>
+  <h1>予約確認</h1>
+
+<div class="confirm-wrap">
+  <table>
+  <tr>
+    <th>日付</th>
+    <td class="confirm-text"><%= @reservation_room.reservation_date %></td>
+  </tr>
+  <tr>
+    <th>時間</th>
+    <td class="confirm-text"><%= @reservation_room.time_zone_id %></td>
+  </tr>
+  <tr>
+    <th>お探しのスタイリングの用途</th>
+    <td class="confirm-text"><%= @reservation_room.purpose_id %></td>
+  </tr>
+  <tr>
+    <th>好きなファッションのスタイル</th>
+    <td class="confirm-text"><%= @reservation_room.style_id %>
+  </tr>
+  <tr>
+    <th>その他をお選びの方ご要望がある方は<br>ご記入ください</th>
+    <td class="confirm-text"><%= @reservation_room.remarks %></td>
+  </tr>
+  </table>
+
+
+  <%= form_with model: @reservation_room, url: reservations_path, local: true do |f|%>
+  <div class='chat-room-form__field'>
+    <div class='chat-room-form__field--left'></div>
+      <%= f.hidden_field :reservation_date %>
+      <%= f.hidden_field :time_zone_id %>
+      <%= f.hidden_field :purpose_id %>
+      <%= f.hidden_field :style_id %>
+      <%= f.hidden_field :remarks %>
+      <%= f.submit class: 'chat-room-form__action-btn'%>
+  </div>
+  <% end %>
+</div>
+</div>

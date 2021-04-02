@@ -3,18 +3,28 @@
   <div class='title-contents'>
 </div>
 <div class="room-wrapper">
-  <%# トークルーム一覧 %>
-  <% if stylist_signed_in? %>
-    <div class="talk-rooms">
-      <h2 class='title'>
-        トークルーム一覧
+  <div class="room-contents">
+    <%# トークルーム一覧 %>
+    <% if stylist_signed_in? %>
+      <h2 class='rooms-title'>
+        予約一覧
       </h2>
-        <div class='room-contents'>
-          <div class="rooms">
-            <%= render partial: 'rooms/room', collection: @rooms %>
+      <p>※時間になりましたら入室してください<br><br>
+      ※チャット終了後はトークルームの<br>
+      <span>チャットを終了する(スタイリスト)</span>を押して<br>
+      チャットを終了してください。</p>
+      <div class="talk-rooms">
+          <div class='room-contents'>
+          <%# if @reservations.room.stylist_id.blank? %>
+              <% @reservations.each do |reservation| %>
+              <ul>
+                <li><%= link_to "#{reservation.user.nickname}様 予約日時：#{reservation.reservation_date}  #{reservation.time_zone.name}",stylist_path(reservation), {class: "text-decoration-none"} %></li> 
+              </ul>
+              <% end %>
+            <%# end %>
           </div>
-        </div>
-    </div>
-  <% end %>
+      </div>
+    <% end %>
+    <%# /トークルーム一覧  %>
+  </div>
 </div>
-<%# /トークルーム一覧  %>

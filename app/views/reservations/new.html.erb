@@ -1,7 +1,16 @@
 <div class='chat-room-form'>
-  <h1>スタイリストとチャット</h1>
-  <%=form_with model: @room, local: true do |f|%>
-   <%= render 'shared/error_messages', model: f.object%>
+  <h1>スタイリスト予約</h1>
+  <%=form_with model: @reservation_room, url: reservations_confirm_path, local: true do |f|%>
+
+    <div class='chat-room-form__field'>
+      <p class="form-text">日付</p>
+    </div>
+    <%= f.date_field :reservation_date, class: 'select-box'%>
+
+    <div class='chat-room-form__field'>
+      <p class="form-text">時間</p>
+    </div>
+      <%= f.collection_select(:time_zone_id, TimeZone.all, :id, :name, {}, {class:"select-box", id:"time"}) %>
 
     <div class='chat-room-form__field'>
       <p class="form-text">お探しのスタイリングの用途</p>
@@ -17,7 +26,8 @@
       <label class="form-text">その他をお選びの方ご要望がある方はご記入ください</label>
     </div>
       <%= f.text_field :remarks, class: 'chat-room-form__input', placeholder: '備考欄'%>
-    <input name="room[user_id]" type="hidden" value=<%= current_user.id %>>
+    <input name="room[user_id]" type="hidden" value=<%= current_user.id%>>
+    <input name="reservation[user_id]" type="hidden" value=<%= current_user.id %>>
 
 
     <div class='chat-room-form__field'>

@@ -19,8 +19,8 @@
 
 ### Association
 
-- has_one :reservation
-- has_one :room
+- has_many :reservations
+- has_one  :room
 - has_many :messages
 
 
@@ -29,11 +29,12 @@
 | Column              | Type          | Options                        |
 | ------------------- |  ------------ | ------------------------------ |
 | date                | date          | null: false                    |
-| time_id             | integer       | null: false                    |
-| user                | references    | null: false, foreign_key: true |
+| time_zone_id        | integer       | null: false                    |
 | purpose_id          | integer       | null: false                    |
 | style_id            | integer       | null: false                    |
 | remarks             | text          |                                |
+| user                | references    | null: false, foreign_key: true |
+| room                | references    | null: false, foreign_key: true |
 
 ### Association
 
@@ -45,7 +46,8 @@
 | Column              | Type          | Options                        |
 | ------------------- |  ------------ | ------------------------------ |
 | user                | references    | null: false, foreign_key: true |
-| stylist             | references    | null: false, foreign_key: true |
+| stylist             | references    | foreign_key: true              |
+| reservation         | references    | null: false, foreign_key: true |
 
 ### Association
 

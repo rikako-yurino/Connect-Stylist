@@ -1,8 +1,8 @@
 class Message < ApplicationRecord
+  belongs_to :room
   belongs_to :user, optional: true
   belongs_to :stylist, optional: true
   has_one_attached :image
-  belongs_to :room
 
   validates :content, presence: true, length: { maximum: 500 }, unless: :was_attached?
 
