@@ -1,9 +1,9 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!
 
   def show
     @message = Message.new
-    @room = Room.find(params[:id])
+    @room = Room.find_by(params[:id])
+    @reservation = Reservation.find(@room.reservation_id)
     @messages = @room.messages.includes(:user)
   end
 

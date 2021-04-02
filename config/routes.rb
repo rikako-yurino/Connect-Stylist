@@ -10,10 +10,11 @@ Rails.application.routes.draw do
 
   post 'reservations/confirm' => 'reservations#confirm'
   resources :reservations, only: [:new, :create, :show] do
-    resources :rooms, only: [:new, :create, :show, :destroy, :list_stylist, :change] 
+    resources :rooms, only: [:new, :create, :show, :destroy, :list_stylist, :change] do
       resources :messages, only: [:create]
+    end
   end
-  resources :stylists, only: [:index, :destroy, :edit] 
+  resources :stylists, only: [:index, :show] 
   resources :diagnoses, only: [:index, :new, :show] 
 
   root to: 'diagnoses#index'

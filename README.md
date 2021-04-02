@@ -30,10 +30,11 @@
 | ------------------- |  ------------ | ------------------------------ |
 | date                | date          | null: false                    |
 | time_zone_id        | integer       | null: false                    |
-| user                | references    | null: false, foreign_key: true |
 | purpose_id          | integer       | null: false                    |
 | style_id            | integer       | null: false                    |
 | remarks             | text          |                                |
+| user                | references    | null: false, foreign_key: true |
+| room                | references    | null: false, foreign_key: true |
 
 ### Association
 

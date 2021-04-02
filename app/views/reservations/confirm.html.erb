@@ -5,7 +5,7 @@
   <table>
   <tr>
     <th>日付</th>
-    <td class="confirm-text"><%= @reservation_room.date %></td>
+    <td class="confirm-text"><%= @reservation_room.reservation_date %></td>
   </tr>
   <tr>
     <th>時間</th>
@@ -29,7 +29,7 @@
   <%= form_with model: @reservation_room, url: reservations_path, local: true do |f|%>
   <div class='chat-room-form__field'>
     <div class='chat-room-form__field--left'></div>
-      <%= f.hidden_field :date %>
+      <%= f.hidden_field :reservation_date %>
       <%= f.hidden_field :time_zone_id %>
       <%= f.hidden_field :purpose_id %>
       <%= f.hidden_field :style_id %>

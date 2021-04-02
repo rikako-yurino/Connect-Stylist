@@ -1,0 +1,42 @@
+<div class='chat-room-form'>
+  <h1>トークルームに参加しますか？</h1>
+
+<div class="confirm-wrap">
+  <table>
+  <tr>
+    <th>お名前</th>
+    <td class="confirm-text"><%= "#{@reservation.user.last_name}#{@reservation.user.first_name}様" %></td>
+  </tr>
+  <tr>
+    <th>日付</th>
+    <td class="confirm-text"><%= @reservation.reservation_date %></td>
+  </tr>
+  <tr>
+    <th>時間</th>
+    <td class="confirm-text"><%= @reservation.time_zone_id %></td>
+  </tr>
+  <tr>
+    <th>お探しのスタイリングの用途</th>
+    <td class="confirm-text"><%= @reservation.purpose_id %></td>
+  </tr>
+  <tr>
+    <th>好きなファッションのスタイル</th>
+    <td class="confirm-text"><%= @reservation.style_id %>
+  </tr>
+  <tr>
+    <th>その他をお選びの方ご要望がある方は<br>ご記入ください</th>
+    <td class="confirm-text"><%= @reservation.remarks %></td>
+  </tr>
+  </table>
+
+
+  <%= form_with model: @room, url: reservation_room_path(@room.id),method: :get, local: true do |f|%>
+  <div class='chat-room-form__field'>
+    <div class='chat-room-form__field--left'></div>
+    
+      <input name="room[stylist_id]" type="hidden" value=<%= current_stylist.id %>>
+      <%= f.submit '入室', class: 'chat-room-form__action-btn'%>
+  </div>
+  <% end %>
+</div>
+</div>
