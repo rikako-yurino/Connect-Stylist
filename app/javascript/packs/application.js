@@ -10,7 +10,7 @@ require("channels")
 require('jquery')
 require('../diagnoses')
 require("bootstrap/dist/js/bootstrap")
-// require("packs/application.css")
+
 
 
 

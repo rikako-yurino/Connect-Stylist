@@ -1,7 +1,7 @@
 <%= render "header_room" %>
 <div class='message-wrapper'>
-  <div id="message-container">
-    <%= render partial: 'message', collection: @messages %>
+  <div id='messages' data-room_id="<%= @room.id %>">
+    <%= render @messages %>
   </div>
   <%= render 'footer' %>
 </div>
