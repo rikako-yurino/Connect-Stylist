@@ -7,6 +7,8 @@ end
 
   private
   def render_message(message)
-    ApplicationController.renderer.render partial: 'messages/message', locals: { message: message }
+    ApplicationController.render_with_signed_in_user(user, 'messages/message', locals: { message: message })
+    ApplicationController.render_with_signed_in_user(stylist, 'messages/message', locals: { message: message })
+    # ApplicationController.renderer.render partial: 'messages/message', locals: { message: message }
   end
 end
