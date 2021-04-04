@@ -3,12 +3,14 @@ class MessageBroadcastJob < ApplicationJob
 
   def perform(message)
     ActionCable.server.broadcast "room_channel_#{message.room_id}", message: render_message(message)
-end
+  end
 
   private
   def render_message(message)
-    ApplicationController.render_with_signed_in_user(user, 'messages/message', locals: { message: message })
-    ApplicationController.render_with_signed_in_user(stylist, 'messages/message', locals: { message: message })
-    # ApplicationController.renderer.render partial: 'messages/message', locals: { message: message }
+    if message.user_id.present?
+      ApplicationController.render_with_signed_in_user(user, 'messages/message', locals: { message: message })
+    elsif message.stylist_id.present?
+      ApplicationController.render_with_signed_in_user(stylist, 'messages/message', locals: { message: message })
+    end
   end
 end

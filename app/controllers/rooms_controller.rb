@@ -1,6 +1,8 @@
 class RoomsController < ApplicationController
 
-  def show
+def show
+    cookies.signed['user_id'] = nil
+    cookies.signed['stylist_id'] = nil
     @message = Message.new
     @messages = Message.all
     @room = Room.find_by(params[:id])
