@@ -17,10 +17,10 @@ $(document).on('turbolinks:load', function() {
         // const messages = document.getElementById('messages');
         // messages.insertAdjacentHTML('beforeend', data['message']);
         },
-    
+
       speak: function(message) {
-        // return this.perform('speak', {message: message});
-        return $(this).perform('speak', {message: message});
+        return this.perform('speak', {message: message});
+        // return $(this).perform('speak', {message: message});
       }
     });
   window.document.onkeydown = function(e) {
