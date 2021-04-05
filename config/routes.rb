@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   }
 
   post 'reservations/confirm' => 'reservations#confirm'
-  resources :reservations, only: [:new, :create, :show] do
+  resources :reservations, only: [:new, :create, :show, :destroy] do
     resources :rooms, only: [:new, :create, :show, :destroy, :change] do
       resources :messages, only: [:create]
     end

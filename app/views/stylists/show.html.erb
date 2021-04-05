@@ -30,7 +30,7 @@
   </table>
 
 
-  <%= form_with model: @room, url: reservation_room_path(@room.id),method: :get, local: true do |f|%>
+  <%= form_with model:[@reservation, @room], url: reservation_room_path(@room.id),method: :get, local: true do |f|%>
   <div class='chat-room-form__field'>
     <div class='chat-room-form__field--left'></div>
     

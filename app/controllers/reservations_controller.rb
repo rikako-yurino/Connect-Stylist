@@ -20,7 +20,12 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    
+  end
+
+  def destroy
+    reservation = Reservation.find(params[:id])
+    reservation.destroy
+    redirect_to "/reservations/#{reservation.id}/rooms/#{room.id} "
   end
 
   private

@@ -14,15 +14,15 @@
       <span>チャットを終了する(スタイリスト)</span>を押して<br>
       チャットを終了してください。</p>
       <div class="talk-rooms">
-          <div class='room-contents'>
-          <%# if @reservations.room.stylist_id.blank? %>
-              <% @reservations.each do |reservation| %>
+        <div class='room-contents'>
+          <% @rooms.each do |room| %>
+            <% if room.stylist_id.blank? %>
               <ul>
-                <li><%= link_to "#{reservation.user.nickname}様 予約日時：#{reservation.reservation_date}  #{reservation.time_zone.name}",stylist_path(reservation), {class: "text-decoration-none"} %></li> 
+                <li><%= link_to "#{room.reservation.user.nickname}様 予約日時：#{room.reservation.reservation_date}  #{room.reservation.time_zone.name}",stylist_path(room.reservation), {class: "text-decoration-none"} %></li> 
               </ul>
-              <% end %>
-            <%# end %>
-          </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     <% end %>
     <%# /トークルーム一覧  %>
