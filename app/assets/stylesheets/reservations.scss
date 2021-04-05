@@ -1,3 +1,92 @@
-// Place all the styles related to the reservations controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*枠デザイン*/
+.profile-wrapper {
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.profile_box {
+  background-color: #FFF;
+  margin: 2em 0;
+  border-left: solid 2px #C2A6ED;
+  border-right: solid 2px #C2A6ED;
+  border-bottom: solid 10px #C2A6ED;
+  border-radius: 10px;
+  }
+  .profile_box .box-title {
+  font-size: 18px;
+  line-height:1.8;
+  background: #C2A6ED; /*タイトルの背景色*/
+  padding: 4px;
+  text-align: center;
+  color: #FFF; /*文字色*/
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  border-radius: 10px 10px 0 0;
+  }
+  /*内容*/
+  .profile_center{
+  text-align: center;
+  margin: 10px 15px 0 0;
+  }
+  /*プロフィール画像*/
+  .profile_figure {
+  width:150px;
+  height:150px;
+  border-radius: 50%; /*丸くする*/
+  border: solid 3px #75DBC7; /*枠線*/
+  }
+  /*名前*/
+  .profile_name {
+  padding: 15px 20px;
+  font-weight:bold;
+  font-size:16px;
+  }
+
+  .profile-details {
+    margin: 0 auto;
+  }
+
+  /*リスト*/
+  .profile_box ul {
+  margin: 0 auto;
+  text-align: right;
+  padding: 0.5em 1em 0.5em 2.3em;
+  position: relative;
+  }
+
+  .profile_box ul li {
+    margin: 0 auto;
+  line-height: 1.5;
+  padding: 20px 0;
+  list-style-type: none!important;
+  }
+
+  .profile_box li {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .profile_box ul li span{
+  margin: 0 auto;
+  padding-left: 20px;
+  font-size: 17px;
+  color: #64c5b2;
+  border-bottom: 1px solid black;
+  }
+
+
+  
+  .profile_box li:before {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Font Awesome 5 Free";
+  font-weight:900;
+  position: absolute;
+  margin:0 auto;/*左端からのアイコンまでの距離*/
+  color: #C2A6ED;/*アイコン色*/
+  }
+
+  .edit-submit {
+    text-align-last: center;
+    margin: 30px auto;
+  }

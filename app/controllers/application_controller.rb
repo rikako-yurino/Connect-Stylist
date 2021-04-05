@@ -24,7 +24,7 @@ class ApplicationController < ActionController::Base
     renderer = self.renderer.new('warden' => proxy)
     renderer.render(*args)
   end
-  
+
   def after_sign_in_path_for(resource)
     case resource
     when User
@@ -33,7 +33,6 @@ class ApplicationController < ActionController::Base
       stylists_path
     end
   end
-
 
   def after_sign_out_path_for(resource_or_scope)
     if resource_or_scope == :stylist

@@ -1,0 +1,20 @@
+<div class="profile-wrapper">
+  <div class="profile_box">
+    <div class="box-title">プロフィール</div>
+      <div class="profile_center">
+        <%= image_tag current_user.user_photo, class:"profile_figure" %>
+        <div class="profile_name"><%= current_user.nickname %></div>
+      </div>
+      <div class="profile-details">
+        <ul>
+          <li class=>お名前：<span><%= "#{current_user.last_name} #{current_user.first_name}"%><span></li>
+          <li>お住まいの地域:<span><%= "#{current_user.prefecture.name}"%><span></li>
+          <li>お仕事:<span><%= "#{current_user.work.name}"%><span></li>
+          <li>あなたの骨格タイプ:<span><%= "#{current_user.frame_type.name}"%><span></li>
+        </ul>
+      </div>
+      <div class="edit-submit">
+        <%= link_to 'アカウント情報を編集する', edit_user_registration_path, class: "dignosis" %>
+      </div>
+  </div>
+</div>

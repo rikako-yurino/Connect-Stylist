@@ -12,7 +12,12 @@ Rails.application.routes.draw do
     resources :rooms, only: [:new, :create, :show, :destroy, :change] do
       resources :messages, only: [:create]
     end
+    member do
+      get 'mypage'
+    end
   end
+
+
   resources :stylists, only: [:index, :show] 
   resources :diagnoses, only: [:index, :new, :show] 
 
