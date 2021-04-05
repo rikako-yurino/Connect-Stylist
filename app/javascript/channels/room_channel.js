@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function() {
       },
     
       received: function(data) {
-        // console.log(data);
+        console.log(data);
         return $('#messages').append(data['message']);
         // const messages = document.getElementById('messages');
         // messages.insertAdjacentHTML('beforeend', data['message']);
