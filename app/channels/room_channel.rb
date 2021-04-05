@@ -8,9 +8,10 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    if defined? current_user
+    # binding.pry
+    if  current_user.present?
       Message.create! content: data['message'], user_id: current_user.id, room_id: params['room']
-    elsif defined? current_stylist
+    elsif current_stylist.present?
       Message.create! content: data['message'], stylist_id: current_stylist.id, room_id: params['room']
     end
   end

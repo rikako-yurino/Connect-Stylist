@@ -8,9 +8,11 @@ class MessageBroadcastJob < ApplicationJob
   private
   def render_message(message)
     if message.user_id.present?
-      ApplicationController.render_with_signed_in_user(user, 'messages/message', locals: { message: message })
+      binding.pry
+      ApplicationController.render_with_signed_in_user(message.user, 'messages/message', locals: { message: message })
     elsif message.stylist_id.present?
-      ApplicationController.render_with_signed_in_user(stylist, 'messages/message', locals: { message: message })
+      binding.pry
+      ApplicationController.render_with_signed_in_stylist(message.stylist, 'messages/message', locals: { message: message })
     end
   end
 end

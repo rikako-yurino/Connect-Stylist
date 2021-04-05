@@ -16,5 +16,16 @@
       <div class="edit-submit">
         <%= link_to 'アカウント情報を編集する', edit_user_registration_path, class: "dignosis" %>
       </div>
+      <div class="user-reservations">
+        <div class='room-contents'>
+            <% @reservations.each do |reservation| %>
+              <% if room.stylist_id.blank? %>
+                <ul>
+                  <li><%= link_to "予約日時：#{reservation.reservation_date}  #{reservation.time_zone.name}",reservation_room_path(room), {class: "text-decoration-none"} %></li> 
+                </ul>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
   </div>
 </div>

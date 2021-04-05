@@ -1,7 +1,7 @@
 class StylistsController < ApplicationController
   def index
     @rooms = Room.all
-    @reservations = Reservation.all
+    @reservations = Reservation.order(reservation_date: :asc)
   end
 
   def show
