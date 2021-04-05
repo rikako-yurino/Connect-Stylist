@@ -30,7 +30,7 @@ class ReservationsController < ApplicationController
 
   def maypage
     @user = User.where(user_id: current_user.id)
-    @reservations = Reservation.includes(:user)
+    @rooms = Room.includes(:user)
   end
 
   private

@@ -1,7 +1,7 @@
 /*枠デザイン*/
 .profile-wrapper {
   width: 70%;
-  height: 100vh;
+  height: 300px;
   margin: 0 auto;
 }
 .profile_box {
@@ -27,6 +27,7 @@
   .profile_center{
   text-align: center;
   margin: 10px 15px 0 0;
+  padding-top: 30px;
   }
   /*プロフィール画像*/
   .profile_figure {
@@ -52,13 +53,14 @@
   text-align: right;
   padding: 0.5em 1em 0.5em 2.3em;
   position: relative;
+  
   }
 
   .profile_box ul li {
     margin: 0 auto;
-  line-height: 1.5;
-  padding: 20px 0;
-  list-style-type: none!important;
+    line-height: 1.5;
+    padding: 20px 0;
+    list-style-type: none!important;
   }
 
   .profile_box li {
@@ -86,7 +88,78 @@
   color: #C2A6ED;/*アイコン色*/
   }
 
+  .user-edit-btn {
+    display: inline-block;
+    padding: 0.4em 1.6em;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #75DBC7;
+    text-decoration: none !important;
+    user-select: none;
+    border: 1px #75DBC7 solid;
+    border-radius: 20px;
+    transition: 0.4s ease;
+  }
+
+  .user-edit-btn:hover {
+    color: #fff;
+    background: #75DBC7;
+  }
+
   .edit-submit {
     text-align-last: center;
     margin: 30px auto;
+  }
+
+  .user-reservations {
+    border-top: 1px solid  #C2A6ED;
+    margin: 30px auto;
+    width: 80%;
+  }
+
+  
+  .user-reservations p {
+    padding-top: 45px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #C2A6ED;
+  }
+
+  .excuse{
+    text-align-last: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(255, 112, 112);
+  }
+
+  .room-contents li {
+    text-align-last: center;
+    padding: 0.4em 1.6em;
+    font-size: 15px;
+    font-weight: bold;
+    color: #83D6FF;
+    text-decoration: none;
+    user-select: none;
+    background: #fff;
+    transition: 0.3s;
+    border-radius: 40px;
+  }
+
+  .room-contents li:hover {
+    color: #fff;
+    background: -webkit-linear-gradient(top left, #D9BFFF, #83D6FF);
+    border-radius: 40px;
+  }
+  
+  .room-contents li::before {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    content: "";
+    background: -webkit-linear-gradient(top left, #D9BFFF, #83D6FF);
+    border-radius: 40px;
   }
