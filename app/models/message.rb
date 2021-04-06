@@ -5,7 +5,7 @@ class Message < ApplicationRecord
   has_one_attached :image
   validates :content, presence: true, length: { maximum: 500 }, unless: :was_attached?
   
-  after_create_commit { MessageBroadcastJob.perform_later self }
+  # after_create_commit { MessageBroadcastJob.perform_later self }
   def template
     ApplicationController.renderer.render partial: 'messages/message', locals: { message: self }
   end

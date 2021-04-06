@@ -1,51 +1,59 @@
+
 /*
-  *= require bootstrap/dist/css/bootstrap.min.css
- *= require_tree .
- *= require_self
- */
+*= ./bootstrap_import
+*= require_tree .
+*= require_self
+*/
+$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
 
- @import "bootstrap/scss/bootstrap";
 
+
+
+ 
  /* リセットCSS */
-body {
-  font-size: 14px;
-  color: #333;
-  margin: 0 auto;
-}
-h1,h2,h3,h4,h5,h6,p {
-  padding: 10px 0;
-  margin: 0;
-}
+// body {
+//   font-size: 14px;
+//   color: #333;
+//   margin: 0 auto;
+// }
+// h1,h2,h3,h4,h5,h6,p {
+//   padding: 10px 0;
+//   margin: 0;
+// }
 
-ul,li {
-  padding: 0;
-  margin: 0;
-}
+// ul,li {
+//   padding: 0;
+//   margin: 0;
+// }
  
 
- // メッセージ一覧
-#message-container {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 1rem 1rem 8rem 1rem;
-}
+//  // メッセージ一覧
+// #message-container {
+//   max-width: 768px;
+//   margin: 0 auto;
+//   padding: 1rem 1rem 8rem 1rem;
+// }
 
-// メッセージ投稿フォーム
-footer {
-  max-width: 768px;
-  padding: 1rem;
-  margin: 0 auto;
-}
+// // メッセージ投稿フォーム
+// footer {
+//   max-width: 768px;
+//   padding: 1rem;
+//   margin: 0 auto;
+// }
 
-.btn-primary.disabled {
-  background-color: #6c757d;
-  border-color: #6c757d;
-  cursor: auto;
-}
+// .btn-primary.disabled {
+//   background-color: #6c757d;
+//   border-color: #6c757d;
+//   cursor: auto;
+// }
 
-#message_content {
-  resize: none;
-}
+// #message_content {
+//   resize: none;
+// }
 
 
 
