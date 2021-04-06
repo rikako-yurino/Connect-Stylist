@@ -6,15 +6,30 @@ body {
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Yu Gothic", YuGothic, sans-serif;
 }
+
+.question-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.flexbox {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+}
+
  
 .choose_box {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
   position: relative;
   height: 50vw;
   width: 100%;
-  display:flex;
-  justify-content: center;
 }
+
  .choose_box p {
+   padding-top: 80px;
     font-size: 24px;
     display: block;
     font-weight: 600;
@@ -23,11 +38,9 @@ body {
  
 .choose_box ul {
   width: 100%;
-  text-align: center;
-  margin: auto;
-  // margin-left: 60vh;
+  margin: 0 auto;
   padding-top: 60px;
-  // padding-left: 60vh;
+  padding-left: 20px;
 }
 .choose_box ul li {
   width: calc(100% / 2 - 20px);
@@ -35,14 +48,17 @@ body {
   margin-bottom: 20px;
   list-style: none;
 }
+
  
-.choose_box ul li:nth-child(2n) {
-  margin-right: 0;
-}
+// .choose_box ul li:nth-child(2n) {
+//   margin-right: 0;
+// }
+
 .choose_box ul li a {
+  height: 120px;
   color: #fff;
   display: block;
-  padding: 20px 60px;
+  padding: 38px 20px;
   text-align: center;
   background-color: #5CE5CB;
   font-weight: 600;
@@ -55,7 +71,7 @@ body {
 }
  
 .choose_box ul li a:hover {
-   background-color: #fff;
+  background-color: #fff;
   color: #5CE5CB;
   -webkit-transition: 0.7s;
   -moz-transition: 0.7s;
@@ -78,6 +94,7 @@ h4 {
  
 .fit {
   position: absolute;
+  text-align: center;
   left: 0px;
   top: 20px;
   width: 100%;
@@ -97,6 +114,31 @@ h4 {
   text-align: center;
 }
 
+.strt-btn-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.start-btn{
+  width: 40%;
+  margin-top: 80px;
+}
+
+.start-btn:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* ボタンをへこませる */
+.start-btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 6px;
+}
+
+
+
 .frame-type {
   width: 50%;
   margin: 30px 0;
@@ -108,24 +150,37 @@ h4 {
 }
 
 .back-btns{
+  margin-bottom: 300px;
   margin: auto;
 }
 
 .back-btn {
   display: inline-block;
-  font-size: 20px;
+  padding: 0.4em 1.6em;
+  font-size: 0.8rem;
   font-weight: bold;
-  color: #5CE5CB;
+  color: #75DBC7;
   text-decoration: none !important;
   user-select: none;
+  border: 1px #75DBC7 solid;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+.back-btn:hover {
+  color: #fff;
+  background: #75DBC7;
 }
 
 .result-diagnoses {
+  background-color: #fff;
+  height: 100vh;
   display: flex;
   justify-content: center;
 }
 
 .answer_01 a,.answer_02 a,.answer_03 a {
+  height: 200vh;
   display: flex;
   justify-content: center;
 }

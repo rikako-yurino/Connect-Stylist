@@ -29,6 +29,7 @@ class ReservationsController < ApplicationController
   end
 
   def maypage
+    binding.pry
     @user = User.where(user_id: current_user.id)
     @rooms = Room.includes(:user)
   end
