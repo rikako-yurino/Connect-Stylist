@@ -29,17 +29,23 @@ $(document).on('turbolinks:load', function() {
 
       speak: function(message) {
         return this.perform('speak', {message: message});
-      }
+      },
+      
     });
     
-    $(document).on('click', '#send', function(e) {
+    $('.message-wrapper').on('click', '#send-button', function() {
+      console.log("発火");
       const input = $('#input').val();
-      // console.log("hello");
-      // console.log("input");
       appRoom.speak(input);
       e.target.value = '';
       e.preventDefault();
-      });
-    }
-  );
+    });
+    // window.document.onkeydown = function(e) {
+    //   if (e.key === 'Enter') {
+    //     appRoom.speak(e.target.value);
+    //     e.target.value = '';
+    //     e.preventDefault();
+      // };
+  });
+
 }); 
