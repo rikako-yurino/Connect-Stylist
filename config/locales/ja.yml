@@ -15,10 +15,10 @@ ja:
         prefecture_id: お住いの地域
         work_id: ご職業
         frame_type_id: あなたの骨格タイプ
-    activerecord:
-      attributes:
-        room:
-          purpose_id: ""
-          style_id: ""
-        
+
+  attributes:  
+    reservation_date: "日付"
+    time_zone_id: "時間"
+    purpose_id: "お探しのスタイリングの用途"
+    style_id: "好きなファッションのスタイル"
 
