@@ -31,13 +31,14 @@ $(document).on('turbolinks:load', function() {
         return this.perform('speak', {message: message});
       }
     });
-    $(document).on('click', '#send', function() {
-        // console.log(e);
-        const input = document.getElementById('input')
-        const content = input.value
-        appRoom.speak(content);
-        e.target.value = '';
-        e.preventDefault();
+    
+    $(document).on('click', '#send', function(e) {
+      const input = $('#input').val();
+      // console.log("hello");
+      // console.log("input");
+      appRoom.speak(input);
+      e.target.value = '';
+      e.preventDefault();
       });
     }
   );
