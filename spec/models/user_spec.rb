@@ -10,9 +10,16 @@ RSpec.describe User, type: :model do
       it 'すべての項目が存在すれば登録できること' do
         expect(@user).to be_valid
       end
-    end
 
+    end
+    
     context '内容に問題がある場合' do
+      it 'プロフィール画像がなくては登録できないこと' do
+        @user.user_photo = nil
+        @user.valid?
+        expect(@user.errors.full_messages).to include("プロフィール画像を選択してください")
+      end
+
       it 'nicknameが空では登録できないこと' do
         @user.nickname = ''
         @user.valid?
