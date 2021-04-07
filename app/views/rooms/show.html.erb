@@ -1,7 +1,22 @@
 <%= render "header_room" %>
 <div class='message-wrapper'>
-  <div id="message-container">
-    <%= render partial: 'message', collection: @messages %>
+  <div id='messages' data-room_id="<%= @room.id %>">
+    <%= render @messages %>
   </div>
-  <%= render 'footer' %>
-</div>
+  <%# <footer class="fixed-bottom" id="footer"> %>
+  <%= form_with model: [@reservation, @room, @message], local: false do |f| %>
+  	<div class="card-footer">
+			<div class="input-group">
+				<div class="input-group-append">
+          <label class="form-image">
+            <span class="input-group-text attach_btn"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+            <%= f.file_field :image, class: 'hidden' %>
+          </label>
+        </div>
+        <%= f.text_area :content, class: 'form-control message_content type_msg', id: 'input', data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
+          <div class="input-group-append">
+            <span id= "send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+          </div>
+        </div>
+      </div>
+  <% end %>

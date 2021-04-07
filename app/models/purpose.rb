@@ -10,7 +10,4 @@ class Purpose < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  # has_many :reservation_rooms
-  has_many :reservations
-  has_many :rooms
 end

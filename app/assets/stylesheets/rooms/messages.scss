@@ -1,28 +1,28 @@
 
-.form-image {
-  font-size: 12px;
-  background-color: lightblue;
-  color: white;
-  padding: 12px;
-  width: 60px;
-  margin: 5px 10px;
-  text-align: center;
-}
+// .form-image {
+//   font-size: 12px;
+//   background-color: lightblue;
+//   color: white;
+//   padding: 12px;
+//   width: 60px;
+//   margin: 5px 10px;
+//   text-align: center;
+// }
 
-.hidden {
-  display: none;
-}
+// .hidden {
+//   display: none;
+// }
 
-.form-input {
-  display: flex;
-  width: 100%;
-}
+// .form-input {
+//   display: flex;
+//   width: 100%;
+// }
 
-.message-wrapper{
-  margin: 40px;
-}
+// .message-wrapper{
+//   margin: 40px;
+// }
 
-
+@import "bootstrap/scss/bootstrap";
 
 
 
@@ -85,18 +85,20 @@ border-radius: 0 0 15px 15px !important;
        outline:0px !important;
 }
 .attach_btn{
-border-radius: 15px 0 0 15px !important;
-background-color: rgba(0,0,0,0.3) !important;
+  border-radius: 15px 0 0 15px !important;
+  background-color: rgba(0,0,0,0.3) !important;
   border:0 !important;
   color: white !important;
   cursor: pointer;
+  height: 60px !important;
 }
 .send_btn{
-border-radius: 0 15px 15px 0 !important;
-background-color: rgba(0,0,0,0.3) !important;
+  border-radius: 0 15px 15px 0 !important;
+  background-color: rgba(0,0,0,0.3) !important;
   border:0 !important;
   color: white !important;
   cursor: pointer;
+  height: 60px !important;
 }
 .search_btn{
   border-radius: 0 15px 15px 0 !important;
@@ -250,4 +252,8 @@ background-color: rgba(0,0,0,0.2);
 .contacts_card{
 margin-bottom: 15px !important;
 }
+}
+
+.hidden {
+  display: none;
 }

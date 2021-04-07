@@ -6,13 +6,15 @@
     <%= csp_meta_tag %>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="/path/to/my.css" media="print" onload="this.media='all'; this.onload=null;">
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%# <% if content_for?(:body_rooms) %>
+      <%# = yield(:body_rooms) %> 
+
     <%= yield %>
   
   </body>

@@ -15,6 +15,4 @@ class TimeZone < ActiveHash::Base
 
   ]
   include ActiveHash::Associations
-  has_many :reservations
-  has_many :rooms
 end

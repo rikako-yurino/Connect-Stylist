@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
-  get '/show_additionally', to: 'rooms#show_additionally'
   devise_for :users
   devise_for :stylists, controllers: {
     sessions: 'stylists/sessions',
@@ -9,11 +8,16 @@ Rails.application.routes.draw do
   }
 
   post 'reservations/confirm' => 'reservations#confirm'
-  resources :reservations, only: [:new, :create, :show] do
-    resources :rooms, only: [:new, :create, :show, :destroy, :list_stylist, :change] do
+  resources :reservations, only: [:new, :create, :show, :destroy] do
+    resources :rooms, only: [:new, :create, :show, :destroy, :change] do
       resources :messages, only: [:create]
     end
+    member do
+      get 'mypage'
+    end
   end
+
+
   resources :stylists, only: [:index, :show] 
   resources :diagnoses, only: [:index, :new, :show] 
 

@@ -20,7 +20,18 @@ class ReservationsController < ApplicationController
   end
 
   def show
-    
+  end
+
+  def destroy
+    reservation = Reservation.find(params[:id])
+    reservation.destroy
+    redirect_to "/reservations/#{reservation.id}/rooms/#{room.id} "
+  end
+
+  def maypage
+    binding.pry
+    @user = User.where(user_id: current_user.id)
+    @rooms = Room.includes(:user)
   end
 
   private

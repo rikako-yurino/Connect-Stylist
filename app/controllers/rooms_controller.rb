@@ -1,21 +1,24 @@
 class RoomsController < ApplicationController
 
-  def show
-    @message = Message.new
-    @room = Room.find_by(params[:id])
-    @reservation = Reservation.find(@room.reservation_id)
-    @messages = @room.messages.includes(:user)
+def show
+  @message = Message.new
+  @messages = Message.all
+  @room = Room.find_by(params[:id])
+  @reservation = Reservation.find(@room.reservation_id)
+  # @messages = @room.messages.includes(:user)
+  if user_signed_in?
+    cookies.signed['user_id'] = nil
+    cookies.signed['user_id'] = current_user.id
+  elsif stylist_signed_in?
+    cookies.signed['stylist_id'] = nil
+    cookies.signed['stylist_id'] = current_stylist.id
   end
-
-  def show_additionally
-    last_id = params[:oldest_message_id].to_i - 1    
-    @messages = Message.includes(:user).order(:id).where(id: 1..last_id).last(50)
   end
 
   def destroy
     room = Room.find(params[:id])
     room.destroy
-    redirect_to root_path
+    redirect_to reservation_room_path(@room.id)
   end
 
 end

@@ -1,6 +1,7 @@
 <div class='chat-room-form'>
   <h1>スタイリスト予約</h1>
   <%=form_with model: @reservation_room, url: reservations_confirm_path, local: true do |f|%>
+  <%= render 'shared/error_messages', model: f.object%>
 
     <div class='chat-room-form__field'>
       <p class="form-text">日付</p>
@@ -28,6 +29,7 @@
       <%= f.text_field :remarks, class: 'chat-room-form__input', placeholder: '備考欄'%>
     <input name="room[user_id]" type="hidden" value=<%= current_user.id%>>
     <input name="reservation[user_id]" type="hidden" value=<%= current_user.id %>>
+
 
 
     <div class='chat-room-form__field'>

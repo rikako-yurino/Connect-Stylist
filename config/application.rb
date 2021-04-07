@@ -8,6 +8,7 @@ module Personalstylist
     config.load_defaults 6.0
     config.i18n.default_locale = :ja
     config.time_zone = 'Asia/Tokyo'
+    config.active_job.queue_adapter = :delayed_job
 
     config.generators.system_tests = nil
   end

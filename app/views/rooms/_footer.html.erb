@@ -1,19 +1,26 @@
-<footer class="fixed-bottom" id="footer">
+<% <footer class="fixed-bottom" id="footer"> %>
   <%= form_with model: [@reservation, @room, @message], local: false do |f| %>
-  <div class="form-group">
-    <div class="form-input"  id="footer">
+
+  <% <form> %>
+  <label>Say something:</label><br>
+  <% <input type="text" data-behavior="room_speaker"> %>
+  <%= f.text_area :content, class:  'form-control message_content',data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
+  <% </form> %>
+  
+  <% <div class="form-group"> %>
+    <div class="form-input"  id="footer"> %>
       <%= f.text_area :content, class:  'form-control message_content', rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
-      <label class="form-image">
-        <span class="image-file">画像</span>
+      <% <label class="form-image"> %>
+        <% <span class="image-file">画像</span> %>
         <%= f.file_field :image, class: 'hidden' %>
-      </label>
-    </div>
-  </div>
-  <div class="form-group">
+      <% </label> %>
+    <% </div> %>
+  <% </div> %>
+  <% <div class="form-group"> %>
     <%= f.submit '送信',  class: 'btn btn-primary btn-block disabled', id: 'message-button'%>
   </div>
   <% end %>
-</footer>
+<% </footer> %>
 
 
 

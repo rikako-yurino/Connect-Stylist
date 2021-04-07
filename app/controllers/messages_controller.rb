@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
   before_action :set_params, only:[:show, :create]
   
   def show
-    @messages = Message.includes(:user).order(:id)
+    @messages = Message.all
     @message = current_user.messages.build
   end
 
@@ -21,7 +21,7 @@ class MessagesController < ApplicationController
     end
   end
 
-  def set_params
-    @room = Room.find(params[:room_id])
-  end
+  # def set_params
+  #   @room = Room.find(params[:room_id])
+  # end
 end
