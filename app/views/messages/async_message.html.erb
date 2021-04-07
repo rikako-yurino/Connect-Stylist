@@ -1,4 +1,5 @@
-<div class="message" id="message-<%= message.id %>">
+<%# <div class="message" id="message-<%= message.id %>
+<div id='messages' data-room_id="<%= @room.id %>" data-user="<%= if user_signed_in ? 'user' : 'stylist' %>">
   <div class="card-body msg_card_body">
     <div class="d-flex justify-content-start mb-4">
       <div class="img_cont_msg">
