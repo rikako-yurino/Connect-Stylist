@@ -21,4 +21,13 @@ ja:
     time_zone_id: "時間"
     purpose_id: "お探しのスタイリングの用途"
     style_id: "好きなファッションのスタイル"
-
+    user_photo: プロフィール画像
+    nickname: ニックネーム
+    email: メールアドレス
+    password: パスワード
+    password_confirmation: 確認パスワード
+    last_name: 姓
+    first_name: 名
+    license: 資格
+    profile: プロフィール
+    stylist_photo:  プロフィール画像
