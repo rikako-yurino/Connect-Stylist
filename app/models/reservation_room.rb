@@ -9,6 +9,7 @@ class ReservationRoom
       validates :time_zone_id
       validates :purpose_id
       validates :style_id
+      validates :user_id
     end
   end
   validates :remarks, length: { maximum: 140}
