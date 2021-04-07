@@ -13,7 +13,7 @@ class ReservationRoom
   end
   validates :remarks, length: { maximum: 140}
 
-
+  
   def save
     reservation = Reservation.create!(reservation_date: reservation_date, time_zone_id: time_zone_id, user_id: user_id, purpose_id: purpose_id, style_id: style_id, remarks: remarks, room_id: room_id)
     Room.create(user_id: user_id, reservation_id: reservation.id)

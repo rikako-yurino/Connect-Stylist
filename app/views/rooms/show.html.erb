@@ -13,9 +13,9 @@
             <%= f.file_field :image, class: 'hidden' %>
           </label>
         </div>
-        <%= f.text_area :content, class:  'form-control message_content type_msg',data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
+        <%= f.text_area :content, class: 'form-control message_content type_msg', id: 'input', data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
           <div class="input-group-append">
-            <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
+            <span id= "send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
           </div>
         </div>
       </div>

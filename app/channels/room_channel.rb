@@ -18,9 +18,9 @@ class RoomChannel < ApplicationCable::Channel
   private
   def render_message(message)
     if message.user_id.present?
-      ApplicationController.render_with_signed_in_user(message.user, partial: 'messages/message', locals: { message: message })
+      ApplicationController.render_with_signed_in_user(message.user, partial: 'messages/async_message', locals: { message: message })
     elsif message.stylist_id.present?
-      ApplicationController.render_with_signed_in_stylist(message.stylist, partial: 'messages/message', locals: { message: message })
+      ApplicationController.render_with_signed_in_stylist(message.stylist, partial: 'messages/async_message', locals: { message: message })
     end
   end
 end

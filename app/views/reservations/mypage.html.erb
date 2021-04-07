@@ -2,8 +2,12 @@
   <div class="profile_box">
     <div class="box-title">プロフィール</div>
       <div class="profile_center">
-        <%= image_tag current_user.user_photo, class:"profile_figure" %>
-        <div class="profile_name"><%= current_user.nickname %></div>
+        <% if current_user.user_photo.present?%>
+          <%= image_tag current_user.user_photo, class:"profile_figure" %>
+        <% elsif current_user.user_photo.blank?%>
+          <div class="profile_name"><%= image_tag "no_image.png" %></div>
+        <% end %>
+      <div class="profile_name"><%= current_user.nickname %></div>
       </div>
       <div class="edit-submit">
           <%= link_to 'アカウント情報を編集する', edit_user_registration_path, class: "user-edit-btn" %>

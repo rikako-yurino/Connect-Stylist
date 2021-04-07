@@ -12,22 +12,33 @@ $(document).on('turbolinks:load', function() {
       },
     
       received: function(data) {
-        return $('#messages').append(data['message']);
-        // const messages = document.getElementById('messages');
-        // messages.insertAdjacentHTML('beforeend', data['message']);
-        },
+        $('#messages').append(data['message']);
+        if ($('#messages').data('user_id').length) {
+          $('#messages').children('.div').addClass('justify-content-end')
+          $('#messages').find('#my-photo').addClass('.rounded-circle')
+          $('#messages').find('#my-message').addClass('.message')
+          $('#messages').find('#my-time').addClass('.msg_time_send')
+        } 
+        else if ($('#messages').data('stylist_id').length) {
+          $('#messages').children('.div').addClass('justify-content-start')
+          $('#messages').find('#my-photo').addClass('.rounded-circle')
+          $('#messages').find('#my-message').addClass('.message')
+          $('#messages').find('#my-time').addClass('.msg_time_send')
+        }
+      },
 
       speak: function(message) {
         return this.perform('speak', {message: message});
-        // return $(this).perform('speak', {message: message});
       }
     });
-  window.document.onkeydown = function(e) {
-      if (e.key === 'Enter') {
-        appRoom.speak(e.target.value);
+    $(document).on('click', '#send', function() {
+        // console.log(e);
+        const input = document.getElementById('input')
+        const content = input.value
+        appRoom.speak(content);
         e.target.value = '';
         e.preventDefault();
-      };
+      });
     }
-  });
+  );
 }); 
