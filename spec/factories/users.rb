@@ -12,5 +12,9 @@ FactoryBot.define do
     prefecture_id         {Faker::Number.between(from: 2, to: 48)}
     work_id               {Faker::Number.between(from: 2, to: 10)}
     frame_type_id         {Faker::Number.between(from: 2, to: 4)}
+
+    after(:build) do |user|
+      user.user_photo.attach(io: File.open('public/images/user_photo01.png'), filename: 'user_photo01.png')
+    end
   end
 end

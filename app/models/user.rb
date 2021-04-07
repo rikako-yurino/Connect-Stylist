@@ -11,6 +11,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
        
   with_options presence: true do  
+    validates :user_photo, presence: { message: 'を選択してください' }
     validates :email
     validates :birthday
     validates :nickname
