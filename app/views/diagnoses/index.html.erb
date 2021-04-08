@@ -86,15 +86,18 @@
   それぞれ販売員経験やネットショップでの勤務経験があるスタイリストが揃っています。
   <br>
   （スタイリストとチャットするには月額980円の会員登録が必要です。）
+  <br><br><br>
   </div>
   <%# /スタイリストについて %>
 </div>
 
+<% unless user_signed_in? %>
 <%# 会員登録 %>
 <div class='item-contents'>
   <%= link_to '会員登録', new_user_registration_path, class: "button-2" %>
 </div>
 <%# /会員登録 %>
+<% end %>
 
 <%= render "shared/footer" %>
 
