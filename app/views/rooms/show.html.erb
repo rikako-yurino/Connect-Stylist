@@ -4,19 +4,19 @@
     <%= render @messages %>
   </div>
   <%# <footer class="fixed-bottom" id="footer"> %>
-  <%= form_with model: [@reservation, @room, @message], local: false do |f| %>
-  	<div class="card-footer">
-			<div class="input-group">
-				<div class="input-group-append">
-          <label class="form-image">
-            <span class="input-group-text attach_btn"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
-            <%= f.file_field :image, class: 'hidden' %>
-          </label>
-        </div>
-        <%= f.text_area :content, class: 'form-control message_content type_msg', id: 'input', data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
-          <div class="input-group-append">
-            <span id= "send" class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span>
-          </div>
-        </div>
-      </div>
-  <% end %>
+  <%#= form_with model: [@reservation, @room, @message], local: false do |f| %>
+  <div class="input-group">
+    <div class="input-group-append">
+      <label class="form-image">
+        <span class="input-group-text attach_btn"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+        <%= file_field_tag :image, class: 'hidden' %>
+      </label>
+    </div>
+    <%= text_area_tag :content, nil , class: 'form-control message_content type_msg', id: 'input', data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
+      <%= button_tag '送信', type: 'button', id: 'send-button' %> 
+      <%# <div class="input-group-append"> %>
+        <%# <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span> %>
+      <%# </div> %>
+    </div>
+  <%# end %>
+</div>

@@ -7,6 +7,10 @@ class ReservationsController < ApplicationController
 
   def confirm
     @reservation_room = ReservationRoom.new(reservation_params)
+    @time_zone = TimeZone.find_by(id: @reservation_room.time_zone_id)
+    @purpose = TimeZone.find_by(id: @reservation_room.purpose_id)
+    @purpose = Purpose.find_by(id: @reservation_room.purpose_id)
+    @style = Style.find_by(id: @reservation_room.style_id)
   end
 
   def create

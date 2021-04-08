@@ -32,7 +32,7 @@ a {
   text-align: center;
   font-size: 28px;
   font-weight: bold;
-  margin-bottom: 20vh;
+  margin-bottom: 7vh;
   position: relative;
 }
 
@@ -171,9 +171,11 @@ a {
 .feature-list-description {
   text-align: center;
   font-size: 20px;
+  line-height: 45px;
 }
 
 .feature-list-description span {
+  font-size: 25px;
   font-weight: bold;
   color: #63d1bb;
 }
@@ -207,9 +209,10 @@ a {
 
 .purchase-btn {
   width: 120px;
+  height: 12%;
   background: #AB99FF;
   text-align: center;
-  border-radius: 4%;
+  border-radius: 50%;
   bottom: 32px;
   right: 32px;
   position: fixed;
@@ -223,9 +226,10 @@ a {
 .purchase-btn-text {
   color: #fff;
   display: block;
-  font-size: 18px;
+  font-size: 15px;
+  font-weight: bold;
   text-decoration: none !important;
-  margin-bottom: 5px;
+  margin: 13px auto;
 }
 
 
@@ -356,4 +360,8 @@ color: #AB99FF;
   background: #fff;
   color: #83D6FF;
   text-decoration: none !important;
+}
+
+.stylist-intro {
+  width: 80%;
 }

@@ -11,9 +11,8 @@ require('jquery')
 require('../diagnoses')
 require("bootstrap/dist/js/bootstrap")
 import '@fortawesome/fontawesome-free/js/all';
+require('../channels/room_channel')
 
-//= require jquery3
-//= require popper
 //= require bootstrap
 //= require_tree .
 

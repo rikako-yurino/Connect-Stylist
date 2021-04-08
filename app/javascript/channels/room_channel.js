@@ -1,6 +1,6 @@
 import consumer from "./consumer"
 
-$(document).on('turbolinks:load', function() {
+// $(document).on('turbolinks:load', function() {
   $(function() {
     const appRoom = consumer.subscriptions.create({ channel:"RoomChannel",room: $('#messages').data('room_id') }, {
       connected() {
@@ -12,6 +12,7 @@ $(document).on('turbolinks:load', function() {
       },
     
       received: function(data) {
+        console.log(data);
         $('#messages').append(data['message']);
         if ($('#messages').data('user_id').length) {
           $('#messages').children('.div').addClass('justify-content-end')
@@ -29,17 +30,23 @@ $(document).on('turbolinks:load', function() {
 
       speak: function(message) {
         return this.perform('speak', {message: message});
-      }
+      },
+      
     });
+    // $(document).on('click', '#send-button', function() {
+    //   console.log('発火');
+    //   // const input = $('#input').val();
+    //   // appRoom.speak(input);
+    //   // e.target.value = '';
+    //   // e.preventDefault();
+    window.document.onkeydown = function(e) {
+      if (e.key === 'Enter') {
+        appRoom.speak(e.target.value);
+        e.target.value = '';
+        e.preventDefault();
+      };
+    };
     
-    $(document).on('click', '#send', function(e) {
-      const input = $('#input').val();
-      // console.log("hello");
-      // console.log("input");
-      appRoom.speak(input);
-      e.target.value = '';
-      e.preventDefault();
-      });
-    }
-  );
-}); 
+  });
+
+// }); 
