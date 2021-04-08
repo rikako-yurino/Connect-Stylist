@@ -15,10 +15,10 @@
     
       
 
-
+<p align="center">
 # About "ConnectStylist"
 #### このアプリケーションについて
-
+</p>
 # Intention
 #### 制作背景
 
