@@ -15,9 +15,8 @@
   align-items: center;
 }
 
-.furima-icon {
+.ps-icon {
   width: 18vw;
-  margin-right: 10vw;
 }
 
 
@@ -108,4 +107,26 @@
   color: #fff;
   background: #AB99FF;
 }
+
+.top-page-footer {
+  width: 100vw;
+  padding: 2vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.footer-contents {
+ width: 20px;
+}
+
+.diagnoses-header {
+  width: 100vw;
+  height: 10vh;
+  padding: 0 8vh;
+}
+
+
+
 

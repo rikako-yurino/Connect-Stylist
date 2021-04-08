@@ -67,7 +67,7 @@
           <br>そんなことを思ったことはありませんか？<br>
         </div>
     </ul>
-      <div class='feature-list-description'> 
+    <div class='feature-list-description'> 
       <%= image_tag "parsonalstylist-intro04.png", class:"stylist-intro" %>
       <br><span>CONNECT Stylist</span>では、<br>チャットやビデオ通話を使い事前に診断した骨格タイプをもとに<br>スタイリストが<span>失敗しがちなネットショッピングをサポート！</span><br>
       ネット完結＆サブスクリプションだから<br>手軽にご利用いただけます。
@@ -75,12 +75,29 @@
   </div>
   <%# /CONNECT Stylistのサービス内容 %>
 
-  <%# 商品一覧 %>
+  <%# スタイリストについて %>
   <div class='feature-contents'>
-    <h2 class='title'>CONNECT Stylistに在籍するスタイリスト</h2>
+    <h2 class='title'>CONNECT Stylistに在籍するのはプロのスタイリスト</h2>
+    <%= image_tag "parsonalstylist-intro05.png", class:"stylist-intro" %>
   </div>
-  <%# /商品一覧 %>
+  <div class='feature-list-description'> 
+  業界屈指のパイオニアICBIにて骨格診断ファッションアナリスト、<br>
+  パーソナルカラーアナリストを受講してプロと認められたスタイリストのみが在籍。<br>
+  それぞれ販売員経験やネットショップでの勤務経験があるスタイリストが揃っています。
+  <br>
+  （スタイリストとチャットするには月額980円の会員登録が必要です。）
+  </div>
+  <%# /スタイリストについて %>
 </div>
+
+<%# 会員登録 %>
+<div class='item-contents'>
+  <%= link_to '会員登録', new_user_registration_path, class: "button-2" %>
+</div>
+<%# /会員登録 %>
+
+<%= render "shared/footer" %>
+
 <% if user_signed_in? %>
   <div class ='purchase-btns'>
     <%= link_to new_reservation_path, class: 'purchase-btn' do %>

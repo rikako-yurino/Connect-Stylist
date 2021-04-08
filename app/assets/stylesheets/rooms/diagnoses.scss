@@ -29,7 +29,7 @@ body {
 }
 
  .choose_box p {
-   padding-top: 80px;
+   padding-top: 55px;
     font-size: 24px;
     display: block;
     font-weight: 600;
@@ -122,7 +122,7 @@ h4 {
 
 .start-btn{
   width: 40%;
-  margin-top: 80px;
+
 }
 
 .start-btn:hover {
@@ -177,6 +177,7 @@ h4 {
   height: 100vh;
   display: flex;
   justify-content: center;
+  border-radius: 12%;
 }
 
 .answer_01 a,.answer_02 a,.answer_03 a {
