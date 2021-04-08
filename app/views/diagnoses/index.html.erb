@@ -10,7 +10,7 @@
   <%# CONNECT Stylist の特徴部分 %>
   <div class='select-future-contents'>
     <h2 class='title'>
-      プロのスタイリストと繋がるネットショッピングサポートサービス
+      プロのスタイリストと繋がる<br>ネットショッピングサポートサービス
     </h2>
     <ul class='future-lists'>
       <li class='list'>
@@ -49,7 +49,7 @@
 
   <%# 無料診断リンク %>
   <div class='item-contents'>
-    <%= link_to '無料で骨格診断', "#", class: "button-2" %>
+    <%= link_to '無料で骨格診断', new_diagnosis_path, data: {"turbolinks" => false}, class: "button-2" %>
   </div>
   <%# /無料診断リンク %>
 
@@ -58,34 +58,33 @@
   <%# CONNECT Stylistのサービス内容 %>
   <div class='feature-contents'>
     <h2 class='title'>
-      あなたの骨格にあったスタイリングをアドバイス！
+      あなたの骨格にあったスタイリングをアドバイス<i class="fas fa-comments"></i>
     </h2>
     <ul class='feature-lists'>
       <li class='list'>
-        <%#= image_tag "furima-intro05.png", class:"list-pict" %>
         <div class='feature-list-description'> 
           <span>「プロのスタイリストにショッピング同行をしてもらいたいけど、<br>スタイリストを見つけられない...料金が高い...」</span>
+          <br>そんなことを思ったことはありませんか？<br>
         </div>
     </ul>
-          <div class='feature-list-description'> 
-          そんなことを思ったことはありませんか？<br><br>
-          CONNECT Stylistでは、チャットやビデオ通話を使いプロスタイリストがアドバイスをします。<br>
-          事前に診断した骨格タイプをもとに、あなたに本当に似合うスタイリングをアドバイスして、<br><span>失敗しがちなネットショッピングをサポート</span>します。
-        </div>
+      <div class='feature-list-description'> 
+      <%= image_tag "parsonalstylist-intro04.png", class:"stylist-intro" %>
+      <br><span>CONNECT Stylist</span>では、<br>チャットやビデオ通話を使い事前に診断した骨格タイプをもとに<br>スタイリストが<span>失敗しがちなネットショッピングをサポート！</span><br>
+      ネット完結＆サブスクリプションだから<br>手軽にご利用いただけます。
+    </div>
   </div>
   <%# /CONNECT Stylistのサービス内容 %>
 
   <%# 商品一覧 %>
   <div class='feature-contents'>
-    <h2 class='title'>スタイリスト紹介</h2>
+    <h2 class='title'>CONNECT Stylistに在籍するスタイリスト</h2>
   </div>
   <%# /商品一覧 %>
 </div>
 <% if user_signed_in? %>
   <div class ='purchase-btns'>
     <%= link_to new_reservation_path, class: 'purchase-btn' do %>
-      <span class='purchase-btn-text'>スタイリストに聞く</span>
+      <span class='purchase-btn-text'>スタイリスト予約</span>
     <% end %>
   <% end%>
 </div>
-<%#= render "shared/footer" %>
