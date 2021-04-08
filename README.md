@@ -1,8 +1,7 @@
 ![ConnectStylist](https://user-images.githubusercontent.com/79197015/113973607-8a138f80-9877-11eb-909d-1787a6e94cdc.png)
-<h2 align="center">Ramen Timer</h2>
+<h2 align="center">ConnectStylist</h2>
 <p align="center">
-  <a href="Ruby公式サイトURL"><img src="https://user-images.githubusercontent.com/79197015/113974271-9b10d080-9878-11eb-9e64-7335daa36fb5.png" width="80px;" /></a>
-  <br>
+  <a href="Ruby公式サイトURL"><img src="https://user-images.githubusercontent.com/79197015/113974271-9b10d080-9878-11eb-9e64-7335daa36fb5.png" width="45px;" /></a>
   <a href="Ruby ob Rails公式サイトURL"><img src="https://user-images.githubusercontent.com/79197015/113974312-a82dbf80-9878-11eb-8ccf-cbcb9b6faf33.png" height="45px;" /></a>
   <a href="jQuery公式サイトURL"><img src="https://user-images.githubusercontent.com/79197015/113974345-b67bdb80-9878-11eb-916c-9933e5e3ca2a.png" height="45px;" /></a>
   <a href="MySQL公式サイトURL"><img src="https://user-images.githubusercontent.com/79197015/113974369-c1367080-9878-11eb-8750-525d3c343ef3.png" height="45px;" /></a>
