@@ -17,16 +17,16 @@
 
 
 # About "ConnectStylist"
-## このアプリケーションについて
+#### このアプリケーションについて
 
 # Intention
-## 制作背景
+#### 制作背景
 
 # Function
-## 機能
+#### 機能
 
 # Build
-## 構築
+#### 構築
 $ git clone ＊＊＊＊＊＊＊＊<br>
 $ cd ＊＊＊＊＊＊＊＊<br>
 $ bundle install<br>
@@ -36,14 +36,10 @@ $ rails s<br>
 :point_right: http://localhost:3000<br>
 
 # DB
-## ER図
+#### ER図
 
 
-# 作者
-
-
-
-## テーブル設計
+#### テーブル設計
 
 ### users テーブル
 
@@ -129,3 +125,6 @@ $ rails s<br>
 
 - belongs_to :room
 - belongs_to :user
+
+
+# 作者
