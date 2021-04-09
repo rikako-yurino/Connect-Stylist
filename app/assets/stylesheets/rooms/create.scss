@@ -62,6 +62,18 @@ background-color: rgba(0,0,0,0.3) !important;
   color: white !important;
   cursor: pointer;
 }
+
+.reset-btn {
+  outline: none;
+  appearance: none;
+  border-radius: 0 15px 15px 0 !important;
+  background-color: rgba(0,0,0,0.3) !important;
+  border:0 !important;
+  color: white !important;
+  cursor: pointer;
+  height: 60px !important;
+}
+
 .send_btn{
 border-radius: 0 15px 15px 0 !important;
 background-color: rgba(0,0,0,0.3) !important;
@@ -69,13 +81,7 @@ background-color: rgba(0,0,0,0.3) !important;
   color: white !important;
   cursor: pointer;
 }
-.search_btn{
-  border-radius: 0 15px 15px 0 !important;
-  background-color: rgba(0,0,0,0.3) !important;
-  border:0 !important;
-  color: white !important;
-  cursor: pointer;
-}
+
 .contacts{
   list-style: none;
   padding: 0;

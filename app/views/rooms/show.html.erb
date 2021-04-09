@@ -13,10 +13,10 @@
       </label>
     </div>
     <%= text_area_tag :content, nil , class: 'form-control message_content type_msg', id: 'input', data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
-      <%= button_tag '送信', type: 'button', id: 'send-button' %> 
-      <%# <div class="input-group-append"> %>
-        <%# <span class="input-group-text send_btn"><i class="fas fa-location-arrow"></i></span> %>
-      <%# </div> %>
-    </div>
+      <%#= button_tag '送信', type: 'button', id: 'send-button' %> 
+      <div class="input-group-append">
+        <span class="input-group-text reset-btn" id='send-button'><i class="fas fa-location-arrow"></i></span>
+      </div>
+  </div>
   <%# end %>
 </div>
