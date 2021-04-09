@@ -22,6 +22,22 @@ a {
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
+.stylist-title-contents {
+  width: 100vw;
+  height: 590px;
+  background-image: image-url('parsonalstylist-header02.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 15vw;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
 
 .select-future-contents {
   padding: 5vh 10vw;
@@ -208,34 +224,34 @@ a {
 }
 
 .purchase-btn {
-  width: 120px;
-  height: 12%;
-  background: #AB99FF;
+  width: 165px;
+  height: 15%;
+  background: -moz-linear-gradient(#ffd28f, #ff708d);
+  background: -webkit-linear-gradient(#ffd28f, #ff708d);
+  background: linear-gradient(to right, #ffd28f, #ff708d);
   text-align: center;
-  border-radius: 50%;
+  border-radius:67% 33% 42% 58% / 48% 30% 70% 52%;
   bottom: 32px;
   right: 32px;
   position: fixed;
-  padding: 15px;
+  padding: 20px;
 }
 
 .purchase-btns{
   display: flex;
+  align-items: center;
 }
 
 .purchase-btn-text {
   color: #fff;
   display: block;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none !important;
   margin: 13px auto;
+  padding-top: 15px;
 }
 
-
-.purchase-btn-icon {
-  width: 60%;
-}
 
 .button-4 {
   display: inline-block;
@@ -270,6 +286,8 @@ a {
   text-align: center;
   color:  #AB99FF;
   font-weight: bold;
+  font-size: 35px;
+  padding-top: 50px;
 }
 
 .room-contents {
@@ -363,5 +381,7 @@ color: #AB99FF;
 }
 
 .stylist-intro {
+  text-align: center;
   width: 80%;
+  margin: 0 auto;
 }
