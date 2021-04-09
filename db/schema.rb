@@ -69,6 +69,8 @@ ActiveRecord::Schema.define(version: 2021_04_03_052124) do
     t.integer "purpose_id"
     t.integer "style_id"
     t.text "remarks"
+    t.bigint "room_id_id"
+    t.bigint "room_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
