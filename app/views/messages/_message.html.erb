@@ -1,4 +1,37 @@
-<div class="message">
-  <%= "#{message.content}" %>
-</div>
+<div class="message" id="message-<%= message.id %>">
+  <div class="card-body msg_card_body">
+    <%# ユーザー側 %>
+      <% if user_signed_in? %>
+        <div class="d-flex justify-content-end mb-4">
+          <div class="msg_cotainer_send">
+            <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
+            <%# <div class="message"> %>
+              <p><%= " #{message.content}" %></p>
+            <%# </div> %>
+            <span class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
+          </div>
+          <%# <div class="img_cont_msg"> %>
+            <%#= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
+          <%# </div> %>
+        </div>
+      <% end %>
+        <%#// ユーザー側 %>
 
+        <%# スタイリスト側 %>
+      <% if stylist_signed_in? %>
+        <div class="d-flex justify-content-start mb-4">
+          <%# <div class="img_cont_msg"> %>
+            <%#= image_tag message.stylist.stylist_photo, class:"rounded-circle user_img_msg" %>
+          <%# </div> %>
+          <div class="msg_cotainer">
+            <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
+            <%# <div class="message"> %>
+              <p><%= " #{message.content}" %></p>
+            <%# </div> %>
+            <span class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
+          </div>
+        </div>
+      <% end %>
+      <%#// スタイリスト側 %>
+  </div>
+</div>

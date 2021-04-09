@@ -33,19 +33,20 @@ import consumer from "./consumer"
       },
       
     });
-    // $(document).on('click', '#send-button', function() {
-    //   console.log('発火');
-    //   // const input = $('#input').val();
-    //   // appRoom.speak(input);
-    //   // e.target.value = '';
-    //   // e.preventDefault();
-    window.document.onkeydown = function(e) {
-      if (e.key === 'Enter') {
-        appRoom.speak(e.target.value);
-        e.target.value = '';
-        e.preventDefault();
-      };
-    };
+    $(document).on('click', '#send-button', function() {
+      console.log('発火');
+      const input = $('#input').val();
+      appRoom.speak(input);
+      e.target.value = '';
+      e.preventDefault();
+    // window.document.onkeydown = function(e) {
+    //   if (e.key === 'Enter') {
+    //     appRoom.speak(e.target.value);
+    //     e.target.value = '';
+    //     e.preventDefault();
+    //   };
+    // };
+    });
     
   });
 
