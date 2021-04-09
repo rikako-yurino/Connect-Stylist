@@ -101,10 +101,12 @@
 
 <%= render "shared/footer" %>
 
-<% if user_signed_in? %>
-  <div class ='purchase-btns'>
-    <%= link_to new_reservation_path, class: 'purchase-btn' do %>
-      <p class='purchase-btn-text'>チャット予約</p>
-    <% end %>
+  <%# 予約 %>
+  <% if user_signed_in? %>
+    <div class ='purchase-btns'>
+      <%= link_to new_reservation_path, class: 'purchase-btn' do %>
+        <p class='purchase-btn-text'>チャット予約</p>
+      <% end %>
   <% end%>
+  <%# //予約 %>
 </div>
