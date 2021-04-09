@@ -66,11 +66,9 @@ ActiveRecord::Schema.define(version: 2021_04_03_052124) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "room_id"
     t.integer "purpose_id"
     t.integer "style_id"
     t.text "remarks"
-    t.index ["room_id"], name: "index_reservations_on_room_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
@@ -126,7 +124,6 @@ ActiveRecord::Schema.define(version: 2021_04_03_052124) do
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "stylists"
   add_foreign_key "messages", "users"
-  add_foreign_key "reservations", "rooms"
   add_foreign_key "reservations", "users"
   add_foreign_key "rooms", "reservations"
   add_foreign_key "rooms", "stylists"
