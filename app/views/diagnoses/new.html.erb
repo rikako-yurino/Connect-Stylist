@@ -1,8 +1,7 @@
-<%= render "shared/header_diagnoses" %>
 <div class="choose_boxes">
   <div class="choose_box">
     <div id="q_00" class="fit">
-        <div class="frame-img btn" href="#q_01">
+        <div class="start-img btn" href="#q_01">
           <%= image_tag "frame_opning.png",data: {"turbolinks" => false}, class:"start-btn" %>
         </div>  
     </div>
@@ -118,8 +117,8 @@
         <div class="frame-img">
           <%= image_tag "frame_straight.png", class:"frame-type" %>
         </div>
-        <div class="frame-btns">
-          <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+        <div class="frame-text">
+          全体的に体にメリハリがあり<br>いわゆるボン・キュ・ボンのグラマラス 体型の方が多いタイプ。<br>腰位置やバスト位置も高く、厚みがあるのが特徴です。
         </div>
       </div>
         
@@ -131,8 +130,8 @@
         <div class="frame-img">
           <%= image_tag "frame_wave.png", class:"frame-type" %>
         </div>
-        <div class="frame-btns">
-          <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+        <div class="frame-text">
+          体が薄くて鎖骨が細く首は長め、全体的に華奢なタイプ。<br>腰位置が低めで、特に下半身に脂肪がつきやすいのが特徴です。
         </div>
       </div>
         
@@ -143,10 +142,12 @@
         <div class="frame-img">
           <%= image_tag "frame_natural.png", class:"frame-type" %>
         </div>     
-        <div class="frame-btns">
-          <%= link_to 'TOPページに戻る', root_path, class:"back-btn" %>
+        <div class="frame-text">
+          全体的に重心の偏りがなく、手足長めのモデル体型さんが多いタイプ。<br>
+          肩や手首、関節などの骨がしっかり出るのが特徴です。
         </div>
       </div>
     </div>
   </div>
 </div>
+<%= render "shared/footer" %>
