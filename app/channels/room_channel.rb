@@ -13,7 +13,7 @@ class RoomChannel < ApplicationCable::Channel
     elsif current_stylist.present?
       message = Message.create! content: data['message'], stylist_id: current_stylist.id, room_id: params['room']
     end
-    ActionCable.server.broadcast "room_channel_#{message.room_id}", message: render_message(message), message_id: message.id
+    ActionCable.server.broadcast "room_channel_#{message.room_id}", message: render_message(message), user_id: message.user_id, stylist_id: message.stylist_id, message_id: message.id 
   end
 
   private
