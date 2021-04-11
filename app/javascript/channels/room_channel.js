@@ -12,40 +12,45 @@ import consumer from "./consumer"
       },
     
       received: function(data) {
-        console.log(data);
+        const messageId = data['message_id'];
+        const userId = data['user_id'];
+        const stylistId = data['stylist_id'];
         $('#messages').append(data['message']);
-        if ($('#messages').data('user_id').length) {
-          $('#messages').children('.div').addClass('justify-content-end')
-          $('#messages').find('#my-photo').addClass('.rounded-circle')
-          $('#messages').find('#my-message').addClass('.message')
-          $('#messages').find('#my-time').addClass('.msg_time_send')
-        } 
-        else if ($('#messages').data('stylist_id').length) {
-          $('#messages').children('.div').addClass('justify-content-start')
-          $('#messages').find('#my-photo').addClass('.rounded-circle')
-          $('#messages').find('#my-message').addClass('.message')
-          $('#messages').find('#my-time').addClass('.msg_time_send')
-        }
-      },
+        const message = $('#messages').find('#message-' + messageId + '')
+
+          if (userId != null){
+            $('#me-message').addClass('msg_container_send');
+            $('#me-time').addClass('msg_time_send');
+            console.log(userId);
+          } else {
+            $('#you-message').addClass('msg_container');
+            $('#you-time').addClass('msg_time');
+          }
+          if (stylistId != null) {
+            $('#me-message').addClass('msg_container_send');
+            $('#me-time').addClass('msg_time_send');
+            console.log(stylistId);
+          } else {
+            $('#you-message').addClass('msg_container');
+            $('#you-time').addClass('msg_time');
+          }
+          console.log(message);
+        },
 
       speak: function(message) {
         return this.perform('speak', {message: message});
       },
       
     });
-    // $(document).on('click', '#send-button', function() {
-    //   console.log('発火');
-    //   // const input = $('#input').val();
-    //   // appRoom.speak(input);
-    //   // e.target.value = '';
-    //   // e.preventDefault();
-    window.document.onkeydown = function(e) {
-      if (e.key === 'Enter') {
-        appRoom.speak(e.target.value);
-        e.target.value = '';
-        e.preventDefault();
-      };
-    };
+    $(document).on('click', '#send-button', function(e) {
+      // console.log('発火');
+      const input = $('#input').val();
+      appRoom.speak(input);
+      $('#input').val('')
+      e.preventDefault();
+      $('#input').animate({ scrollTop: $('#input')[0].scrollHeight});
+      return false
+    });
     
   });
 

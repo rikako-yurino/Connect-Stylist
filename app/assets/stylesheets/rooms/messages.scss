@@ -1,38 +1,24 @@
 
-// .form-image {
-//   font-size: 12px;
-//   background-color: lightblue;
-//   color: white;
-//   padding: 12px;
-//   width: 60px;
-//   margin: 5px 10px;
-//   text-align: center;
-// }
-
-// .hidden {
-//   display: none;
-// }
-
-// .form-input {
-//   display: flex;
-//   width: 100%;
-// }
-
-// .message-wrapper{
-//   margin: 40px;
-// }
-
 @import "bootstrap/scss/bootstrap";
-
-
-
 
 body,html{
   height: 100%;
   margin: 0;
   background: #7F7FD5;
-     background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
-      background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+}
+
+.message-wrapper {
+  width: 100vh;
+  height: 100vh;
+  padding: 5vh 35vh;
+}
+
+.room-view {
+  width: 45%;
+  position: absolute;
+  margin:0 auto;
 }
 
 .chat{
@@ -81,8 +67,8 @@ border-radius: 0 0 15px 15px !important;
   overflow-y: auto;
 }
   .type_msg:focus{
-     box-shadow:none !important;
-       outline:0px !important;
+  box-shadow:none !important;
+  outline:0px !important;
 }
 .attach_btn{
   border-radius: 15px 0 0 15px !important;
@@ -100,25 +86,7 @@ border-radius: 0 0 15px 15px !important;
   cursor: pointer;
   height: 60px !important;
 }
-.search_btn{
-  border-radius: 0 15px 15px 0 !important;
-  background-color: rgba(0,0,0,0.3) !important;
-  border:0 !important;
-  color: white !important;
-  cursor: pointer;
-}
-.contacts{
-  list-style: none;
-  padding: 0;
-}
-.contacts li{
-  width: 100% !important;
-  padding: 5px 10px;
-  margin-bottom: 15px !important;
-}
-.active{
-  background-color: rgba(0,0,0,0.3);
-}
+
 .user_img{
   height: 70px;
   width: 70px;
@@ -140,43 +108,8 @@ border-radius: 0 0 15px 15px !important;
   height: 40px;
   width: 40px;
 }
-.online_icon{
-position: absolute;
-height: 15px;
-width:15px;
-background-color: #4cd137;
-border-radius: 50%;
-bottom: 0.2em;
-right: 0.4em;
-border:1.5px solid white;
-}
-.offline{
-background-color: #c23616 !important;
-}
-.user_info{
-margin-top: auto;
-margin-bottom: auto;
-margin-left: 15px;
-}
-.user_info span{
-font-size: 20px;
-color: white;
-}
-.user_info p{
-font-size: 10px;
-color: rgba(255,255,255,0.6);
-}
-.video_cam{
-margin-left: 50px;
-margin-top: 5px;
-}
-.video_cam span{
-color: white;
-font-size: 20px;
-cursor: pointer;
-margin-right: 20px;
-}
-.msg_cotainer{
+
+.msg_container{
 margin-top: auto;
 margin-bottom: auto;
 margin-left: 10px;
@@ -185,7 +118,7 @@ background-color: #82ccdd;
 padding: 10px;
 position: relative;
 }
-.msg_cotainer_send{
+.msg_container_send{
 margin-top: auto;
 margin-bottom: auto;
 margin-right: 10px;
