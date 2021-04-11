@@ -21,20 +21,21 @@ import consumer from "./consumer"
           if (userId != null){
             // $('#me-message').addClass('msg_container_send');
             // $('#me-time').addClass('msg_time_send');
-            $('#my-photo').children('img_tag').attr('src', 'user_photo01.png');
+            console.log('はい');
+            $('#my-photo').children('img').attr('src', 'src="/assets/user_photo.png"');
           } else if (stylistId != null) {
             // $('#me-message').addClass('msg_container_send');
             // $('#me-time').addClass('msg_time_send');
-            $('#your-photo').children('img_tag').attr('src', 'stylist_photo01.png');
+            console.log($('#my-photo').children('img').attr('src', 'src="/assets/stylist_photo.png"'));
           }
           if (userId == null) {
             // $('#you-message').addClass('msg_container');
             // $('#you-time').addClass('msg_time');
-            $('#your-photo').children('img_tag').attr('src', 'user_photo01.png');
+            $('#your-photo').children('img').attr('src', 'src="/assets/user_photo.png"');
           } else if (stylistId == null) {
             // $('#you-message').addClass('msg_container');
             // $('#you-time').addClass('msg_time');
-            $('#your-photo').children('img_tag').attr('src', 'stylist_photo01.png');
+            $('#your-photo').children('img').attr('src', 'src="/assets/stylist_photo.png"');
           }
           console.log(message);
         },
