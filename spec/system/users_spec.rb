@@ -1,22 +1,10 @@
 require 'rails_helper'
 
-def visit_with_http_auth(path)
-  username = ENV["BASIC_AUTH_USER"]
-  password = ENV["BASIC_AUTH_PASSWORD"]
-  visit "http://#{username}:#{password}@#{Capybara.current_session.server.host}:#{Capybara.current_session.server.port}#{path}"
-end
-
-RSpec.feature 'ベーシック認証', type: :system do
-  scenario '登録されているIDとパスで通過できること' do
-    visit_with_http_auth root_path
-    expect(page).to have_content '新規登録'
-  end
-end
-
 RSpec.describe "Users", type: :system do
   before do
     @user = FactoryBot.build(:user)
   end
+
   context 'ユーザー新規登録ができるとき' do 
     it '正しい情報を入力すればユーザー新規登録ができてトップページに移動する' do
       # トップページに移動する
@@ -26,18 +14,21 @@ RSpec.describe "Users", type: :system do
       # 新規登録ページへ移動する
       visit new_user_registration_path
       # ユーザー情報を入力する
+      attach_file 'user[user_photo]', "public/images/user_photo01.png"
       fill_in 'ニックネーム', with: @user.nickname
       fill_in 'メールアドレス', with: @user.email
       fill_in 'パスワード', with: @user.password
-      fill_in 'パスワード(確認)', with: @user.password_confirmation
-      fill_in 'お名前(全角)', with: @user.last_name
-      fill_in 'お名前(全角)', with: @user.first_name
-      fill_in 'お名前カナ(全角)', with: @user.last_name_kana
-      fill_in 'お名前カナ(全角)', with: @user.first_name_kana
-      fill_in '生年月日', with: @user.birthday
-      fill_in 'お住いの地域', with: @user.prefecture_id
-      fill_in 'お仕事', with: @user.work_id
-      fill_in 'あなたの骨格タイプ', with: @user.frame_type_id
+      fill_in '確認パスワード', with: @user.password_confirmation
+      fill_in 'user[last_name]', with: @user.last_name
+      fill_in 'user[first_name]', with: @user.first_name
+      fill_in 'user[last_name_kana]', with: @user.last_name_kana
+      fill_in 'user[first_name_kana]', with: @user.first_name_kana
+      select '1940', from: "user_birthday_1i"
+      select '1', from: "user_birthday_2i"
+      select '1', from: "user_birthday_3i"
+      select '北海道', from: "user_prefecture"
+      select '会社員', from: "user_work"
+      select 'ストレート', from: "user_frame-type"
       # サインアップボタンを押すとユーザーモデルのカウントが1上がることを確認する
       expect{
         find('input[name="commit"]').click
@@ -61,18 +52,21 @@ RSpec.describe "Users", type: :system do
       # 新規登録ページへ移動する
       visit new_user_registration_path
       # ユーザー情報を入力する
-      fill_in 'ニックネーム', with: ''
+      # attach_file 'user[user_photo]',  ''
+      fill_in 'ニックネーム', with: 'picture'
       fill_in 'メールアドレス', with: ''
       fill_in 'パスワード', with: ''
-      fill_in 'パスワード(確認)', with: ''
-      fill_in 'お名前(全角)', with: ''
-      fill_in 'お名前(全角)', with: ''
-      fill_in 'お名前カナ(全角)', with: ''
-      fill_in 'お名前カナ(全角)', with: ''
-      fill_in '生年月日', with: ''
-      fill_in 'お住いの地域', with: ''
-      fill_in 'お仕事', with: ''
-      fill_in 'あなたの骨格タイプ', with: ''
+      fill_in '確認パスワード', with: ''
+      fill_in 'user[last_name]', with: ''
+      fill_in 'user[first_name]', with: ''
+      fill_in 'user[last_name_kana]', with: ''
+      fill_in 'user[first_name_kana]', with: ''
+      select '--', from: "user_birthday_1i"
+      select '--', from: "user_birthday_2i"
+      select '--', from: "user_birthday_3i"
+      select '--', from: "user_prefecture"
+      select '--', from: "user_work"
+      select '--', from: "user_frame-type"
       # サインアップボタンを押してもユーザーモデルのカウントは上がらないことを確認する
       expect{
         find('input[name="commit"]').click
@@ -97,8 +91,8 @@ RSpec.describe 'ログイン', type: :system do
       # ログインページへ遷移する
       visit new_user_session_path
       # 正しいユーザー情報を入力する
-      fill_in 'メールアドレス', with: @user.email
-      fill_in 'パスワード', with: @user.password
+      fill_in 'user[email]', with: @user.email
+      fill_in 'user[password]', with: @user.password
       # ログインボタンを押す
       find('input[name="commit"]').click
       # トップページへ遷移することを確認する
@@ -120,8 +114,8 @@ RSpec.describe 'ログイン', type: :system do
       # ログインページへ遷移する
       visit new_user_session_path
       # ユーザー情報を入力する
-      fill_in 'メールアドレス', with: ''
-      fill_in 'パスワード', with: ''
+      fill_in 'user[email]', with: ''
+      fill_in 'user[password]', with: ''
       # ログインボタンを押す
       find('input[name="commit"]').click
       # ログインページへ戻されることを確認する
