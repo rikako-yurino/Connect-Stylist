@@ -12,27 +12,29 @@ import consumer from "./consumer"
       },
     
       received: function(data) {
+        console.log(data);
         const messageId = data['message_id'];
         const userId = data['user_id'];
         const stylistId = data['stylist_id'];
         $('#messages').append(data['message']);
         const message = $('#messages').find('#message-' + messageId + '')
-
           if (userId != null){
-            $('#me-message').addClass('msg_container_send');
-            $('#me-time').addClass('msg_time_send');
-            console.log(userId);
+            // $('#me-message').addClass('msg_container_send');
+            // $('#me-time').addClass('msg_time_send');
+            $('#my-photo').children('img_tag').attr('src', 'user_photo01.png');
           } else if (stylistId != null) {
-            $('#me-message').addClass('msg_container_send');
-            $('#me-time').addClass('msg_time_send');
+            // $('#me-message').addClass('msg_container_send');
+            // $('#me-time').addClass('msg_time_send');
+            $('#your-photo').children('img_tag').attr('src', 'stylist_photo01.png');
           }
           if (userId == null) {
-            $('#you-message').addClass('msg_container');
-            $('#you-time').addClass('msg_time');
-            console.log(stylistId);
+            // $('#you-message').addClass('msg_container');
+            // $('#you-time').addClass('msg_time');
+            $('#your-photo').children('img_tag').attr('src', 'user_photo01.png');
           } else if (stylistId == null) {
-            $('#you-message').addClass('msg_container');
-            $('#you-time').addClass('msg_time');
+            // $('#you-message').addClass('msg_container');
+            // $('#you-time').addClass('msg_time');
+            $('#your-photo').children('img_tag').attr('src', 'stylist_photo01.png');
           }
           console.log(message);
         },

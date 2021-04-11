@@ -4,50 +4,50 @@
     <% if user_signed_in? %>
       <% if message.user_id.present? %>
         <div class="d-flex justify-content-end mb-4">
-          <div id="me-message">
+          <div id="me-message" class="msg_container_send">
             <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
               <p><%= " #{message.content}" %></p>
-            <span id="me-time"><%= l message.created_at, format: '%H:%M' %></span>
+            <span id="me-time" class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
           </div>
-          <div class="img_cont_msg">
-            <%= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
+          <div class="img_cont_msg" id="my-photo">
+            <%= image_tag "no_image.png", class:"rounded-circle user_img_msg" %>
           </div>
         </div>
       <% else %>
         <div class="d-flex justify-content-start mb-4">
-          <div  class="img_cont_msg">
-            <%= image_tag message.stylist.stylist_photo, class:"rounded-circle user_img_msg" %>
+          <div  class="img_cont_msg" id="your-photo">
+            <%= image_tag "no_image.png", class:"rounded-circle user_img_msg" %>
           </div>
-          <div id="you-message">
+          <div id="you-message"   class="msg_container">
             <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
               <p><%= " #{message.content}" %></p>
-            <span id="you-time"><%= l message.created_at, format: '%H:%M' %></span>
+            <span id="you-time"  class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
           </div>
         </div>
       <% end %>
     <% end %>
-    <%# <左> %>
+    <%# <右> %>
     <% if stylist_signed_in? %>
       <% if message.stylist_id.present?%>
         <div class="d-flex justify-content-end mb-4">
-          <div id="me-message">
+          <div id="me-message"  class="msg_container_send">
             <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
               <p><%= " #{message.content}" %></p>
-            <span id="me-time"><%= l message.created_at, format: '%H:%M' %></span>
+            <span id="me-time"  class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
           </div>
-          <div class="img_cont_msg">
-            <%= image_tag message.stylist.stylist_photo, class:"rounded-circle user_img_msg" %>
+          <div class="img_cont_msg" id="your-photo">
+            <%= image_tag "no_image.png", class:"rounded-circle user_img_msg" %>
           </div>
         </div>
       <% else %>
         <div class="d-flex justify-content-start mb-4">
-          <div  class="img_cont_msg">
-            <%= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
+          <div  class="img_cont_msg" id="my-photo">
+            <%= image_tag "no_image.png", class:"rounded-circle user_img_msg" %>
           </div>
-          <div id="you-message">
+          <div id="you-message"  class="msg_container">
             <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
               <p><%= " #{message.content}" %></p>
-            <span id="you-time"><%= l message.created_at, format: '%H:%M' %></span>
+            <span id="you-time"  class="msg_time"><%= l message.created_at, format: '%H:%M' %></span>
           </div>
         </div>
       <% end %>
