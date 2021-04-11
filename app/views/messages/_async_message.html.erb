@@ -1,22 +1,11 @@
 <div class="d-flex justify-content-end mb-4">
-  <div id="me-message">
+  <div>
     <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
       <p><%= " #{message.content}" %></p>
-    <span id="me-time"><%= l message.created_at, format: '%H:%M' %></span>
+    <span><%= l message.created_at, format: '%H:%M' %></span>
   </div>
   <div class="img_cont_msg">
     <%= image_tag "no_image.png", class:"rounded-circle user_img_msg" %>
-  </div>
-</div>
-
-<div class="d-flex justify-content-start mb-4">
-  <div  class="img_cont_msg">
-    <%= image_tag "no_image.png", class:"rounded-circle user_img_msg" %>
-  </div>
-  <div id="you-message">
-    <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
-      <p><%= " #{message.content}" %></p>
-    <span id="you-time"><%= l message.created_at, format: '%H:%M' %></span>
   </div>
 </div>
 

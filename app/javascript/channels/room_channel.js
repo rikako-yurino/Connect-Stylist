@@ -22,15 +22,15 @@ import consumer from "./consumer"
             $('#me-message').addClass('msg_container_send');
             $('#me-time').addClass('msg_time_send');
             console.log(userId);
-          } else {
-            $('#you-message').addClass('msg_container');
-            $('#you-time').addClass('msg_time');
-          }
-          if (stylistId != null) {
+          } else if (stylistId != null) {
             $('#me-message').addClass('msg_container_send');
             $('#me-time').addClass('msg_time_send');
+          }
+          if (userId == null) {
+            $('#you-message').addClass('msg_container');
+            $('#you-time').addClass('msg_time');
             console.log(stylistId);
-          } else {
+          } else if (stylistId == null) {
             $('#you-message').addClass('msg_container');
             $('#you-time').addClass('msg_time');
           }
