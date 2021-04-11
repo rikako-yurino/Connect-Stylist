@@ -16,7 +16,7 @@
       <% else %>
         <div class="d-flex justify-content-start mb-4">
           <div  class="img_cont_msg" id="your-photo">
-            <%= image_tag "no_image.png", class:"rounded-circle user_img_msg" %>
+            <%= image_tag message.stylist.stylist_photo, class:"rounded-circle user_img_msg" %>
           </div>
           <div id="you-message"   class="msg_container">
             <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
@@ -36,7 +36,7 @@
             <span id="me-time"  class="msg_time_send"><%= l message.created_at, format: '%H:%M' %></span>
           </div>
           <div class="img_cont_msg" id="your-photo">
-            <%= image_tag "no_image.png", class:"rounded-circle user_img_msg" %>
+            <%= image_tag message.stylist.stylist_photo,  class:"rounded-circle user_img_msg" %>
           </div>
         </div>
       <% else %>
