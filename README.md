@@ -24,14 +24,13 @@
 
 # :star:How to Use
 #### :crystal_ball: 利用方法
-- <strong>:raising_hand:User</strong><br>
+- <strong>👉 User</strong><br>
   - まずはトップページから「骨格診断」へ移動し、セルフ診断をする
   - トップページページから新規会員登録
   - 会員登録後は「チャット予約」から予約
   - 予約が完了したらマイページの予約一覧より入室
-  - スタイリストとチャットルームでメッセージをやり取りする
-<br>
-- <strong>:information_desk_person:Stylist</strong><br>
+  - スタイリストとチャットルームでメッセージをやり取りする<br>
+- <strong>👉 Stylist</strong><br>
   - スタイリスト専用トップページから新規会員登録
   - 新規会員登録・ログイン後はトップページの予約一覧からチャットルームに入室
   - ユーザーとチャットルームでメッセージをやり取りする
