@@ -117,10 +117,6 @@ password:  test123  <br>
 #### :crystal_ball: 今後の実装予定
 
 
-# :star:DB
-#### ER図
-
-
 # :star:Build
 #### ローカル環境構築
 $ git clone ＊＊＊＊＊＊＊＊<br>
@@ -133,8 +129,8 @@ $ rails s<br>
 
 
 
-
-#### テーブル設計
+# :star:Database
+#### :crystal_ball: DB設計
 
 ### users テーブル
 
