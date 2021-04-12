@@ -20,7 +20,11 @@
 # :star: About "Connect Stylist" 
 #### :tada:このアプリケーションについて
 プロのファッションスタイリストとユーザーをチャットで繋ぎ、  
-失敗しがちな服のネットショッピングをサポートするアプリケーションです。
+失敗しがちな服のネットショッピングをサポートするアプリケーションです。<br>
+
+# :star:How to Use
+#### :tada:利用方法
+
 
 # :star:URL & Test account
 #### このアプリケーションには<br>『ユーザー専用ページ』と『スタイリスト専用ページ』があります<br>
@@ -41,9 +45,6 @@ URL: https://connect-stylist.herokuapp.com/stylists  <br>
 email:  test@com  <br>
 password:  test123  <br>
 <br>
-
-# :star:How to Use
-#### :tada:利用方法
 
 
 # :star:Task
