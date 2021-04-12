@@ -64,8 +64,9 @@ password:  test123  <br>
 これではサービスを受けられるのは、<strong>一部の限られた人だけ</strong>になってしまいます。<br>
 <br>
 <br>
-そこで、<strong>オンラインで診断＆ネットショッピングのアドバイス</strong>のサービスを展開し、<br>
-プロのサービスをより手軽に、そして多くの人に利用して頂けることを目指したのが<br>
+そこで、<strong>オンラインで診断＆ネットショッピングのアドバイス</strong><br>
+というサービスを展開し、プロのサービスをより手軽に、<br>
+そして多くの人に利用して頂けることを目指したのが<br>
 <strong>ConnectStylist</strong>です。
 <br>
 <br>
@@ -110,7 +111,7 @@ password:  test123  <br>
 #### :crystal_ball: 要件定義
 
 
-# :star:Function
+# :star:Functions
 #### :crystal_ball: 実装した機能
 
 # :star:Plans
