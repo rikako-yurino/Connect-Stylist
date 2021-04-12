@@ -2,10 +2,10 @@
   <div>
     <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
       <p><%= " #{message.content}" %></p>
-    <span><%= l message.created_at, format: '%H:%M' %></span>
+    <span id="time"><%= l message.created_at, format: '%H:%M' %></span>
   </div>
-  <div class="img_cont_msg">
-    <%= image_tag message.user.user_photo, class:"rounded-circle user_img_msg" %>
+  <div class="img_cont_msg" id="my-photo">
+    <%= image_tag "user_photo01.png", class:"rounded-circle user_img_msg" %>
   </div>
 </div>
 

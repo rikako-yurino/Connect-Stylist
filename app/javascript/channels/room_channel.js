@@ -19,20 +19,19 @@ import consumer from "./consumer"
         $('#messages').append(data['message']);
         const message = $('#messages').find('#message-' + messageId + '')
           if (userId != null){
-            $('#me-message').addClass('msg_container_send');
-            $('#me-time').addClass('msg_time_send');
+            $('.justify-content-end').children('.div').addClass('msg_container_send');
+            $('#time').addClass('msg_time_send');
           } else if (stylistId != null) {
-            $('#me-message').addClass('msg_container_send');
-            $('#me-time').addClass('msg_time_send');
+            $('.justify-content-end').children('msg_container_send');
+            $('#time').addClass('msg_time_send');
           }
           if (userId == null) {
-            $('#you-message').addClass('msg_container');
-            $('#you-time').addClass('msg_time');
+            $('.justify-content-end').children('msg_container');
+            $('#time').addClass('msg_time');
           } else if (stylistId == null) {
-            $('#you-message').addClass('msg_container');
-            $('#you-time').addClass('msg_time');
+            $('.justify-content-end').children('msg_container');
+            $('#time').addClass('msg_time');
           }
-          console.log(message);
         },
 
       speak: function(message) {
