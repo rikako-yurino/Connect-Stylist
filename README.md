@@ -17,16 +17,16 @@
       
 
 
-# :white_check_mark: About "Connect Stylist" 
-#### :tada:このアプリケーションについて
+# :star: About "Connect Stylist" 
+#### :white_check_mark:このアプリケーションについて
 プロのファッションスタイリストとユーザーをチャットで繋ぎ、  
 失敗しがちな服のネットショッピングをサポートするアプリケーションです。<br>
 
-# :white_check_mark:How to Use
-#### :star:利用方法
+# :star:How to Use
+#### :white_check_mark:利用方法
 
 
-# :white_check_mark:URL & Test account
+# :star:URL & Test account
 #### このアプリケーションには<br>『ユーザー専用ページ』と『スタイリスト専用ページ』があります<br>
 
 #### :point_right:Basic認証
@@ -47,22 +47,22 @@ password:  test123  <br>
 <br>
 
 
-# :white_check_mark:Task
-#### :star:目指した問題解決
+# :star:Task
+#### :white_check_mark:目指した問題解決
 
 
-# :white_check_mark:Requirements
-#### :star:要件定義
+# :star:Requirements
+#### :white_check_mark:要件定義
 
 
-# :white_check_mark:Function
-#### :star:実装した機能
+# :star:Function
+#### :white_check_mark:実装した機能
 
-# :white_check_mark:Plans
-#### :star:今後の実装予定
+# :star:Plans
+#### :white_check_mark:今後の実装予定
 
 
-# :white_check_mark:DB
+# :star:DB
 #### ER図
 
 
@@ -77,8 +77,8 @@ $ rails s<br>
 :point_right: http://localhost:3000<br>
 
 
-# :white_check_mark:Intention
-#### :star:制作背景
+# :star:Intention
+#### :white_check_mark:制作背景
 **雑誌やSNSで話題の”骨格診断”をご存知ですか？**  
 骨格診断とは、体の特徴や肌の質感により３タイプに分類し、  
 タイプごとに最も似合うデザイン・カラー・素材を知ることが出来る基準です。  
@@ -192,8 +192,8 @@ $ rails s<br>
 - belongs_to :user
 
 
-# :white_check_mark:AboutMe
-#### :star:製作者
+# :star:AboutMe
+#### :white_check_mark:製作者
 趣味はデジタルイラストを描くこととインテリア。<br>
 0→1で作ることも、既存のものを組み合わせて作ることも<br>
 とにかくモノづくりが好きです。<br>
