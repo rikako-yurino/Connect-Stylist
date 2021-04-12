@@ -64,13 +64,11 @@ ActiveRecord::Schema.define(version: 2021_04_11_082029) do
     t.date "reservation_date", null: false
     t.integer "time_zone_id", null: false
     t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.integer "purpose_id", null: false
     t.integer "style_id", null: false
     t.text "remarks"
-    t.bigint "room_id_id"
-    t.bigint "room_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
