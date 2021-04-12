@@ -24,23 +24,23 @@
 
 # :star:URL & Test account
 #### このアプリケーションには<br>『ユーザー専用ページ』と『スタイリスト専用ページ』があります<br>
-
+<br>
 
 #### :point_right:Basic認証
-UserID: admin <br>
-Password: 2222 <br>
+UserID:  admin <br>
+Password:  2222 <br>
 <br>
 
 #### :bust_in_silhouette:user
 URL: https://connect-stylist.herokuapp.com/ <br>
-email: test@com  <br>
-password: test123  <br>
+email:  test@com  <br>
+password:  test123  <br>
 <br>
 
 #### :bust_in_silhouette:stylist
 URL: https://connect-stylist.herokuapp.com/stylists  <br>
-email: test@com  <br>
-password: test123  <br>
+email:  test@com  <br>
+password:  test123  <br>
 
 # :star:How to Use
 #### :open_file_folder:利用方法
