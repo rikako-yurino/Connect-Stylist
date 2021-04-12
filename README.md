@@ -119,8 +119,8 @@ password:  test123  <br>
 
 # :star:Build
 #### ローカル環境構築
-$ git clone ＊＊＊＊＊＊＊＊<br>
-$ cd ＊＊＊＊＊＊＊＊<br>
+$ git clone https://github.com/rikako-yurino/Connect-Stylist.git<br>
+$ cd Connect-Stylist<br>
 $ bundle install<br>
 $ rails db:create<br>
 $ rails db:migrate<br>
