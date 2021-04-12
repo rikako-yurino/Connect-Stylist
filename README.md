@@ -10,12 +10,7 @@
 <br>
 <br>
 <br>
-
 </p>
-  
-    
-      
-
 
 # :star: About "Connect Stylist" 
 #### :crystal_ball: このアプリケーションについて
@@ -74,7 +69,7 @@ password:  test123  <br>
 :tada:骨格タイプが分かるとこれらが改善されます！
 - おしゃれをしても垢抜けない  
 - 「着痩せ」または「自分を魅力的に見せたい」  
-- 買っても着ない洋服がある・クローゼットが服でいっぱい
+- 買っても着ない服がある・クローゼットが服でいっぱい
 
 <br>
 しかし、パーソナルスタイリストに診断&ショッピング同行のサービスを受けるにはサービス料が高く、<br>
@@ -83,7 +78,7 @@ password:  test123  <br>
 <br>
 <br>
 そこで、<strong>オンラインで診断＆ネットショッピングのアドバイス</strong><br>というサービスを展開してプロのサービスをより手軽に、<br>
-そして多くの人に利用して頂けることを目指したのが<strong>ConnectStylist</strong>です👍
+そして多くの人に利用して頂けることを目指したのが<strong>Connect Stylist</strong>です👍
 <br>
 <br>
 
@@ -121,14 +116,16 @@ password:  test123  <br>
   - オンライン完結によるサービスの場が増え、コロナ渦における活動縮小を軽減させる<br>
 <br>
 
+# :star:Demo
+#### :crystal_ball: 実際の操作風景
+<strong>骨格診断</strong><br>
 
+<strong>ユーザー管理機能</strong><br>
 
-# :star:Requirements
-#### :crystal_ball: 要件定義
+<strong>予約機能</strong><br>
 
+<strong>チャット機能</strong><br>
 
-# :star:Functions
-#### :crystal_ball: 実装した機能
 
 # :star:Plans
 #### :crystal_ball: 今後の実装予定
