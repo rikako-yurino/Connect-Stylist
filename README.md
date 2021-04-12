@@ -19,12 +19,60 @@
 
 # :star:About "ConnectStylist"
 #### :purple_heart:このアプリケーションについて
-プロのファッションスタイリストとユーザーをコネクトし、  
-失敗しがちな洋服のネットショッピングをサポートします。
+プロのファッションスタイリストとユーザーをチャットで繋ぎ、  
+失敗しがちな服のネットショッピングをサポートするアプリケーションです。
+
+# :star:URL & Test account
+このアプリケーションには
+『ユーザー専用ページ』と『スタイリスト専用ページ』があります。<br>
+
+#### user
+URL: https://connect-stylist.herokuapp.com/
+email: test@com
+password: test123
+<br>
+#### stylist
+URL: https://connect-stylist.herokuapp.com/stylists
+email: test@com
+password: test123
+
+# :star:How to Use
+#### :purple_heart:利用方法
+
+
+# :star:Task
+#### :purple_heart:目指した問題解決
+
+
+# :star:Requirements
+#### :purple_heart:要件定義
+
+
+# :star:Function
+#### :purple_heart:実装した機能
+
+# :star:Plans
+#### :purple_heart:今後の実装予定
+
+
+# :star:DB
+#### ER図
+
+
+# Build
+#### ローカル環境構築
+$ git clone ＊＊＊＊＊＊＊＊<br>
+$ cd ＊＊＊＊＊＊＊＊<br>
+$ bundle install<br>
+$ rails db:create<br>
+$ rails db:migrate<br>
+$ rails s<br>
+:point_right: http://localhost:3000<br>
+
 
 # :star:Intention
 #### :purple_heart:制作背景
-**巷で話題の”骨格診断”をご存知ですか？**  
+**雑誌やSNSで話題の”骨格診断”をご存知ですか？**  
 骨格診断とは、体の特徴や肌の質感により３タイプに分類し、  
 タイプごとに最も似合うデザイン・カラー・素材を知ることが出来る基準です。  
 <br>
@@ -45,22 +93,8 @@
 <strong>ConnectStylist</strong>です。
 
 
-# :star:Function
-#### :purple_heart:機能
 
 
-# Build
-#### 構築
-$ git clone ＊＊＊＊＊＊＊＊<br>
-$ cd ＊＊＊＊＊＊＊＊<br>
-$ bundle install<br>
-$ rails db:create<br>
-$ rails db:migrate<br>
-$ rails s<br>
-:point_right: http://localhost:3000<br>
-
-# :star:DB
-#### ER図
 
 
 #### テーブル設計
