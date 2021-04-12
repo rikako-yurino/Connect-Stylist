@@ -23,19 +23,18 @@
 失敗しがちな服のネットショッピングをサポートするアプリケーションです。
 
 # :star:URL & Test account
-####このアプリケーションには<br>
-『ユーザー専用ページ』と『スタイリスト専用ページ』があります。<br>
+#### このアプリケーションには<br>『ユーザー専用ページ』と『スタイリスト専用ページ』があります。<br>
 
 #### :point_right:user
-URL: https://connect-stylist.herokuapp.com/
-email: test@com
-password: test123
+URL: https://connect-stylist.herokuapp.com/ <br>
+email: test@com  <br>
+password: test123  <br>
 <br>
 
 #### :point_right:stylist
-URL: https://connect-stylist.herokuapp.com/stylists
-email: test@com
-password: test123
+URL: https://connect-stylist.herokuapp.com/stylists  <br>
+email: test@com  <br>
+password: test123  <br>
 
 # :star:How to Use
 #### :open_file_folder:利用方法
