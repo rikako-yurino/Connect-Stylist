@@ -72,7 +72,7 @@ password:  test123  <br>
 
 # :star:Task
 #### :crystal_ball: どのような課題に対してアプローチしているか
-  <strong>総合的視点</strong>
+  <strong>総合的視点</strong><br>
     - 現状課題<br>
       - 骨格診断やパーソナルスタイリストのサービスが注目されているにも関わらず、<br>
       高単価なサービスが多いため利用者が限られている<br>
