@@ -83,7 +83,7 @@ password:  test123  <br>
 <br>
 <br>
 そこで、<strong>オンラインで診断＆ネットショッピングのアドバイス</strong><br>というサービスを展開してプロのサービスをより手軽に、<br>
-そして多くの人に利用して頂けることを目指したのが<strong>ConnectStylist</strong>です。
+そして多くの人に利用して頂けることを目指したのが<strong>ConnectStylist</strong>です👍
 <br>
 <br>
 
