@@ -18,13 +18,12 @@
 
 
 # :star: About "Connect Stylist" 
-#### :open_file_folder:このアプリケーションについて
+#### :tada:このアプリケーションについて
 プロのファッションスタイリストとユーザーをチャットで繋ぎ、  
 失敗しがちな服のネットショッピングをサポートするアプリケーションです。
 
 # :star:URL & Test account
 #### このアプリケーションには<br>『ユーザー専用ページ』と『スタイリスト専用ページ』があります<br>
-<br>
 
 #### :point_right:Basic認証
 UserID:  admin <br>
@@ -41,24 +40,25 @@ password:  test123  <br>
 URL: https://connect-stylist.herokuapp.com/stylists  <br>
 email:  test@com  <br>
 password:  test123  <br>
+<br>
 
 # :star:How to Use
-#### :open_file_folder:利用方法
+#### :tada:利用方法
 
 
 # :star:Task
-#### :open_file_folder:目指した問題解決
+#### :tada:目指した問題解決
 
 
 # :star:Requirements
-#### :open_file_folder:要件定義
+#### :tada:要件定義
 
 
 # :star:Function
-#### :open_file_folder:実装した機能
+#### :tada:実装した機能
 
 # :star:Plans
-#### :open_file_folder:今後の実装予定
+#### :tada:今後の実装予定
 
 
 # :star:DB
@@ -77,7 +77,7 @@ $ rails s<br>
 
 
 # :star:Intention
-#### :open_file_folder:制作背景
+#### :tada:制作背景
 **雑誌やSNSで話題の”骨格診断”をご存知ですか？**  
 骨格診断とは、体の特徴や肌の質感により３タイプに分類し、  
 タイプごとに最も似合うデザイン・カラー・素材を知ることが出来る基準です。  
@@ -192,7 +192,7 @@ $ rails s<br>
 
 
 # :star:AboutMe
-#### :open_file_folder:製作者
+#### :tada:製作者
 趣味はデジタルイラストを描くこととインテリア。<br>
 0→1で作ることも、既存のものを組み合わせて作ることも<br>
 とにかくモノづくりが好きです。<br>
