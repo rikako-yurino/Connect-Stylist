@@ -19,23 +19,18 @@ import consumer from "./consumer"
         $('#messages').append(data['message']);
         const message = $('#messages').find('#message-' + messageId + '')
           if (userId != null){
-            // $('#me-message').addClass('msg_container_send');
-            // $('#me-time').addClass('msg_time_send');
-            console.log('はい');
-            $('#my-photo').children('img').attr('src', 'src="/assets/user_photo.png"');
+            $('#me-message').addClass('msg_container_send');
+            $('#me-time').addClass('msg_time_send');
           } else if (stylistId != null) {
-            // $('#me-message').addClass('msg_container_send');
-            // $('#me-time').addClass('msg_time_send');
-            console.log($('#my-photo').children('img').attr('src', 'src="/assets/stylist_photo.png"'));
+            $('#me-message').addClass('msg_container_send');
+            $('#me-time').addClass('msg_time_send');
           }
           if (userId == null) {
-            // $('#you-message').addClass('msg_container');
-            // $('#you-time').addClass('msg_time');
-            $('#your-photo').children('img').attr('src', 'src="/assets/user_photo.png"');
+            $('#you-message').addClass('msg_container');
+            $('#you-time').addClass('msg_time');
           } else if (stylistId == null) {
-            // $('#you-message').addClass('msg_container');
-            // $('#you-time').addClass('msg_time');
-            $('#your-photo').children('img').attr('src', 'src="/assets/stylist_photo.png"');
+            $('#you-message').addClass('msg_container');
+            $('#you-time').addClass('msg_time');
           }
           console.log(message);
         },
