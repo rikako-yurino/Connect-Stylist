@@ -18,12 +18,12 @@
 
 
 # :star: About "Connect Stylist" 
-#### :white_check_mark:このアプリケーションについて
+#### :crystal_ball: このアプリケーションについて
 プロのファッションスタイリストとユーザーをチャットで繋ぎ、  
 失敗しがちな服のネットショッピングをサポートするアプリケーションです。<br>
 
 # :star:How to Use
-#### :white_check_mark:利用方法
+#### :crystal_ball: 利用方法
 
 
 # :star:URL & Test account
@@ -47,7 +47,7 @@ password:  test123  <br>
 <br>
 
 # :star:Intention
-#### :white_check_mark:制作背景
+#### :crystal_ball: 制作背景
 **雑誌やSNSで話題の”骨格診断”をご存知ですか？**  
 骨格診断とは、骨格の特徴や肌の質感により３タイプに分類し、  
 タイプごとに最も似合うデザイン・カラー・素材を知ることが出来る基準です。  
@@ -70,20 +70,20 @@ password:  test123  <br>
 <br>
 
 # :star:Task
-#### :white_check_mark:目指した問題解決
+#### :crystal_ball: 目指した問題解決
 
 
 
 
 # :star:Requirements
-#### :white_check_mark:要件定義
+#### :crystal_ball: 要件定義
 
 
 # :star:Function
-#### :white_check_mark:実装した機能
+#### :crystal_ball: 実装した機能
 
 # :star:Plans
-#### :white_check_mark:今後の実装予定
+#### :crystal_ball: 今後の実装予定
 
 
 # :star:DB
@@ -192,7 +192,7 @@ $ rails s<br>
 
 
 # :star:AboutMe
-#### :white_check_mark:製作者
+#### :crystal_ball: 製作者
 趣味はデジタルイラストを描くこととインテリア。<br>
 0→1で作ることも、既存のものを組み合わせて作ることも<br>
 とにかくモノづくりが好きです。<br>
