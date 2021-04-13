@@ -116,7 +116,10 @@ password:  test123  <br>
 [![Image from Gyazo](https://i.gyazo.com/6b9efaca26125fd0c461ccaf5e44b8b0.jpg)](https://gyazo.com/6b9efaca26125fd0c461ccaf5e44b8b0)
 
 <br><strong> 👉 ユーザー管理機能</strong><br>
+User
 [![Image from Gyazo](https://i.gyazo.com/c2bacf8c340387a0fe499be9e67bdad3.gif)](https://gyazo.com/c2bacf8c340387a0fe499be9e67bdad3)
+Stylist
+[![Image from Gyazo](https://i.gyazo.com/ad6d904f5de8df11dc37f9ecc5299523.gif)](https://gyazo.com/ad6d904f5de8df11dc37f9ecc5299523)
 
 <strong> 👉 予約機能</strong><br>
 [![Image from Gyazo](https://i.gyazo.com/4072c37e839ba443924befd951598423.gif)](https://gyazo.com/4072c37e839ba443924befd951598423)
