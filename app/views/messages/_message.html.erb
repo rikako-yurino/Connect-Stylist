@@ -1,7 +1,7 @@
 <div class="message" id="message-<%= message.id %>">
   <div class="card-body msg_card_body">
     <%# <右> %>
-    <% if user_signed_in? %>
+
       <% if message.user_id.present? %>
         <div class="d-flex justify-content-end mb-4">
           <div class="msg_container_send">
@@ -25,9 +25,9 @@
           </div>
         </div>
       <% end %>
-    <% end %>
+
     <%# <右> %>
-    <% if stylist_signed_in? %>
+
       <% if message.stylist_id.present?%>
         <div class="d-flex justify-content-end mb-4">
           <div  class="msg_container_send">
@@ -51,6 +51,6 @@
           </div>
         </div>
       <% end %>
-    <% end %>
+
   </div>
 </div>

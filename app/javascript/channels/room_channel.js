@@ -22,31 +22,23 @@ import consumer from "./consumer"
         const messageFrame = $('.message').find('.message-frame');
         if (currentUser == 'user'){ //見ているのがuserであれば
           if (userId == null){ //stylistからのメッセージ
-            console.log('userがスタイリストのメッセージを見てる')
             messageSend.addClass('justify-content-start');
             messageFrame.addClass('msg_container');
             $('.time').addClass('msg_time');
-            // $('.img_cont_msg').children('image_tag').attr('src', '../app/assets/images/stylist_photo01.jpg');
           } else if (stylistId == null) { //userのメッセージ
-            console.log('userが自分のメッセージを見てる')
             messageSend.addClass('justify-content-end');
             messageFrame.addClass('msg_container_send');
             $('.time').addClass('msg_time_send');
-            // $('.img_cont_msg').children('image_tag').attr('src', '../app/assets/images/user_photo01.jpg');
           }
         } else { //見ているのがstylistであれば
           if (userId == null){ //stylistのメッセージ
-            console.log('スタイリストが自分のメッセージを見てる')
             messageSend.addClass('justify-content-end');
             messageFrame.addClass('msg_container_send');
             $('.time').addClass('msg_time_send');
-            // $('.img_cont_msg').children('image_tag').attr('src', '../app/assets/images/user_photo01.jpg');
           } else if (stylistId == null) { //userからのメッセージ
-            console.log('スタイリストがuserのメッセージを見てる')
             messageSend.addClass('justify-content-start');
             messageFrame.addClass('msg_container');
             $('.time').addClass('msg_time');
-            // $('.img_cont_msg').children('image_tag').attr('src', '../app/assets/images/stylist_photo01.jpg');
           }
         }
       },
