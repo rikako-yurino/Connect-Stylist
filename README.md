@@ -131,7 +131,7 @@ password:  test123  <br>
 [![Image from Gyazo](https://i.gyazo.com/4072c37e839ba443924befd951598423.gif)](https://gyazo.com/4072c37e839ba443924befd951598423)
 
 <strong>チャット機能</strong><br>
-[![Image from Gyazo](https://i.gyazo.com/8efbc45d7beed9bd66c6e19390a4daf3.jpg)](https://gyazo.com/8efbc45d7beed9bd66c6e19390a4daf3)
+[![Image from Gyazo](https://i.gyazo.com/31c6c9b7218685c310dc07cc98a4cd8f.gif)](https://gyazo.com/31c6c9b7218685c310dc07cc98a4cd8f)
 
 # :star:Plans
 #### :crystal_ball: 今後の実装予定

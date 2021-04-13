@@ -19,10 +19,11 @@ import consumer from "./consumer"
         $('#messages').append(data['message']);
         const message = $('#messages').find('#message-' + messageId + '');
         const messageSend =  $('.message').find('.message-send');
+        const messageLeft =  $('.message').find('.message-left');
         const messageFrame = $('.message').find('.message-frame');
         if (currentUser == 'user'){ //見ているのがuserであれば
           if (userId == null){ //stylistからのメッセージ
-            messageSend.addClass('justify-content-start');
+            messageLeft.addClass('justify-content-start');
             messageFrame.addClass('msg_container');
             $('.time').addClass('msg_time');
           } else if (stylistId == null) { //userのメッセージ
@@ -36,7 +37,7 @@ import consumer from "./consumer"
             messageFrame.addClass('msg_container_send');
             $('.time').addClass('msg_time_send');
           } else if (stylistId == null) { //userからのメッセージ
-            messageSend.addClass('justify-content-start');
+            messageLeft.addClass('justify-content-start');
             messageFrame.addClass('msg_container');
             $('.time').addClass('msg_time');
           }
