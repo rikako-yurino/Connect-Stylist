@@ -118,27 +118,27 @@ password:  test123  <br>
 
 # :star:Demo
 #### :crystal_ball: 実際の操作風景
-<br><strong>骨格診断</strong><br>
+<br><strong> 👉 骨格診断</strong><br>
 診断中
 [![Image from Gyazo](https://i.gyazo.com/74b1fb3d7a5e3289a837dddab25bbc60.gif)](https://gyazo.com/74b1fb3d7a5e3289a837dddab25bbc60)
 診断結果
 [![Image from Gyazo](https://i.gyazo.com/6b9efaca26125fd0c461ccaf5e44b8b0.jpg)](https://gyazo.com/6b9efaca26125fd0c461ccaf5e44b8b0)
 
-<br><strong>ユーザー管理機能</strong><br>
+<br><strong> 👉 ユーザー管理機能</strong><br>
 [![Image from Gyazo](https://i.gyazo.com/c2bacf8c340387a0fe499be9e67bdad3.gif)](https://gyazo.com/c2bacf8c340387a0fe499be9e67bdad3)
 
-<strong>予約機能</strong><br>
+<strong> 👉 予約機能</strong><br>
 [![Image from Gyazo](https://i.gyazo.com/4072c37e839ba443924befd951598423.gif)](https://gyazo.com/4072c37e839ba443924befd951598423)
 
-<strong>チャット機能</strong><br>
+<strong> 👉 チャット機能</strong><br>
 [![Image from Gyazo](https://i.gyazo.com/31c6c9b7218685c310dc07cc98a4cd8f.gif)](https://gyazo.com/31c6c9b7218685c310dc07cc98a4cd8f)
 
 # :star:Plans
 #### :crystal_ball: 今後の実装予定
-- 画像送信機能
+- 予約日時の制御
+- チャット内の画像送信機能
 - 購入機能
-  - 月額制
-- 購入機能
+  - PAY.JPによる月額制の会員
 
 
 # :star:Build
