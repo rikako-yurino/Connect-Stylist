@@ -1,11 +1,18 @@
-<div class="d-flex justify-content-end mb-4">
-  <div>
-    <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
-      <p><%= " #{message.content}" %></p>
-    <span id="time"><%= l message.created_at, format: '%H:%M' %></span>
-  </div>
-  <div class="img_cont_msg" id="my-photo">
-    <%= image_tag "user_photo01.png", class:"rounded-circle user_img_msg" %>
+<div class="message" id="message-<%= message.id %>">
+  <div class="card-body msg_card_body">
+     <div class="message-send d-flex mb-4">
+        <div class="message-frame">
+            <%= image_tag message.image.variant(resize: '400x400'), class: 'message-image' if message.image.attached? %>
+            <p><%= " #{message.content}" %></p>
+            <span  class="time"><%= l message.created_at, format: '%H:%M' %></span>
+          </div>
+          <div class="img_cont_msg" >
+          <% if message.user_id.present? %>
+            <%= image_tag "user_photo01.png", class:"rounded-circle user_img_msg" %>
+          <% elsif %>
+            <%= image_tag "stylist_photo01.png", class:"rounded-circle user_img_msg" %>
+          <% end %>
+        </div>
+      </div>
   </div>
 </div>
-

@@ -1,20 +1,20 @@
 <%= render "header_room" %>
-<div class='message-wrapper'>
-  <div class="room-view">
-    <div id='messages' data-room_id="<%= @room.id %>">
-      <%= render @messages %>
-    </div>
-    <div class="input-group">
-      <div class="input-group-append">
-        <label class="form-image">
-          <span class="input-group-text attach_btn"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
-          <%= file_field_tag :image, class: 'hidden' %>
-        </label>
+  <div class='message-wrapper'>
+    <div class="room-view">
+      <div id='messages' data-room_id="<%= @room.id %>" data-current_user="<%= user_signed_in? ? 'user' : 'stylist'%>">
+        <%= render @messages %>
       </div>
-      <%= text_area_tag :content, nil , class: 'form-control message_content type_msg', id: 'input', data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
+      <div class="input-group">
         <div class="input-group-append">
-          <span class="input-group-text reset-btn" id='send-button'><i class="fas fa-location-arrow"></i></span>
-        </div>
+          <label class="form-image">
+            <span class="input-group-text attach_btn"><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+            <%= file_field_tag :image, class: 'hidden' %>
+          </label>
+      </div>
+        <%= text_area_tag :content, nil , class: 'form-control message_content type_msg', id: 'input', data: {behavior: "room_speaker"}, rows: '1', maxlength: '500', placeholder: 'メッセージを入力'%>
+          <div class="input-group-append">
+            <span class="input-group-text reset-btn" id='send-button'><i class="fas fa-location-arrow"></i></span>
+          </div>
+      </div>
     </div>
   </div>
-</div>

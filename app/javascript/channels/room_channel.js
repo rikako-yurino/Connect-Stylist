@@ -12,27 +12,44 @@ import consumer from "./consumer"
       },
     
       received: function(data) {
-        console.log(data);
+        const currentUser = $('#messages').data('current_user');
         const messageId = data['message_id'];
         const userId = data['user_id'];
         const stylistId = data['stylist_id'];
         $('#messages').append(data['message']);
-        const message = $('#messages').find('#message-' + messageId + '')
-          if (userId != null){
-            $('.justify-content-end').children('.div').addClass('msg_container_send');
-            $('#time').addClass('msg_time_send');
-          } else if (stylistId != null) {
-            $('.justify-content-end').children('msg_container_send');
-            $('#time').addClass('msg_time_send');
+        const message = $('#messages').find('#message-' + messageId + '');
+        const messageSend =  $('.message').find('.message-send');
+        const messageFrame = $('.message').find('.message-frame');
+        if (currentUser == 'user'){ //見ているのがuserであれば
+          if (userId == null){ //stylistからのメッセージ
+            console.log('userがスタイリストのメッセージを見てる')
+            messageSend.addClass('justify-content-start');
+            messageFrame.addClass('msg_container');
+            $('.time').addClass('msg_time');
+            // $('.img_cont_msg').children('image_tag').attr('src', '../app/assets/images/stylist_photo01.jpg');
+          } else if (stylistId == null) { //userのメッセージ
+            console.log('userが自分のメッセージを見てる')
+            messageSend.addClass('justify-content-end');
+            messageFrame.addClass('msg_container_send');
+            $('.time').addClass('msg_time_send');
+            // $('.img_cont_msg').children('image_tag').attr('src', '../app/assets/images/user_photo01.jpg');
           }
-          if (userId == null) {
-            $('.justify-content-end').children('msg_container');
-            $('#time').addClass('msg_time');
-          } else if (stylistId == null) {
-            $('.justify-content-end').children('msg_container');
-            $('#time').addClass('msg_time');
+        } else { //見ているのがstylistであれば
+          if (userId == null){ //stylistのメッセージ
+            console.log('スタイリストが自分のメッセージを見てる')
+            messageSend.addClass('justify-content-end');
+            messageFrame.addClass('msg_container_send');
+            $('.time').addClass('msg_time_send');
+            // $('.img_cont_msg').children('image_tag').attr('src', '../app/assets/images/user_photo01.jpg');
+          } else if (stylistId == null) { //userからのメッセージ
+            console.log('スタイリストがuserのメッセージを見てる')
+            messageSend.addClass('justify-content-start');
+            messageFrame.addClass('msg_container');
+            $('.time').addClass('msg_time');
+            // $('.img_cont_msg').children('image_tag').attr('src', '../app/assets/images/stylist_photo01.jpg');
           }
-        },
+        }
+      },
 
       speak: function(message) {
         return this.perform('speak', {message: message});
