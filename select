@@ -228,3 +228,4 @@ histignore                        (No default value)
 binary-mode                       FALSE
 server-public-key-path            (No default value)
 connect-expired-password          FALSE
+
