@@ -21,7 +21,7 @@
         </ul>
       </div>
       <div class="user-reservations">
-        <p>スタイリスト予約一覧</p>
+        <p>スタイリストチャット予約一覧</p>
           <div class='room-contents'>
             <% @rooms = Room.includes(:user) %> 
                 <% @rooms.each do |room| %>  
@@ -30,7 +30,7 @@
                       <div class="excuse">お時間になりましたら下記よりお入りください</div>
                     <% end %>
                     <ul>
-                      <li><%= link_to "予約日時：#{room.reservation.reservation_date}  #{room.reservation.time_zone.name}", reservation_room_path(room.reservation), {class: "text-decoration-none"} %></li> 
+                      <li><%= link_to "予約日時：#{room.reservation.reservation_date}  #{room.reservation.time_zone.name}", "/reservations/#{room.reservation.id}/rooms/#{room.id}", {class: "text-decoration-none"} %></li> 
                     </ul>
                   <% end %>
                 <% end %>

@@ -1,6 +1,4 @@
-// Place all the styles related to the diagnoses controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -13,46 +11,47 @@ body {
 }
 
 .flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   text-align: center;
   margin: 0 auto;
 }
 
- 
 .choose_box {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: relative;
   height: 45vw;
   width: 100%;
 }
 
- .choose_box p {
-   padding-top: 55px;
-    font-size: 24px;
-    display: block;
-    font-weight: 600;
-    text-align: center;
-  }
- 
+.choose_box p {
+  padding-top: 55px;
+  font-size: 24px;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+}
+
 .choose_box ul {
   width: 100%;
   margin: 0 auto;
   padding-top: 40px;
   padding-left: 20px;
 }
+
 .choose_box ul li {
   width: calc(100% / 2 - 20px);
   margin-right: 20px;
   margin-bottom: 20px;
   list-style: none;
 }
-
- 
-// .choose_box ul li:nth-child(2n) {
-//   margin-right: 0;
-// }
 
 .choose_box ul li a {
   height: 120px;
@@ -65,20 +64,16 @@ body {
   font-size: 18px;
   border: 2px solid #5CE5CB;
   text-decoration: none;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
   border-radius: 6px;
 }
- 
+
 .choose_box ul li a:hover {
   background-color: #fff;
   color: #5CE5CB;
   -webkit-transition: 0.7s;
-  -moz-transition: 0.7s;
-  -o-transition: 0.7s;
   transition: 0.7s;
 }
- 
+
 h4 {
   position: relative;
   text-align: center;
@@ -86,12 +81,16 @@ h4 {
   font-size: 0.8em;
   color: #5CE5CB;
   font-weight: bold;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border-top: 3px #5CE5CB solid;
   border-bottom: 3px #5CE5CB solid;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
-  }
- 
+}
+
 .fit {
   position: absolute;
   text-align: center;
@@ -100,13 +99,14 @@ h4 {
   width: 100%;
 }
 
-#q_06 span,#q_07 span {
+#q_06 span, #q_07 span {
   display: block;
-  width:100%;
+  width: 100%;
 }
-#q_06 a,#q_07 a {
+
+#q_06 a, #q_07 a {
   display: block;
-  width:100%;
+  width: 100%;
   text-align: center;
 }
 
@@ -120,14 +120,17 @@ h4 {
   text-align: center;
 }
 
-
-.strt-btn-wrapper{
+.strt-btn-wrapper {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.start-btn{
+.start-btn {
   width: 40%;
   padding-top: 10vh;
 }
@@ -139,12 +142,11 @@ h4 {
 
 /* ボタンをへこませる */
 .start-btn:active {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   position: relative;
   top: 6px;
 }
-
-
 
 .frame-type {
   width: 50%;
@@ -152,11 +154,15 @@ h4 {
 }
 
 .frame-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.back-btns{
+.back-btns {
   margin-bottom: 300px;
   margin: auto;
 }
@@ -168,9 +174,13 @@ h4 {
   font-weight: bold;
   color: #75DBC7;
   text-decoration: none !important;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border: 1px #75DBC7 solid;
   border-radius: 20px;
+  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
 
@@ -183,18 +193,27 @@ h4 {
   margin-top: 20px;
   background-color: #fff;
   height: 88vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 12%;
 }
 
-.answer_01 a,.answer_02 a,.answer_03 a {
+.answer_01 a, .answer_02 a, .answer_03 a {
   width: 100vh;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .frame-text {
   text-align-last: center;
 }
+/*# sourceMappingURL=diagnoses.css.map */
