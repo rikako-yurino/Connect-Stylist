@@ -67,4 +67,4 @@ gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'delayed_job_active_record'
 gem 'bootstrap', '~> 4.1.1'
-
+gem "aws-sdk-s3", require: false
