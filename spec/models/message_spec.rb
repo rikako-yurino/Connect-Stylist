@@ -3,9 +3,7 @@ require 'rails_helper'
 RSpec.describe Message, type: :model do
   describe '#create' do
     before do
-      @user = FactoryBot.create(:user)
-      @stylist = FactoryBot.build(:stylist)
-      @reservation_room = FactoryBot.build(:reservation_room, user_id: @user.id, stylist_id: @stylist.id)
+      @message = FactoryBot.build(:message)
     end
 
     describe 'message送信' do
@@ -28,7 +26,7 @@ RSpec.describe Message, type: :model do
       end
 
       context '内容に問題ない場合' do
-        it 'contentとimageが空では保存できないこと' do
+        it 'contentが空では保存できないこと' do
           @message.content = ''
           @message.valid?
           expect(@message.errors.full_messages).to include("Contentを入力してください")

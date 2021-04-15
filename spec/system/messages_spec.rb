@@ -1,86 +1,109 @@
 require 'rails_helper'
 
-RSpec.describe "Messages", type: :system do
+RSpec.describe "Messages送信機能", type: :system do
   before do
-    driven_by(:rack_test)
+    @user = FactoryBot.create(:user)
+    @stylist = FactoryBot.create(:stylist)
+    @reservation = FactoryBot.create(:reservation,  user_id: @user.id)
+    @room = FactoryBot.create(:room, user_id: @user.id, reservation_id: @reservation.id)
+    @message = Message.last
   end
 
-  pending "add some scenarios (or delete) #{__FILE__}"
-end
-
-  context '投稿に失敗したとき' do
-    it '送る値が空の為、メッセージの送信に失敗すること' do
+  context 'ユーザー側' do
+    it 'message送信に成功すると、message内容が表示されている' do
       # サインインする
-      sign_in(@room_user.user)
+      visit new_user_session_path
+      fill_in 'user[email]', with: @user.email
+      fill_in 'user[password]', with: @user.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq(root_path)
+      # マイページに移動する
+      visit mypage_reservation_path(@user)
+      #  マイページには先ほど予約した内容が存在する（テキスト）
+      expect(page).to have_content(@room.reservation.reservation_date)
+      # 予約内容をクリック
+      click_on "#{@room.reservation.reservation_date}"
+      # チャットルームへ遷移する
+      visit "/reservations/#{@reservation.id}/rooms/#{@room.id}"
+      # フォームにmessageを入力する
+      fill_in 'input', with:'こんにちは'
+      # 送信した値がDBに保存されていることを確認する
+      expect{
+        find_by_id('send-button').click
+      }.to change { Message.count }.by(1)
 
-      # 作成されたチャットルームへ遷移する
-      click_on(@room_user.room.name)
+      # 送信したmessageがブラウザに表示されていることを確認する
+      expect(page).to have_content('こんにちは')
+    end
 
-      # DBに保存されていないことを確認する
-
-      # 元のページに戻ってくることを確認する
-
+    it '送る値が空の為、message送信に失敗すること' do
+    # サインインする
+    visit new_user_session_path
+    fill_in 'user[email]', with: @user.email
+    fill_in 'user[password]', with: @user.password
+    find('input[name="commit"]').click
+    expect(current_path).to eq(root_path)
+    # マイページに移動する
+    visit mypage_reservation_path(@user)
+    #  マイページには先ほど予約した内容が存在する（テキスト）
+    expect(page).to have_content(@room.reservation.reservation_date)
+    # 予約内容をクリック
+    click_on "#{@room.reservation.reservation_date}"
+    # チャットルームへ遷移する
+    visit "/reservations/#{@reservation.id}/rooms/#{@room.id}"
+    #  フォームにmessageを入力せずに送信すると保存されない
+    expect{
+      find_by_id('send-button').click
+    }.to change { Message.count }.by(0)
     end
   end
 
-  context '投稿に成功したとき' do
-    it 'テキストの投稿に成功すると、投稿一覧に遷移して、投稿した内容が表示されている' do
+  context 'スタイリスト側' do
+    it 'message送信に成功すると、message内容が表示されている' do
       # サインインする
-      sign_in(@room_user.user)
-
-      # 作成されたチャットルームへ遷移する
-      click_on(@room_user.room.name)
-
-      # 値をテキストフォームに入力する
-
+      visit new_stylist_session_path
+      fill_in 'stylist[email]', with: @stylist.email
+      fill_in 'stylist[password]', with: @stylist.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq(stylists_path)
+      # スタイリストのトップページには予約一覧が表示されている
+      expect(page).to have_content(@room.reservation.reservation_date)
+      # 予約内容をクリック
+      click_on "#{@room.reservation.reservation_date}"
+      # 確認画面で「入室」ボタンをクリックする
+      click_on "入室"
+      # チャットルームへ遷移する
+      visit "/reservations/#{@reservation.id}/rooms/#{@room.id}"
+      # フォームにmessageを入力する
+      fill_in 'input', with:'こんばんは'
       # 送信した値がDBに保存されていることを確認する
+      expect{
+        find_by_id('send-button').click
+      }.to change { Message.count }.by(1)
 
-      # 投稿一覧画面に遷移していることを確認する
-
-      # 送信した値がブラウザに表示されていることを確認する
-
+      # 送信したmessageがブラウザに表示されていることを確認する
+      expect(page).to have_content('こんばんは')
     end
 
-    it '画像の投稿に成功すると、投稿一覧に遷移して、投稿した画像が表示されている' do
+    it '送る値が空の為、message送信に失敗すること' do
       # サインインする
-      sign_in(@room_user.user)
-
-      # 作成されたチャットルームへ遷移する
-      click_on(@room_user.room.name)
-
-      # 添付する画像を定義する
-      image_path = Rails.root.join('public/images/test_image.png')
-
-      # 画像選択フォームに画像を添付する
-
-      # 送信した値がDBに保存されていることを確認する
-
-      # 投稿一覧画面に遷移していることを確認する
-
-      # 送信した画像がブラウザに表示されていることを確認する
-
-    end
-
-    it 'テキストと画像の投稿に成功すること' do
-      # サインインする
-      sign_in(@room_user.user)
-
-      # 作成されたチャットルームへ遷移する
-      click_on(@room_user.room.name)
-
-      # 添付する画像を定義する
-      image_path = Rails.root.join('public/images/test_image.png')
-
-      # 画像選択フォームに画像を添付する
-
-      # 値をテキストフォームに入力する
-
-      # 送信した値がDBに保存されていることを確認する
-
-      # 送信した値がブラウザに表示されていることを確認する
-
-      # 送信した画像がブラウザに表示されていることを確認する
-
+      visit new_stylist_session_path
+      fill_in 'stylist[email]', with: @stylist.email
+      fill_in 'stylist[password]', with: @stylist.password
+      find('input[name="commit"]').click
+      expect(current_path).to eq(stylists_path)
+      # スタイリストのトップページには予約一覧が表示されている
+      expect(page).to have_content(@room.reservation.reservation_date)
+      # 予約内容をクリック
+      click_on "#{@room.reservation.reservation_date}"
+      # 確認画面で「入室」ボタンをクリックする
+      click_on "入室"
+      # チャットルームへ遷移する
+      visit "/reservations/#{@reservation.id}/rooms/#{@room.id}"
+      #  フォームにmessageを入力せずに送信すると保存されない
+      expect{
+        find_by_id('send-button').click
+      }.to change { Message.count }.by(0)
     end
   end
 end

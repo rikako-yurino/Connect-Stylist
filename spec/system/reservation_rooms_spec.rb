@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe "ReservationRooms", type: :system do
   before do
     @user = FactoryBot.create(:user)
+    @reservation_room = FactoryBot.build(:reservation_room, user_id: @user.id)
     @reservation = Reservation.last
   end
   context 'チャット予約ができるとき'do
@@ -39,19 +40,19 @@ RSpec.describe "ReservationRooms", type: :system do
       # マイページに移動する
       visit mypage_reservation_path(@user)
       #  マイページには先ほど予約した内容が存在する（テキスト）
-      expect(page).to have_content(@reservation_room)
+      expect(page).to have_content(@reservation)
     end
   end
 
   context 'チャット予約がができないとき'do
-    it 'ログインしていないと新規投稿ページに遷移できない' do
+    it 'ログインしていないとチャット予約ページに遷移できない' do
       # トップページに遷移する
       visit root_path
-      # 新規投稿ページへのリンクがない
+      # チャット予約ページへのリンクがない
       expect(page).to have_no_content('チャット予約')
     end
 
-    it '誤った情報ではユーザー新規登録ができずに新規登録ページへ戻ってくる' do
+    it '誤った情報では新規予約ができずに新規登録ページへ戻ってくる' do
      # ログインする
      visit new_user_session_path
      fill_in 'user[email]', with: @user.email
@@ -66,8 +67,11 @@ RSpec.describe "ReservationRooms", type: :system do
      select '--', from: "reservation_room[style_id]"
       # サインアップボタンを押しても確認画面に遷移しないことを確認する
       click_on '確認画面へ'
+      # 確認画面遷移
+      expect(current_path).to eq ('/reservations/confirm')
+      click_on '登録する'
       # 新規登録ページへ戻されることを確認する
-      expect(current_path).to eq ('/reservations/new')
+      expect(current_path).to eq ('/reservations')
     end
   end
 end
