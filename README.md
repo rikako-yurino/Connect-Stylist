@@ -5,6 +5,10 @@
   <a href="https://rubyonrails.org/"><img src="https://user-images.githubusercontent.com/79197015/113974312-a82dbf80-9878-11eb-8ccf-cbcb9b6faf33.png" height="50px;" /></a>
   <a href="https://jquery.com/"><img src="https://user-images.githubusercontent.com/79197015/113974345-b67bdb80-9878-11eb-916c-9933e5e3ca2a.png" height="25px;" /></a>
   <a href="https://www.mysql.com/jp/"><img src="https://user-images.githubusercontent.com/79197015/113974369-c1367080-9878-11eb-8750-525d3c343ef3.png" height="50px;" /></a>
+  <a href="https://aws.amazon.com/jp/"><img src="https://user-images.githubusercontent.com/79197015/114863980-67f7af80-9e2b-11eb-83d3-7dbead94923d.png" height="50px;" /></a>
+  <a href="https://yhbt.net/unicorn/"><img src="https://user-images.githubusercontent.com/79197015/114864064-82318d80-9e2b-11eb-8126-ba8221ec3390.png" height="50px;" /></a>
+  <a href="https://www.nginx.com/"><img src="https://user-images.githubusercontent.com/79197015/114864541-13a0ff80-9e2c-11eb-9e2a-b9fe5e61ba78.png" height="50px;" /></a>
+  <a href="https://capistranorb.com/"><img src="https://user-images.githubusercontent.com/79197015/114864727-4ba84280-9e2c-11eb-9853-02d6295fb6f0.png" height="50px;" /></a>
 <br>
 <br>
 <br>
@@ -42,19 +46,19 @@
 # :star:URL & Test account
 #### このアプリケーションには<br>『ユーザー専用ページ』と『スタイリスト専用ページ』があります<br>
 
-#### :point_right:Basic認証
+<!-- #### :point_right:Basic認証
 UserID:  admin <br>
 Password:  2222 <br>
-<br>
+<br> -->
 
 #### :bust_in_silhouette:User
-URL: https://connect-stylist.herokuapp.com/ <br>
+URL: http://54.64.102.18/<br>
 email:  test@com  <br>
 password:  test123  <br>
 <br>
 
 #### :bust_in_silhouette:Stylist
-URL: https://connect-stylist.herokuapp.com/stylists  <br>
+URL: http://54.64.102.18/stylists  <br>
 email:  test@com  <br>
 password:  test123  <br>
 <br>
