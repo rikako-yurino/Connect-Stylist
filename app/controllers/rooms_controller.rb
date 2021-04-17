@@ -17,8 +17,10 @@ def show
 
   def destroy
     room = Room.find(params[:id])
+    # messages = Message.all
     room.destroy
-    redirect_to reservation_room_path(@room.id)
+    # redirect_to reservation_room_path(@room.id)
+    redirect_to root_path
   end
 
 end
